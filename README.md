@@ -1,32 +1,32 @@
 # Global AI Governance
 
-Practical open-source systems for AI governance, verification, evidence, and accountable deployment.
+**Open-source governance infrastructure for consequential AI.**
 
-Global AI Governance provides public tools for making AI systems visible, owned, risk-tiered, tested, monitored, corrected, and operationally controllable.
+*Transforming AI chaos into aligned order.*
 
-## Start Here
+Global AI Governance develops practical specifications, tools, frameworks, and simulations for governable, verifiable, resilient, and accountable AI.
 
-1. **Global AI Governance Solutions**
-   Enterprise adoption package for AI visibility, ownership, risk classification, evidence, controls, monitoring, correction, and shutdown authority.
+## Portfolio
 
-2. **AI Governance OS**
-   Core governance operating model for accountable AI deployment.
+- **AUTHORIZE** · [Agentic AI Governance](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance)
+- **GOVERN AND MEASURE** · [Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit)
+- **VERIFY AND CLOSE** · [Verified Vulnerability Governance](https://github.com/GLOBAL-AI-GOVERNANCE/verified-vulnerability-governance)
+- **CONTAIN AND RECOVER** · [AI Cyber Resilience Framework](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework)
+- **DECIDE AND LEARN** · [Peace Governance: Crisis Room](https://github.com/GLOBAL-AI-GOVERNANCE/peace-governance-crisis-room)
+- **FOUNDATIONAL MODEL** · [AI Governance OS](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-os)
 
-3. **VVD-OS**
-   Verified vulnerability detection with evidence, ownership, risk scoring, remediation governance, and verified closure.
+## Evidence and Authority Chain
 
-4. **Peace OS: Crisis Room**
-   Serious policy simulation for crisis verification, civilian protection, confidence scoring, and de-escalation under public pressure.
+```text
+Govern
+→ Authorize
+→ Enforce
+→ Observe
+→ Verify
+→ Contain
+→ Recover
+→ Measure
+→ Learn
+```
 
-## Operating Doctrine
-
-* No owner, no deployment.
-* No inventory, no governance.
-* No evidence, no approval.
-* No verification, no closure.
-* No shutdown path, no frontier release.
-* Human authority remains accountable.
-
-## Who This Is For
-
-Boards, executives, security teams, AI governance teams, public-sector leaders, researchers, policy teams, and builders who need practical tools for responsible AI deployment.
+The portfolio is organized around this shared lifecycle. Each repository defines its own scope, maturity, and assurance boundaries.
