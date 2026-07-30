@@ -1,21 +1,48 @@
 # Global AI Governance
 
-**Open-source governance infrastructure for consequential AI.**
+**Open-source engineering for governable, verifiable, resilient, and accountable AI.**
 
 *Transforming AI chaos into aligned order.*
 
-Global AI Governance develops practical specifications, tools, frameworks, and simulations for governable, verifiable, resilient, and accountable AI.
+Global AI Governance turns AI uncertainty into evidence, controls, human decisions, and repeatable governance outcomes.
+
+## Start Here
+
+### Govern One AI System
+
+The public flagship is the [Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit), a working public reference toolkit released as [v2.1.0 — Decision-Ready Governance](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/tag/v2.1.0).
+
+```text
+AI system inventory
+→ schema validation
+→ preliminary risk tier
+→ policy-driven findings
+→ executive governance report
+→ AI Governance Decision Pack
+→ human review and decision
+```
+
+1. [Open the five-minute path](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit#quick-start).
+2. Run the bundled sample in explicit report-only mode.
+3. [Review the generated reference Decision Pack](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/main/examples/decision-pack/valid-system).
+4. Replace the sample with one real, authorized AI system record.
+5. Keep approval, restrictions, risk acceptance, rollback, and shutdown decisions human-owned.
+
+The finished Decision Pack contains an executive summary, system profile, risk findings, evidence and ownership review, decision record, action plan, and integrity manifest.
 
 ## Portfolio
 
-- **AUTHORIZE** · [Agentic AI Governance](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance)
-- **GOVERN AND MEASURE** · [Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit)
-- **VERIFY AND CLOSE** · [Verified Vulnerability Governance](https://github.com/GLOBAL-AI-GOVERNANCE/verified-vulnerability-governance)
-- **CONTAIN AND RECOVER** · [AI Cyber Resilience Framework](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework)
-- **DECIDE AND LEARN** · [Peace Governance: Crisis Room](https://github.com/GLOBAL-AI-GOVERNANCE/peace-governance-crisis-room)
-- **FOUNDATIONAL MODEL** · [AI Governance OS](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-os)
+| Lifecycle role | Repository | Current maturity | Finished outcome |
+|---|---|---|---|
+| **GOVERN + MEASURE** | [Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit) | **v2.1.0 · working public reference toolkit** | Reproducible AI Governance Decision Pack |
+| **AUTHORIZE** | [Agentic AI Governance](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance) | **v0.1.0-alpha.1 · experimental public alpha** | Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts |
+| **ENFORCE** | [Governed Systems Administration](https://github.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration) | **Pre-alpha · preimplementation · independent semantic review required · no execution capability** | Proposed human-governed administration request, review, validation, and evidence contracts |
+| **OBSERVE + VERIFY + CLOSE** | [Verified Vulnerability Governance](https://github.com/GLOBAL-AI-GOVERNANCE/verified-vulnerability-governance) | **v0.1.2 · pre-release foundation** | Evidence-linked vulnerability ownership, remediation, retesting, and closure |
+| **CONTAIN + RECOVER** | [AI Cyber Resilience Framework](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework) | **v0.1.0 · initial public defensive framework** | Boundary assessment, evidence cards, and architecture-hardening backlog |
+| **DECIDE + LEARN** | [Peace Governance: Crisis Room](https://github.com/GLOBAL-AI-GOVERNANCE/peace-governance-crisis-room) | **v0.2.1 · source-side public build candidate** | Fictional crisis-verification simulation and after-action review |
+| **FOUNDATION** | [AI Governance OS](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-os) | **v1.1 · foundational governance model and template set** | Inventory, ownership, risk, control, monitoring, and reporting foundations |
 
-## Evidence and Authority Chain
+## Shared Governance Lifecycle
 
 ```text
 Govern
@@ -29,4 +56,21 @@ Govern
 → Learn
 ```
 
-The portfolio is organized around this shared lifecycle. Each repository defines its own scope, maturity, and assurance boundaries.
+The repositories are complementary. They do not all implement every lifecycle stage, and they do not share one maturity level.
+
+## Operating Principles
+
+- No inventory, no governance.
+- No owner, no deployment.
+- No evidence, no claim.
+- No verification, no closure.
+- No shutdown path, no frontier release.
+- AI may assist. Humans retain authority.
+
+## Evidence Boundary
+
+This portfolio includes working public reference tools, experimental alpha specifications, pre-release foundations, pre-alpha designs, defensive frameworks, and source-side prototypes.
+
+Repository checks establish bounded technical consistency for the included artifacts. They do not establish operational safety, factual truth of submitted declarations, legal compliance, certification, production authorization, institutional approval, or fitness for every environment.
+
+**Start narrow. Govern one system. Produce one decision-ready outcome. Capture proof. Repeat.**
