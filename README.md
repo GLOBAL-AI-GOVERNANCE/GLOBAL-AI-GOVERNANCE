@@ -7,7 +7,6 @@
 Global AI Governance turns AI uncertainty into evidence, controls, human decisions, and repeatable governance outcomes.
 
 ## Start Here
-
 ### Govern One AI System
 
 The public flagship is the [Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit), a working public reference toolkit released as [v2.1.0 — Decision-Ready Governance](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/tag/v2.1.0).
@@ -37,10 +36,10 @@ The finished Decision Pack contains an executive summary, system profile, risk f
 | **GOVERN + MEASURE** | [Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit) | **v2.1.0 · working public reference toolkit** | Reproducible AI Governance Decision Pack |
 | **AUTHORIZE** | [Agentic AI Governance](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance) | **v0.1.0-alpha.1 · experimental public alpha** | Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts |
 | **ENFORCE** | [Governed Systems Administration](https://github.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration) | **Pre-alpha · preimplementation · independent semantic review required · no execution capability** | Proposed human-governed administration request, review, validation, and evidence contracts |
-| **OBSERVE + VERIFY + CLOSE** | [Verified Vulnerability Governance](https://github.com/GLOBAL-AI-GOVERNANCE/verified-vulnerability-governance) | **v0.1.2 · pre-release foundation** | Evidence-linked vulnerability ownership, remediation, retesting, and closure |
-| **CONTAIN + RECOVER** | [AI Cyber Resilience Framework](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework) | **v0.1.0 · initial public defensive framework** | Boundary assessment, evidence cards, and architecture-hardening backlog |
-| **DECIDE + LEARN** | [Peace Governance: Crisis Room](https://github.com/GLOBAL-AI-GOVERNANCE/peace-governance-crisis-room) | **v0.2.1 · source-side public build candidate** | Fictional crisis-verification simulation and after-action review |
-| **FOUNDATION** | [AI Governance OS](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-os) | **v1.1 · foundational governance model and template set** | Inventory, ownership, risk, control, monitoring, and reporting foundations |
+| **OBSERVE + VERIFY + CLOSE** | [Verified Vulnerability Governance](https://github.com/GLOBAL-AI-GOVERNANCE/verified-vulnerability-governance) | **v0.1.3 · verified-closure pre-release** | Evidence-linked vulnerability ownership, remediation, retesting, and closure |
+| **CONTAIN + RECOVER** | [AI Cyber Resilience Framework](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework) | **v0.1.1 · public defensive reference** | Boundary assessment, evidence cards, and architecture-hardening backlog |
+| **DECIDE + LEARN** | [Peace Governance Crisis Room](https://github.com/GLOBAL-AI-GOVERNANCE/peace-governance-crisis-room) | **v0.2.2 · source-readiness pre-release · runtime not yet tested** | Fictional crisis-verification simulation and after-action review |
+| **FOUNDATION** | [AI Governance Foundations](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-os) | **v1.1 · foundational governance model and template set** | Inventory, ownership, risk, control, monitoring, and reporting foundations |
 
 ## Shared Governance Lifecycle
 
@@ -69,7 +68,7 @@ The repositories are complementary. They do not all implement every lifecycle st
 
 ## Evidence Boundary
 
-This portfolio includes working public reference tools, experimental alpha specifications, pre-release foundations, pre-alpha designs, defensive frameworks, and source-side prototypes.
+This portfolio includes a working public reference toolkit, an experimental alpha specification, verified-closure and source-readiness pre-releases, a pre-alpha design, a defensive reference framework, and foundational governance templates.
 
 Repository checks establish bounded technical consistency for the included artifacts. They do not establish operational safety, factual truth of submitted declarations, legal compliance, certification, production authorization, institutional approval, or fitness for every environment.
 
