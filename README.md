@@ -1,38 +1,47 @@
 # Global AI Governance
 
-**Open-source governance infrastructure for consequential AI.**
+**Open-source engineering for governable, verifiable, resilient, and accountable AI.**
 
 *Transforming AI chaos into aligned order.*
 
-Global AI Governance develops practical specifications, tools, frameworks, and simulations for governable, verifiable, resilient, and accountable AI.
+Global AI Governance turns AI uncertainty into evidence, controls, human decisions, and repeatable governance outcomes.
 
 ## Start Here
+### Govern One AI System
 
-**[Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit)** is the public flagship.
-
-It turns an AI inventory record into policy-driven findings and a reproducible, human-reviewed **AI Governance Decision Pack**.
+The public flagship is the [Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit), a working public reference toolkit released as [v2.1.0 — Decision-Ready Governance](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/tag/v2.1.0).
 
 ```text
-AI inventory
-→ validated evidence
+AI system inventory
+→ schema validation
+→ preliminary risk tier
 → policy-driven findings
-→ decision-ready package
+→ executive governance report
+→ AI Governance Decision Pack
 → human review and decision
 ```
 
-AI supports research, classification, comparison, validation, and drafting. Human authority remains visible and controls the final decision.
+1. [Open the five-minute path](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit#quick-start).
+2. Run the bundled sample in explicit report-only mode.
+3. [Review the generated reference Decision Pack](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/main/examples/decision-pack/valid-system).
+4. Replace the sample with one real, authorized AI system record.
+5. Keep approval, restrictions, risk acceptance, rollback, and shutdown decisions human-owned.
+
+The finished Decision Pack contains an executive summary, system profile, risk findings, evidence and ownership review, decision record, action plan, and integrity manifest.
 
 ## Portfolio
 
-- **GOVERN AND MEASURE** · [Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit) · working public reference
-- **FOUNDATIONS** · [AI Governance Foundations](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-os) · foundational model
-- **AUTHORIZE** · [Agentic AI Governance](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance) · public alpha
-- **VERIFY AND CLOSE** · [Verified Vulnerability Governance](https://github.com/GLOBAL-AI-GOVERNANCE/verified-vulnerability-governance) · verified-closure reference
-- **CONTAIN AND RECOVER** · [AI Cyber Resilience Framework](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework) · defensive reference framework
-- **DECIDE AND LEARN** · [Peace Governance Crisis Room](https://github.com/GLOBAL-AI-GOVERNANCE/peace-governance-crisis-room) · source-ready simulation prototype
-- **GOVERN OPERATIONS** · [Governed Systems Administration](https://github.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration) · preimplementation reference
+| Lifecycle role | Repository | Current maturity | Finished outcome |
+|---|---|---|---|
+| **GOVERN + MEASURE** | [Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit) | **v2.1.0 · working public reference toolkit** | Reproducible AI Governance Decision Pack |
+| **AUTHORIZE** | [Agentic AI Governance](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance) | **v0.1.0-alpha.1 · experimental public alpha** | Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts |
+| **ENFORCE** | [Governed Systems Administration](https://github.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration) | **Pre-alpha · preimplementation · independent semantic review required · no execution capability** | Proposed human-governed administration request, review, validation, and evidence contracts |
+| **OBSERVE + VERIFY + CLOSE** | [Verified Vulnerability Governance](https://github.com/GLOBAL-AI-GOVERNANCE/verified-vulnerability-governance) | **v0.1.3 · verified-closure pre-release** | Evidence-linked vulnerability ownership, remediation, retesting, and closure |
+| **CONTAIN + RECOVER** | [AI Cyber Resilience Framework](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework) | **v0.1.1 · public defensive reference** | Boundary assessment, evidence cards, and architecture-hardening backlog |
+| **DECIDE + LEARN** | [Peace Governance Crisis Room](https://github.com/GLOBAL-AI-GOVERNANCE/peace-governance-crisis-room) | **v0.2.2 · source-readiness pre-release · runtime not yet tested** | Fictional crisis-verification simulation and after-action review |
+| **FOUNDATION** | [AI Governance Foundations](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-os) | **v1.1 · foundational governance model and template set** | Inventory, ownership, risk, control, monitoring, and reporting foundations |
 
-## Shared Lifecycle
+## Shared Governance Lifecycle
 
 ```text
 Govern
@@ -46,8 +55,21 @@ Govern
 → Learn
 ```
 
+The repositories are complementary. They do not all implement every lifecycle stage, and they do not share one maturity level.
+
+## Operating Principles
+
+- No inventory, no governance.
+- No owner, no deployment.
+- No evidence, no claim.
+- No verification, no closure.
+- No shutdown path, no frontier release.
+- AI may assist. Humans retain authority.
+
 ## Evidence Boundary
 
-Each repository defines its own scope, maturity, validation status, and human-authorization boundary.
+This portfolio includes a working public reference toolkit, an experimental alpha specification, verified-closure and source-readiness pre-releases, a pre-alpha design, a defensive reference framework, and foundational governance templates.
 
-Passing repository checks supports only the conditions those checks actually test. It does not by itself establish legal compliance, certification, production readiness, deployment approval, operational suitability, or acceptance of risk.
+Repository checks establish bounded technical consistency for the included artifacts. They do not establish operational safety, factual truth of submitted declarations, legal compliance, certification, production authorization, institutional approval, or fitness for every environment.
+
+**Start narrow. Govern one system. Produce one decision-ready outcome. Capture proof. Repeat.**
