@@ -38,7 +38,7 @@ The finished Decision Pack contains an executive summary, system profile, risk f
 | **ENFORCE** | [Governed Systems Administration](https://github.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration) | **Pre-alpha · preimplementation · independent semantic review required · no execution capability** | Proposed human-governed administration request, review, validation, and evidence contracts |
 | **OBSERVE + VERIFY + CLOSE** | [Verified Vulnerability Governance](https://github.com/GLOBAL-AI-GOVERNANCE/verified-vulnerability-governance) | **v0.1.3 · verified-closure pre-release** | Evidence-linked vulnerability ownership, remediation, retesting, and closure |
 | **CONTAIN + RECOVER** | [AI Cyber Resilience Framework](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework) | **v0.1.1 · public defensive reference** | Boundary assessment, evidence cards, and architecture-hardening backlog |
-| **DECIDE + LEARN** | [Peace Governance Crisis Room](https://github.com/GLOBAL-AI-GOVERNANCE/peace-governance-crisis-room) | **v0.2.2 · source-readiness pre-release · runtime not yet tested** | Fictional crisis-verification simulation and after-action review |
+| **DECIDE + LEARN** | [Peace OS: Crisis Room](https://github.com/GLOBAL-AI-GOVERNANCE/peace-os-crisis-room) | **v0.3.0-rc2 · published public browser review candidate · stable, human-validation, Godot, and Windows gates open** | Fictional crisis-verification simulation and after-action review |
 | **FOUNDATION** | [AI Governance Foundations](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-os) | **v1.1 · foundational governance model and template set** | Inventory, ownership, risk, control, monitoring, and reporting foundations |
 
 ## Shared Governance Lifecycle
@@ -68,7 +68,7 @@ The repositories are complementary. They do not all implement every lifecycle st
 
 ## Evidence Boundary
 
-This portfolio includes a working public reference toolkit, an experimental alpha specification, verified-closure and source-readiness pre-releases, a pre-alpha design, a defensive reference framework, and foundational governance templates.
+This portfolio includes a working public reference toolkit, an experimental alpha specification, verified-closure and public-browser-review prereleases, a pre-alpha design, a defensive reference framework, and foundational governance templates.
 
 Repository checks establish bounded technical consistency for the included artifacts. They do not establish operational safety, factual truth of submitted declarations, legal compliance, certification, production authorization, institutional approval, or fitness for every environment.
 

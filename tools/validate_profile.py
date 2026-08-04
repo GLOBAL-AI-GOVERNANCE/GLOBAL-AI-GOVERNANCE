@@ -26,7 +26,7 @@ REQUIRED_REPOSITORIES = (
     "governed-systems-administration",
     "verified-vulnerability-governance",
     "ai-cyber-resilience-framework",
-    "peace-governance-crisis-room",
+    "peace-os-crisis-room",
     "ai-governance-os",
 )
 
@@ -43,6 +43,9 @@ REQUIRED_BOUNDARIES = (
 
 FORBIDDEN_TEXT = (
     "global-ai-governance-solutions",
+    "peace-governance-crisis-room",
+    "Peace Governance Crisis Room",
+    "v0.2.2 · source-readiness pre-release · runtime not yet tested",
     "all repositories are production-ready",
     "fully compliant",
     "certified ai governance",
@@ -116,6 +119,13 @@ def main() -> None:
 
     if "Pre-alpha" not in text or "independent semantic review" not in text:
         fail("GSA pre-alpha review boundary is missing.")
+    if not re.search(
+        r"peace-os-crisis-room.*v0\.3\.0-rc2.*"
+        r"published public browser review candidate",
+        text,
+        re.IGNORECASE | re.DOTALL,
+    ):
+        fail("Peace OS RC2 repository and bounded maturity are not connected.")
 
     if "\t" in text:
         fail("README contains tab characters.")
