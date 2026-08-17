@@ -1,0 +1,84 @@
+{
+  "$id": "https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/schemas/program-closeout.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "completion_boundary": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "deferred_release_gates": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 2,
+      "type": "array"
+    },
+    "evidence_boundary": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "merged_unreleased_development": {
+      "additionalProperties": false,
+      "properties": {
+        "ai-cyber-resilience-framework": {
+          "const": "v0.2.0 Continuous Assurance Thread"
+        },
+        "peace-os-crisis-room": {
+          "const": "Post-RC2 Portfolio Operating Disposition Reference"
+        }
+      },
+      "required": [
+        "ai-cyber-resilience-framework",
+        "peace-os-crisis-room"
+      ],
+      "type": "object"
+    },
+    "program": {
+      "const": "GLOBAL AI GOVERNANCE portfolio hardening and assurance integration"
+    },
+    "protected_default_branches": {
+      "const": 9
+    },
+    "published_release_state": {
+      "additionalProperties": false,
+      "properties": {
+        "ai-cyber-resilience-framework": {
+          "const": "v0.1.1"
+        },
+        "peace-os-crisis-room": {
+          "const": "v0.3.0-rc2"
+        }
+      },
+      "required": [
+        "ai-cyber-resilience-framework",
+        "peace-os-crisis-room"
+      ],
+      "type": "object"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "scope": {
+      "const": "M0-M9"
+    },
+    "status": {
+      "const": "COMPLETE"
+    }
+  },
+  "required": [
+    "schema_version",
+    "program",
+    "status",
+    "scope",
+    "completion_boundary",
+    "protected_default_branches",
+    "published_release_state",
+    "merged_unreleased_development",
+    "deferred_release_gates",
+    "evidence_boundary"
+  ],
+  "title": "GLOBAL AI GOVERNANCE Program Closeout",
+  "type": "object"
+}

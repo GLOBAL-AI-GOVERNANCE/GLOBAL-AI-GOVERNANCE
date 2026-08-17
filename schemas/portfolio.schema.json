@@ -116,7 +116,8 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "ai-cyber-resilience-framework"
+        "ai-cyber-resilience-framework",
+        "peace-os-crisis-room"
       ],
       "properties": {
         "ai-cyber-resilience-framework": {
@@ -136,6 +137,26 @@
             },
             "published_release": {
               "const": "v0.1.1"
+            }
+          }
+        },
+        "peace-os-crisis-room": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "candidate",
+            "status",
+            "published_release"
+          ],
+          "properties": {
+            "candidate": {
+              "const": "Post-RC2 Portfolio Operating Disposition Reference"
+            },
+            "status": {
+              "const": "MERGED_UNRELEASED"
+            },
+            "published_release": {
+              "const": "v0.3.0-rc2"
             }
           }
         }

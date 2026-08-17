@@ -18,6 +18,7 @@ REQUIRED_HEADINGS = (
     "## Start Here",
     "### Govern One AI System",
     "## Portfolio",
+    "## Development Baseline",
     "## Shared Governance Lifecycle",
     "## Operating Principles",
     "## Evidence Boundary",
@@ -91,6 +92,14 @@ def validate_manifest(manifest: dict) -> list[dict]:
     candidates = manifest.get("development_candidates", {})
     if candidates.get("ai-cyber-resilience-framework") != expected_candidate:
         fail("ACRF development candidate record is incorrect")
+
+    expected_peace_candidate = {
+        "candidate": "Post-RC2 Portfolio Operating Disposition Reference",
+        "status": "MERGED_UNRELEASED",
+        "published_release": "v0.3.0-rc2",
+    }
+    if candidates.get("peace-os-crisis-room") != expected_peace_candidate:
+        fail("Peace OS development candidate record is incorrect")
 
     lifecycle = manifest.get("shared_lifecycle")
     if not isinstance(lifecycle, list) or not lifecycle:
