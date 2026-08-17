@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "owner": "GLOBAL-AI-GOVERNANCE",
+  "profile_repository": "GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE",
+  "flagship_repository": "global-ai-governance-toolkit",
+  "shared_lifecycle": [
+    "Govern",
+    "Authorize",
+    "Enforce",
+    "Observe",
+    "Verify",
+    "Contain",
+    "Recover",
+    "Measure",
+    "Learn"
+  ],
+  "repositories": [
+    {
+      "repository": "global-ai-governance-toolkit",
+      "display_name": "Global AI Governance Toolkit",
+      "lifecycle_roles": ["GOVERN", "MEASURE"],
+      "version": "v2.1.0",
+      "maturity": "v2.1.0 · working public reference toolkit",
+      "finished_outcome": "Reproducible AI Governance Decision Pack",
+      "authority_boundary": "Decision Pack supports human review and decision; it does not approve, certify, or authorize deployment.",
+      "upstream": [],
+      "downstream": ["agentic-ai-governance", "verified-vulnerability-governance"]
+    },
+    {
+      "repository": "agentic-ai-governance",
+      "display_name": "Agentic AI Governance",
+      "lifecycle_roles": ["AUTHORIZE"],
+      "version": "v0.1.0-alpha.1",
+      "maturity": "v0.1.0-alpha.1 · experimental public alpha",
+      "finished_outcome": "Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts",
+      "authority_boundary": "Passport and validation artifacts express bounded machine-readable authority semantics; production authorization remains human-governed and environment-specific.",
+      "upstream": ["global-ai-governance-toolkit"],
+      "downstream": ["governed-systems-administration"]
+    },
+    {
+      "repository": "governed-systems-administration",
+      "display_name": "Governed Systems Administration",
+      "lifecycle_roles": ["ENFORCE"],
+      "version": null,
+      "maturity": "Pre-alpha · preimplementation · independent semantic review required · no execution capability",
+      "finished_outcome": "Proposed human-governed administration request, review, validation, and evidence contracts",
+      "authority_boundary": "The repository is preimplementation and provides no execution capability.",
+      "upstream": ["agentic-ai-governance"],
+      "downstream": []
+    },
+    {
+      "repository": "verified-vulnerability-governance",
+      "display_name": "Verified Vulnerability Governance",
+      "lifecycle_roles": ["OBSERVE", "VERIFY", "CLOSE"],
+      "version": "v0.1.3",
+      "maturity": "v0.1.3 · verified-closure pre-release",
+      "finished_outcome": "Evidence-linked vulnerability ownership, remediation, retesting, and closure",
+      "authority_boundary": "Closure is evidence-driven and human-authorized; repository checks do not establish enterprise deployment or independent operational retesting services.",
+      "upstream": ["global-ai-governance-toolkit"],
+      "downstream": ["ai-cyber-resilience-framework"]
+    },
+    {
+      "repository": "ai-cyber-resilience-framework",
+      "display_name": "AI Cyber Resilience Framework",
+      "lifecycle_roles": ["CONTAIN", "RECOVER"],
+      "version": "v0.1.1",
+      "maturity": "v0.1.1 · public defensive reference",
+      "finished_outcome": "Boundary assessment, evidence cards, and architecture-hardening backlog",
+      "authority_boundary": "The framework is a public defensive reference, not executable operational software, certification, or proof that a deployed control works.",
+      "upstream": ["verified-vulnerability-governance"],
+      "downstream": ["peace-os-crisis-room"]
+    },
+    {
+      "repository": "peace-os-crisis-room",
+      "display_name": "Peace OS: Crisis Room",
+      "lifecycle_roles": ["DECIDE", "LEARN"],
+      "version": "v0.3.0-rc2",
+      "maturity": "v0.3.0-rc2 · published public browser review candidate · stable, human-validation, Godot, and Windows gates open",
+      "finished_outcome": "Fictional crisis-verification simulation and after-action review",
+      "authority_boundary": "The experience is a fictional learning and review candidate, not an operational intelligence, emergency, attribution, certification, or autonomous-release system.",
+      "upstream": ["ai-cyber-resilience-framework"],
+      "downstream": []
+    },
+    {
+      "repository": "ai-governance-os",
+      "display_name": "AI Governance Foundations",
+      "lifecycle_roles": ["FOUNDATION"],
+      "version": "v1.1",
+      "maturity": "v1.1 · foundational governance model and template set",
+      "finished_outcome": "Inventory, ownership, risk, control, monitoring, and reporting foundations",
+      "authority_boundary": "Foundational models and templates provide reference structure; they do not independently establish approval, compliance, certification, or production authorization.",
+      "upstream": [],
+      "downstream": ["global-ai-governance-toolkit"]
+    }
+  ]
+}

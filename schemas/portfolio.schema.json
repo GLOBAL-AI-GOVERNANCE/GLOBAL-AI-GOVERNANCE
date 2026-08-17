@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/schemas/portfolio.schema.json",
+  "title": "GLOBAL AI GOVERNANCE Portfolio Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "owner",
+    "profile_repository",
+    "flagship_repository",
+    "shared_lifecycle",
+    "repositories"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "owner": {"const": "GLOBAL-AI-GOVERNANCE"},
+    "profile_repository": {"const": "GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE"},
+    "flagship_repository": {"type": "string", "minLength": 1},
+    "shared_lifecycle": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "repositories": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "repository",
+          "display_name",
+          "lifecycle_roles",
+          "version",
+          "maturity",
+          "finished_outcome",
+          "authority_boundary",
+          "upstream",
+          "downstream"
+        ],
+        "properties": {
+          "repository": {"type": "string", "minLength": 1},
+          "display_name": {"type": "string", "minLength": 1},
+          "lifecycle_roles": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "version": {"type": ["string", "null"]},
+          "maturity": {"type": "string", "minLength": 1},
+          "finished_outcome": {"type": "string", "minLength": 1},
+          "authority_boundary": {"type": "string", "minLength": 1},
+          "upstream": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "downstream": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    }
+  }
+}
