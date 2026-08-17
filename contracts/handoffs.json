@@ -1,0 +1,66 @@
+{
+  "contract_version": "1.0.0",
+  "handoffs": [
+    {
+      "authority_boundary": "Foundational references do not approve deployment.",
+      "failure_behavior": "REJECT_UNSUPPORTED",
+      "handoff_id": "foundation-to-toolkit",
+      "reference_only": true,
+      "source_artifact": "foundational schemas/templates/registers",
+      "source_repository": "ai-governance-os",
+      "target_input": "authorized governance workflow inputs",
+      "target_repository": "global-ai-governance-toolkit"
+    },
+    {
+      "authority_boundary": "Decision Pack does not grant agent action authority.",
+      "failure_behavior": "HOLD_FOR_HUMAN_REVIEW",
+      "handoff_id": "toolkit-to-agentic",
+      "reference_only": true,
+      "source_artifact": "AI Governance Decision Pack reference",
+      "source_repository": "global-ai-governance-toolkit",
+      "target_input": "governed decision/evidence context reference",
+      "target_repository": "agentic-ai-governance"
+    },
+    {
+      "authority_boundary": "GSA does not redefine Agent Trust Passport semantics and has no execution capability.",
+      "failure_behavior": "FAIL_CLOSED",
+      "handoff_id": "agentic-to-gsa",
+      "reference_only": true,
+      "source_artifact": "Agent Trust Passport / authority reference",
+      "source_repository": "agentic-ai-governance",
+      "target_input": "AdministrativeActionRequest.requester.trust_reference",
+      "target_repository": "governed-systems-administration"
+    },
+    {
+      "authority_boundary": "Governance context does not itself prove remediation or closure.",
+      "failure_behavior": "HOLD_FOR_HUMAN_REVIEW",
+      "handoff_id": "toolkit-to-vvd",
+      "reference_only": true,
+      "source_artifact": "governed system / evidence context reference",
+      "source_repository": "global-ai-governance-toolkit",
+      "target_input": "asset, ownership, evidence, and governance context",
+      "target_repository": "verified-vulnerability-governance"
+    },
+    {
+      "authority_boundary": "Closure evidence does not establish current system assurance after configuration change.",
+      "failure_behavior": "REVERIFICATION_REQUIRED",
+      "handoff_id": "vvd-to-acrf",
+      "reference_only": true,
+      "source_artifact": "configuration-aware verified-closure evidence reference",
+      "source_repository": "verified-vulnerability-governance",
+      "target_input": "evidence / configuration assurance context",
+      "target_repository": "ai-cyber-resilience-framework"
+    },
+    {
+      "authority_boundary": "Peace OS remains a fictional review experience, not an operational decision authority.",
+      "failure_behavior": "HOLD_FOR_HUMAN_REVIEW",
+      "handoff_id": "acrf-to-peace",
+      "reference_only": true,
+      "source_artifact": "operating disposition / assurance state reference",
+      "source_repository": "ai-cyber-resilience-framework",
+      "target_input": "fictional decision and after-action learning context",
+      "target_repository": "peace-os-crisis-room"
+    }
+  ],
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,10 @@
+{
+  "authority_boundary": "GSA does not redefine Agent Trust Passport semantics and has no execution capability.",
+  "failure_behavior": "FAIL_CLOSED",
+  "handoff_id": "agentic-to-gsa",
+  "reference_only": true,
+  "source_artifact": "Agent Trust Passport / authority reference",
+  "source_repository": "agentic-ai-governance",
+  "target_input": "AdministrativeActionRequest.requester.trust_reference",
+  "target_repository": "governed-systems-administration"
+}

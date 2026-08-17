@@ -21,3 +21,7 @@ jobs:
       - name: Validate public profile
         run: |
           python3 -B tools/validate_profile.py
+
+      - name: Validate portfolio integration contracts
+        run: |
+          python3 -B tools/validate_integration.py

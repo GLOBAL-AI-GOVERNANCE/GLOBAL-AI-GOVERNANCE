@@ -1,0 +1,54 @@
+{
+  "$id": "https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/contracts/portfolio-handoff.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "authority_boundary": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "failure_behavior": {
+      "enum": [
+        "FAIL_CLOSED",
+        "REJECT_UNSUPPORTED",
+        "HOLD_FOR_HUMAN_REVIEW",
+        "REVERIFICATION_REQUIRED"
+      ]
+    },
+    "handoff_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "reference_only": {
+      "const": true
+    },
+    "source_artifact": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "source_repository": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "target_input": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "target_repository": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "handoff_id",
+    "source_repository",
+    "target_repository",
+    "source_artifact",
+    "target_input",
+    "reference_only",
+    "failure_behavior",
+    "authority_boundary"
+  ],
+  "title": "Portfolio Handoff",
+  "type": "object"
+}
