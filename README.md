@@ -41,6 +41,17 @@ The finished Decision Pack contains an executive summary, system profile, risk f
 | **DECIDE + LEARN** | [Peace OS: Crisis Room](https://github.com/GLOBAL-AI-GOVERNANCE/peace-os-crisis-room) | **v0.3.0-rc2 · published public browser review candidate · stable, human-validation, Godot, and Windows gates open** | Fictional crisis-verification simulation and after-action review |
 | **FOUNDATION** | [AI Governance Foundations](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-os) | **v1.1 · foundational governance model and template set** | Inventory, ownership, risk, control, monitoring, and reporting foundations |
 
+## Development Baseline
+
+Published release identities remain controlling. Merged development work is tracked separately so development state does not silently become a release claim.
+
+- **AI Cyber Resilience Framework:** `v0.2.0 Continuous Assurance Thread` is merged and unreleased. The published release remains `v0.1.1`.
+- **Peace OS: Crisis Room:** `Post-RC2 Portfolio Operating Disposition Reference` is merged and unreleased. The published browser review candidate remains `v0.3.0-rc2`, and its documented stable-release holds remain open.
+
+These development handoffs are reference-only. They do not silently become release claims, production authorization, certification, operational truth, or permission to act.
+
+See [`docs/PROGRAM_CLOSEOUT.md`](docs/PROGRAM_CLOSEOUT.md) for the bounded M0-M9 closeout and deferred release/maturity gates.
+
 ## Shared Governance Lifecycle
 
 ```text

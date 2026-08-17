@@ -25,3 +25,7 @@ jobs:
       - name: Validate portfolio integration contracts
         run: |
           python3 -B tools/validate_integration.py
+
+      - name: Validate program closeout
+        run: |
+          python3 -B tools/validate_closeout.py
