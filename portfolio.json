@@ -55,7 +55,7 @@
       "repository": "governed-systems-administration",
       "display_name": "Governed Systems Administration",
       "lifecycle_roles": [
-        "ENFORCE"
+        "DESIGN ENFORCEMENT"
       ],
       "version": null,
       "maturity": "Pre-alpha \u00b7 preimplementation \u00b7 independent semantic review required \u00b7 no execution capability",
