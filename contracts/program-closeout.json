@@ -1,0 +1,21 @@
+{
+  "completion_boundary": "Complete for the current GitHub portfolio hardening, assurance-integration, protection, public-truth, and closeout scope. This does not mean every repository is production-ready, stable, certified, or operationally validated.",
+  "deferred_release_gates": [
+    "AI Cyber Resilience Framework v0.2.0 public tag/release remains a separate reviewed release gate.",
+    "Peace OS stable release remains held on its documented human accessibility, real-device, cross-browser, print/PDF, subject-matter, Godot, Windows, and other stable-release evidence."
+  ],
+  "evidence_boundary": "Repository and workflow checks prove only the bounded technical properties they test. They do not establish legal compliance, certification, operational safety, production authorization, institutional approval, or real-world truth.",
+  "merged_unreleased_development": {
+    "ai-cyber-resilience-framework": "v0.2.0 Continuous Assurance Thread",
+    "peace-os-crisis-room": "Post-RC2 Portfolio Operating Disposition Reference"
+  },
+  "program": "GLOBAL AI GOVERNANCE portfolio hardening and assurance integration",
+  "protected_default_branches": 9,
+  "published_release_state": {
+    "ai-cyber-resilience-framework": "v0.1.1",
+    "peace-os-crisis-room": "v0.3.0-rc2"
+  },
+  "schema_version": "1.0.0",
+  "scope": "M0-M9",
+  "status": "COMPLETE"
+}
