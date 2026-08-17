@@ -140,6 +140,10 @@ def validate_manifest(manifest: dict) -> list[dict]:
             if relation not in known:
                 fail(f"unknown repository relation: {relation}")
 
+    gsa = next((item for item in repos if item["repository"] == "governed-systems-administration"), None)
+    if gsa is None or gsa["lifecycle_roles"] != ["DESIGN ENFORCEMENT"]:
+        fail("GSA lifecycle role must remain DESIGN ENFORCEMENT until execution capability exists")
+
     return repos
 
 
