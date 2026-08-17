@@ -81,6 +81,17 @@ def validate_manifest(manifest: dict) -> list[dict]:
     if manifest.get("profile_repository") != "GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE":
         fail("profile_repository is incorrect")
 
+    if manifest.get("integration_contract_version") != "1.0.0":
+        fail("integration_contract_version must be 1.0.0")
+    expected_candidate = {
+        "candidate": "v0.2.0 Continuous Assurance Thread",
+        "status": "MERGED_UNRELEASED",
+        "published_release": "v0.1.1",
+    }
+    candidates = manifest.get("development_candidates", {})
+    if candidates.get("ai-cyber-resilience-framework") != expected_candidate:
+        fail("ACRF development candidate record is incorrect")
+
     lifecycle = manifest.get("shared_lifecycle")
     if not isinstance(lifecycle, list) or not lifecycle:
         fail("shared_lifecycle must be a non-empty list")
