@@ -52,6 +52,16 @@ These development handoffs are reference-only. They do not silently become relea
 
 See [`docs/PROGRAM_CLOSEOUT.md`](docs/PROGRAM_CLOSEOUT.md) for the bounded M0-M9 closeout and deferred release/maturity gates.
 
+## Integrated Reference Proof
+
+The final internal reference thread demonstrates bounded interoperability across the portfolio without transferring authority or truth between repositories.
+
+- [Governed Vulnerability Remediation integrated reference](docs/GOVERNED_VULNERABILITY_REMEDIATION_REFERENCE.md)
+- [NIST AI RMF 1.0 bounded portfolio mapping](docs/NIST_AI_RMF_1_0_MAPPING.md)
+- [Final internal update scope and evidence boundary](docs/FINAL_INTERNAL_UPDATE_SCOPE.md)
+
+The thread is synthetic and reference-only. It does not prove real remediation, independent retesting, operational assurance, compliance, certification, or permission to act.
+
 ## Shared Governance Lifecycle
 
 ```text
