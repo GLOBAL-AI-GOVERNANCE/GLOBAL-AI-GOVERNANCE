@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "reference_id": "global-ai-governance.final-internal-reference.synthetic.001",
+  "reference_only": true,
+  "synthetic_only": true,
+  "authority_effect": "NONE",
+  "authority_transfer": false,
+  "event_occurrence_assumed": false,
+  "current_validity_assumed": false,
+  "human_decision_required": true,
+  "failure_behavior": "FAIL_CLOSED",
+  "artifact_resolution": "PATH_PLUS_GATE_EVIDENCE_DIGEST",
+  "foundation": {
+    "repository": "ai-governance-os",
+    "artifact_path": "README.md",
+    "role": "FOUNDATION"
+  },
+  "stages": [
+    {
+      "stage": "GOVERN_MEASURE",
+      "repository": "global-ai-governance-toolkit",
+      "artifact_path": "automation/fixtures/governance-decision-handoff.example.json"
+    },
+    {
+      "stage": "AUTHORIZE",
+      "repository": "agentic-ai-governance",
+      "artifact_path": "examples/passports/signed-unrevoked.json",
+      "artifact_semantics": "SIGNED_SYNTHETIC_REFERENCE_ONLY",
+      "current_authority_assumed": false
+    },
+    {
+      "stage": "DESIGN_ENFORCEMENT",
+      "repository": "governed-systems-administration",
+      "artifact_path": "tests/golden/administration-evidence-record.json",
+      "execution_assumed": false
+    },
+    {
+      "stage": "OBSERVE_VERIFY_CLOSE",
+      "repository": "verified-vulnerability-governance",
+      "artifact_path": "examples/governed-remediation/reference.json",
+      "real_remediation_assumed": false
+    },
+    {
+      "stage": "CONTAIN_RECOVER",
+      "repository": "ai-cyber-resilience-framework",
+      "artifact_path": "examples/secure-inference-cell/reference-bundle.json",
+      "operational_assurance_assumed": false
+    },
+    {
+      "stage": "DECIDE_LEARN",
+      "repository": "peace-os-crisis-room",
+      "artifact_path": "examples/portfolio/operating-disposition-reference.json",
+      "simulation_only": true
+    }
+  ],
+  "limitations": [
+    "References do not transfer authority or truth between repositories.",
+    "Time validity of the Agentic sample must be evaluated by Agentic semantics at use time.",
+    "GSA remains pre-alpha, preimplementation, and non-executing.",
+    "The thread is synthetic and does not prove real remediation or operational assurance.",
+    "Published release identities remain controlling."
+  ]
+}
