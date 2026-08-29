@@ -7,9 +7,12 @@
 Global AI Governance turns AI uncertainty into evidence, controls, human decisions, and repeatable governance outcomes.
 
 ## Start Here
-### Govern One AI System
 
-The public flagship is the [Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit), a working public reference toolkit released as [v2.1.0 — Decision-Ready Governance](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/tag/v2.1.0).
+Choose one public path. Each route names the capability and maturity that exist today.
+
+### TRY
+
+Govern one authorized AI system with the [Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit), a working public reference toolkit released as [v2.1.0 — Decision-Ready Governance](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/tag/v2.1.0).
 
 ```text
 AI system inventory
@@ -21,13 +24,29 @@ AI system inventory
 → human review and decision
 ```
 
-1. [Open the five-minute path](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit#quick-start).
+1. [Open the released five-minute path](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.1.0#quick-start).
 2. Run the bundled sample in explicit report-only mode.
-3. [Review the generated reference Decision Pack](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/main/examples/decision-pack/valid-system).
+3. [Review the released reference Decision Pack](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.1.0/examples/decision-pack/valid-system).
 4. Replace the sample with one real, authorized AI system record.
 5. Keep approval, restrictions, risk acceptance, rollback, and shutdown decisions human-owned.
 
 The finished Decision Pack contains an executive summary, system profile, risk findings, evidence and ownership review, decision record, action plan, and integrity manifest.
+
+### INTEGRATE
+
+Use only the versioned public contracts that fit your boundary:
+
+- [Toolkit v2.1.0 automation](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.1.0/automation) for inventory checks, policy findings, reports, and a human Decision Pack.
+- [Agentic AI Governance v0.1.0-alpha.1 schemas](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance/tree/v0.1.0-alpha.1/schemas) for experimental authority, passport, evidence, validation, expiry, and revocation artifacts.
+- [Portfolio repository contracts](docs/REPOSITORY_CONTRACTS.md) for reference-only handoffs that do not transfer approval, truth, certification, or operational authority.
+
+Published tags remain controlling. Merged or local development work is not a released interface until its own release gate passes.
+
+### PARTNER
+
+Start with one bounded, evidence-producing pilot: one authorized inventory, one accountable human owner, one Decision Pack, and one documented decision boundary. Use the flagship's [public contribution process](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/blob/v2.1.0/CONTRIBUTING.md) to propose a reproducible use case, fixture, documentation improvement, or integration adapter.
+
+Partnership does not imply endorsement, certification, production authorization, compliance, or acceptance of submitted claims. Do not include confidential, personal, regulated, or otherwise protected information in public contributions.
 
 ## Portfolio
 

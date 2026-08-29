@@ -16,7 +16,9 @@ SCHEMA = ROOT / "schemas" / "portfolio.schema.json"
 REQUIRED_HEADINGS = (
     "# Global AI Governance",
     "## Start Here",
-    "### Govern One AI System",
+    "### TRY",
+    "### INTEGRATE",
+    "### PARTNER",
     "## Portfolio",
     "## Development Baseline",
     "## Shared Governance Lifecycle",
@@ -43,6 +45,13 @@ FORBIDDEN_TEXT = (
     "all repositories are production-ready",
     "fully compliant",
     "certified ai governance",
+)
+
+REQUIRED_JOURNEY_LINKS = (
+    "global-ai-governance-toolkit/tree/v2.1.0#quick-start",
+    "global-ai-governance-toolkit/tree/v2.1.0/automation",
+    "agentic-ai-governance/tree/v0.1.0-alpha.1/schemas",
+    "global-ai-governance-toolkit/blob/v2.1.0/CONTRIBUTING.md",
 )
 
 REQUIRED_REPOSITORY_KEYS = {
@@ -178,6 +187,21 @@ def main() -> None:
     for forbidden in FORBIDDEN_TEXT:
         if forbidden.lower() in lowered:
             fail(f"forbidden or stale claim found: {forbidden}")
+
+    journey = text.split("## Start Here", 1)[1].split("## Portfolio", 1)[0]
+    journey_headings = re.findall(r"^### ([A-Z]+)$", journey, re.MULTILINE)
+    if journey_headings != ["TRY", "INTEGRATE", "PARTNER"]:
+        fail("first-time journey must contain exactly TRY, INTEGRATE, PARTNER in order")
+    for link in REQUIRED_JOURNEY_LINKS:
+        if link not in journey:
+            fail(f"first-time journey route is missing: {link}")
+    for boundary in (
+        "Published tags remain controlling",
+        "does not imply endorsement",
+        "Do not include confidential",
+    ):
+        if boundary not in journey:
+            fail(f"first-time journey boundary is missing: {boundary}")
 
     lifecycle_section = text.split("## Shared Governance Lifecycle", 1)[1].split(
         "## Operating Principles", 1
