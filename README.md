@@ -10,7 +10,7 @@ Global AI Governance turns AI uncertainty into evidence, controls, human decisio
 
 Choose one public path. Each route names the capability and maturity that exist today.
 
-### TRY
+### USE
 
 Govern one authorized AI system with the [Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit), a working public reference toolkit released as [v2.1.0 — Decision-Ready Governance](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/tag/v2.1.0).
 

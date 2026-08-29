@@ -16,7 +16,7 @@ SCHEMA = ROOT / "schemas" / "portfolio.schema.json"
 REQUIRED_HEADINGS = (
     "# Global AI Governance",
     "## Start Here",
-    "### TRY",
+    "### USE",
     "### INTEGRATE",
     "### PARTNER",
     "## Portfolio",
@@ -190,8 +190,8 @@ def main() -> None:
 
     journey = text.split("## Start Here", 1)[1].split("## Portfolio", 1)[0]
     journey_headings = re.findall(r"^### ([A-Z]+)$", journey, re.MULTILINE)
-    if journey_headings != ["TRY", "INTEGRATE", "PARTNER"]:
-        fail("first-time journey must contain exactly TRY, INTEGRATE, PARTNER in order")
+    if journey_headings != ["USE", "INTEGRATE", "PARTNER"]:
+        fail("first-time journey must contain exactly USE, INTEGRATE, PARTNER in order")
     for link in REQUIRED_JOURNEY_LINKS:
         if link not in journey:
             fail(f"first-time journey route is missing: {link}")
