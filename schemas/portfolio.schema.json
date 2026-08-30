@@ -116,10 +116,52 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
+        "agentic-ai-governance",
+        "verified-vulnerability-governance",
         "ai-cyber-resilience-framework",
         "peace-os-crisis-room"
       ],
       "properties": {
+        "agentic-ai-governance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "candidate",
+            "status",
+            "published_release"
+          ],
+          "properties": {
+            "candidate": {
+              "const": "OPA Enforcement Bridge reference implementation"
+            },
+            "status": {
+              "const": "MERGED_UNRELEASED"
+            },
+            "published_release": {
+              "const": "v0.1.0-alpha.2"
+            }
+          }
+        },
+        "verified-vulnerability-governance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "candidate",
+            "status",
+            "published_release"
+          ],
+          "properties": {
+            "candidate": {
+              "const": "Synthetic crypto-migration closure reference"
+            },
+            "status": {
+              "const": "MERGED_UNRELEASED"
+            },
+            "published_release": {
+              "const": "v0.1.3"
+            }
+          }
+        },
         "ai-cyber-resilience-framework": {
           "type": "object",
           "additionalProperties": false,

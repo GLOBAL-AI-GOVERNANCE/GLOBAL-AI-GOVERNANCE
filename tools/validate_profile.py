@@ -114,8 +114,21 @@ def validate_manifest(manifest: dict) -> list[dict]:
     if candidates.get("peace-os-crisis-room") != expected_peace_candidate:
         fail("Peace OS development candidate record is incorrect")
 
-    if "agentic-ai-governance" in candidates:
-        fail("Agentic development candidate must be absent after the Alpha.2 release")
+    expected_agentic_candidate = {
+        "candidate": "OPA Enforcement Bridge reference implementation",
+        "status": "MERGED_UNRELEASED",
+        "published_release": "v0.1.0-alpha.2",
+    }
+    if candidates.get("agentic-ai-governance") != expected_agentic_candidate:
+        fail("Agentic current-main development candidate record is incorrect")
+
+    expected_vvg_candidate = {
+        "candidate": "Synthetic crypto-migration closure reference",
+        "status": "MERGED_UNRELEASED",
+        "published_release": "v0.1.3",
+    }
+    if candidates.get("verified-vulnerability-governance") != expected_vvg_candidate:
+        fail("VVG current-main development candidate record is incorrect")
 
     lifecycle = manifest.get("shared_lifecycle")
     if not isinstance(lifecycle, list) or not lifecycle:

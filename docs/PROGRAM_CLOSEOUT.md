@@ -28,12 +28,16 @@ Merged development work does not silently promote those release identities.
 
 ## Merged, unreleased development
 
-- AI Cyber Resilience Framework: `v0.2.0 Continuous Assurance Thread`;
+- Agentic AI Governance: bounded OPA Enforcement Bridge reference implementation (`DEFINED / VERIFIED` on current `main`), with external enforcement and release promotion not established;
+- Verified Vulnerability Governance: bounded synthetic crypto-migration closure reference using the existing governed-remediation contract, with real migration and independent retesting not established;
+- AI Cyber Resilience Framework: `v0.2.0 Continuous Assurance Thread` plus the optional synthetic crypto-agility reference;
 - Peace OS: `Post-RC2 Portfolio Operating Disposition Reference`.
 
 ## Deferred release and maturity gates
 
 The ACRF `v0.2.0` public tag/release remains a separate reviewed release gate.
+
+The Agentic OPA bridge remains unreleased. Closing that active increment, authorizing the next lifecycle demonstration, and selecting any later release identity remain separate steward decisions. A second independently maintained verifier remains an external gate.
 
 Peace OS stable release remains held on the evidence classes documented in its own `VERIFICATION.md` and `PUBLIC_RELEASE_GATE.md`, including human accessibility, real-device, cross-browser, print/PDF, subject-matter, Godot, Windows, and other stable-release evidence.
 
