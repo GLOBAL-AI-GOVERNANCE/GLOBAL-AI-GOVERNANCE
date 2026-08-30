@@ -146,6 +146,11 @@
       "candidate": "Post-RC2 Portfolio Operating Disposition Reference",
       "status": "MERGED_UNRELEASED",
       "published_release": "v0.3.0-rc2"
+    },
+    "agentic-ai-governance": {
+      "candidate": "Stateful Revocation continuity",
+      "status": "MERGED_UNRELEASED",
+      "published_release": "v0.1.0-alpha.1"
     }
   }
 }
