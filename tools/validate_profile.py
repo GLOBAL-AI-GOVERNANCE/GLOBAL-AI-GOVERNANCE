@@ -114,6 +114,14 @@ def validate_manifest(manifest: dict) -> list[dict]:
     if candidates.get("peace-os-crisis-room") != expected_peace_candidate:
         fail("Peace OS development candidate record is incorrect")
 
+    expected_agentic_candidate = {
+        "candidate": "Stateful Revocation continuity",
+        "status": "MERGED_UNRELEASED",
+        "published_release": "v0.1.0-alpha.1",
+    }
+    if candidates.get("agentic-ai-governance") != expected_agentic_candidate:
+        fail("Agentic Stateful Revocation development candidate record is incorrect")
+
     lifecycle = manifest.get("shared_lifecycle")
     if not isinstance(lifecycle, list) or not lifecycle:
         fail("shared_lifecycle must be a non-empty list")
@@ -187,6 +195,13 @@ def main() -> None:
     for boundary in REQUIRED_BOUNDARIES:
         if boundary.lower() not in lowered:
             fail(f"evidence boundary is missing: {boundary}")
+
+    for phrase in (
+        "Stateful Revocation continuity is implemented and verified on current `main` and remains unreleased.",
+        "The published release remains `v0.1.0-alpha.1`.",
+    ):
+        if phrase not in text:
+            fail(f"Agentic development baseline truth is missing: {phrase}")
 
     for forbidden in FORBIDDEN_TEXT:
         if forbidden.lower() in lowered:

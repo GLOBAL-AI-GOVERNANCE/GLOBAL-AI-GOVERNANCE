@@ -64,6 +64,7 @@ Partnership does not imply endorsement, certification, production authorization,
 
 Published release identities remain controlling. Merged development work is tracked separately so development state does not silently become a release claim.
 
+- **Agentic AI Governance:** Stateful Revocation continuity is implemented and verified on current `main` and remains unreleased. The published release remains `v0.1.0-alpha.1`.
 - **AI Cyber Resilience Framework:** `v0.2.0 Continuous Assurance Thread` is merged and unreleased. The published release remains `v0.1.1`.
 - **Peace OS: Crisis Room:** `Post-RC2 Portfolio Operating Disposition Reference` is merged and unreleased. The published browser review candidate remains `v0.3.0-rc2`, and its documented stable-release holds remain open.
 
