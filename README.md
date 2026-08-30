@@ -12,25 +12,23 @@ Choose one public path. Each route names the capability and maturity that exist 
 
 ### USE
 
-Govern one authorized AI system with the [Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit), a working public reference toolkit released as [v2.1.0 — Decision-Ready Governance](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/tag/v2.1.0).
+Open the [live local-first governance browser](https://global-ai-governance.github.io/global-ai-governance-toolkit/). The hosted browser reflects current `main` and remains distinct from the tagged [v2.1.0 — Decision-Ready Governance](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/tag/v2.1.0) release.
 
 ```text
 AI system inventory
-→ schema validation
+→ normalization and schema validation
 → preliminary risk tier
 → policy-driven findings
-→ executive governance report
+→ machine-readable governance outputs
 → AI Governance Decision Pack
 → human review and decision
 ```
 
-1. [Open the released five-minute path](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.1.0#quick-start).
-2. Run the bundled sample in explicit report-only mode.
-3. [Review the released reference Decision Pack](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.1.0/examples/decision-pack/valid-system).
-4. Replace the sample with one real, authorized AI system record.
-5. Keep approval, restrictions, risk acceptance, rollback, and shutdown decisions human-owned.
+1. Open the live browser and select **Run sample**.
+2. Review normalization, findings, machine outputs, and the Decision Pack.
+3. Load one authorized CSV when appropriate; approval, restrictions, risk acceptance, rollback, and shutdown remain human-owned.
 
-The finished Decision Pack contains an executive summary, system profile, risk findings, evidence and ownership review, decision record, action plan, and integrity manifest.
+For a reproducible tagged reference path, use the released [v2.1.0 five-minute workflow](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.1.0#quick-start).
 
 ### INTEGRATE
 
