@@ -38,6 +38,9 @@ REQUIRED_BOUNDARIES = (
 )
 
 FORBIDDEN_TEXT = (
+    "[v2.2.0 five-minute workflow]",
+    "[Toolkit v2.2.0 automation]",
+    "[v2.3.0 - Assurance & Accountability Profiles](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/tag/v2.2.0)",
     "global-ai-governance-solutions",
     "peace-governance-crisis-room",
     "Peace Governance Crisis Room",
@@ -48,6 +51,7 @@ FORBIDDEN_TEXT = (
 )
 
 REQUIRED_JOURNEY_LINKS = (
+    "global-ai-governance-toolkit/releases/tag/v2.3.0",
     "global-ai-governance-toolkit/tree/v2.3.0#quick-start",
     "global-ai-governance-toolkit/tree/v2.3.0/automation",
     "agentic-ai-governance/tree/v0.1.0-alpha.1/schemas",
