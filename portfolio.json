@@ -137,6 +137,16 @@
   ],
   "integration_contract_version": "1.0.0",
   "development_candidates": {
+    "agentic-ai-governance": {
+      "candidate": "OPA Enforcement Bridge reference implementation",
+      "status": "MERGED_UNRELEASED",
+      "published_release": "v0.1.0-alpha.2"
+    },
+    "verified-vulnerability-governance": {
+      "candidate": "Synthetic crypto-migration closure reference",
+      "status": "MERGED_UNRELEASED",
+      "published_release": "v0.1.3"
+    },
     "ai-cyber-resilience-framework": {
       "candidate": "v0.2.0 Continuous Assurance Thread",
       "status": "MERGED_UNRELEASED",
