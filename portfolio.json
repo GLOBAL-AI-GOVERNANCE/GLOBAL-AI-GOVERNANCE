@@ -40,8 +40,8 @@
       "lifecycle_roles": [
         "AUTHORIZE"
       ],
-      "version": "v0.1.0-alpha.1",
-      "maturity": "v0.1.0-alpha.1 · experimental public alpha",
+      "version": "v0.1.0-alpha.2",
+      "maturity": "v0.1.0-alpha.2 · experimental public alpha",
       "finished_outcome": "Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts",
       "authority_boundary": "Passport and validation artifacts express bounded machine-readable authority semantics; production authorization remains human-governed and environment-specific.",
       "upstream": [
@@ -146,11 +146,6 @@
       "candidate": "Post-RC2 Portfolio Operating Disposition Reference",
       "status": "MERGED_UNRELEASED",
       "published_release": "v0.3.0-rc2"
-    },
-    "agentic-ai-governance": {
-      "candidate": "Stateful Revocation continuity",
-      "status": "MERGED_UNRELEASED",
-      "published_release": "v0.1.0-alpha.1"
     }
   }
 }

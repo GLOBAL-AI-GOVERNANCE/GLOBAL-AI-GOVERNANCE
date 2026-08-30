@@ -54,7 +54,7 @@ REQUIRED_JOURNEY_LINKS = (
     "global-ai-governance-toolkit/releases/tag/v2.3.0",
     "global-ai-governance-toolkit/tree/v2.3.0#quick-start",
     "global-ai-governance-toolkit/tree/v2.3.0/automation",
-    "agentic-ai-governance/tree/v0.1.0-alpha.1/schemas",
+    "agentic-ai-governance/tree/v0.1.0-alpha.2/schemas",
     "global-ai-governance-toolkit/blob/v2.3.0/CONTRIBUTING.md",
 )
 
@@ -114,13 +114,8 @@ def validate_manifest(manifest: dict) -> list[dict]:
     if candidates.get("peace-os-crisis-room") != expected_peace_candidate:
         fail("Peace OS development candidate record is incorrect")
 
-    expected_agentic_candidate = {
-        "candidate": "Stateful Revocation continuity",
-        "status": "MERGED_UNRELEASED",
-        "published_release": "v0.1.0-alpha.1",
-    }
-    if candidates.get("agentic-ai-governance") != expected_agentic_candidate:
-        fail("Agentic Stateful Revocation development candidate record is incorrect")
+    if "agentic-ai-governance" in candidates:
+        fail("Agentic development candidate must be absent after the Alpha.2 release")
 
     lifecycle = manifest.get("shared_lifecycle")
     if not isinstance(lifecycle, list) or not lifecycle:
@@ -196,12 +191,10 @@ def main() -> None:
         if boundary.lower() not in lowered:
             fail(f"evidence boundary is missing: {boundary}")
 
-    for phrase in (
-        "Stateful Revocation continuity is implemented and verified on current `main` and remains unreleased.",
-        "The published release remains `v0.1.0-alpha.1`.",
-    ):
-        if phrase not in text:
-            fail(f"Agentic development baseline truth is missing: {phrase}")
+    if "Stateful Revocation continuity is implemented and verified on current `main` and remains unreleased." in text:
+        fail("stale Agentic merged-unreleased baseline remains after Alpha.2")
+    if "v0.1.0-alpha.2 · experimental public alpha" not in text:
+        fail("Agentic Alpha.2 public maturity is missing")
 
     for forbidden in FORBIDDEN_TEXT:
         if forbidden.lower() in lowered:

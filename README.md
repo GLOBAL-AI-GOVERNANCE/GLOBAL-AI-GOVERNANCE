@@ -37,7 +37,7 @@ v2.3.0 preserves the bounded sovereignty assessment and adds optional Auditable 
 Use only the versioned public contracts that fit your boundary:
 
 - [Toolkit v2.3.0 automation](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.3.0/automation) for inventory checks, policy findings, reports, and a human Decision Pack.
-- [Agentic AI Governance v0.1.0-alpha.1 schemas](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance/tree/v0.1.0-alpha.1/schemas) for experimental authority, passport, evidence, validation, expiry, and revocation artifacts.
+- [Agentic AI Governance v0.1.0-alpha.2 schemas](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance/tree/v0.1.0-alpha.2/schemas) for experimental authority, passport, evidence, validation, expiry, and revocation artifacts.
 - [Portfolio repository contracts](docs/REPOSITORY_CONTRACTS.md) for reference-only handoffs that do not transfer approval, truth, certification, or operational authority.
 
 Published tags remain controlling. Merged or local development work is not a released interface until its own release gate passes.
@@ -53,7 +53,7 @@ Partnership does not imply endorsement, certification, production authorization,
 | Lifecycle role | Repository | Current maturity | Finished outcome |
 |---|---|---|---|
 | **GOVERN + MEASURE** | [Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit) | **v2.3.0 · working public reference toolkit** | Reproducible Decision Pack, bounded sovereignty assessment, and optional assurance/accountability profiles |
-| **AUTHORIZE** | [Agentic AI Governance](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance) | **v0.1.0-alpha.1 · experimental public alpha** | Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts |
+| **AUTHORIZE** | [Agentic AI Governance](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance) | **v0.1.0-alpha.2 · experimental public alpha** | Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts |
 | **DESIGN ENFORCEMENT** | [Governed Systems Administration](https://github.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration) | **Pre-alpha · preimplementation · independent semantic review required · no execution capability** | Proposed human-governed administration request, review, validation, and evidence contracts |
 | **OBSERVE + VERIFY + CLOSE** | [Verified Vulnerability Governance](https://github.com/GLOBAL-AI-GOVERNANCE/verified-vulnerability-governance) | **v0.1.3 · verified-closure pre-release** | Evidence-linked vulnerability ownership, remediation, retesting, and closure |
 | **CONTAIN + RECOVER** | [AI Cyber Resilience Framework](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework) | **v0.1.1 · public defensive reference** | Boundary assessment, evidence cards, and architecture-hardening backlog |
@@ -64,7 +64,6 @@ Partnership does not imply endorsement, certification, production authorization,
 
 Published release identities remain controlling. Merged development work is tracked separately so development state does not silently become a release claim.
 
-- **Agentic AI Governance:** Stateful Revocation continuity is implemented and verified on current `main` and remains unreleased. The published release remains `v0.1.0-alpha.1`.
 - **AI Cyber Resilience Framework:** `v0.2.0 Continuous Assurance Thread` is merged and unreleased. The published release remains `v0.1.1`.
 - **Peace OS: Crisis Room:** `Post-RC2 Portfolio Operating Disposition Reference` is merged and unreleased. The published browser review candidate remains `v0.3.0-rc2`, and its documented stable-release holds remain open.
 
