@@ -12,7 +12,7 @@ Choose one public path. Each route names the capability and maturity that exist 
 
 ### USE
 
-Open the [live local-first governance browser](https://global-ai-governance.github.io/global-ai-governance-toolkit/). The hosted browser reflects current `main`. The controlling tagged reference is [v2.3.0 - Assurance & Accountability Profiles](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/tag/v2.2.0).
+Open the [live local-first governance browser](https://global-ai-governance.github.io/global-ai-governance-toolkit/). The hosted browser reflects current `main`. The controlling tagged reference is [v2.3.0 - Assurance & Accountability Profiles](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/tag/v2.3.0).
 
 ```text
 AI system inventory
@@ -28,7 +28,7 @@ AI system inventory
 2. Review normalization, findings, machine outputs, and the Decision Pack.
 3. Load one authorized CSV when appropriate; approval, restrictions, risk acceptance, rollback, and shutdown remain human-owned.
 
-For a reproducible tagged reference path, use the released [v2.2.0 five-minute workflow](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.3.0#quick-start).
+For a reproducible tagged reference path, use the released [v2.3.0 five-minute workflow](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.3.0#quick-start).
 
 v2.3.0 preserves the bounded sovereignty assessment and adds optional Auditable AI, Quantum-AI synthetic assurance, and CISO accountability profiles. These profiles produce non-authorizing evidence and decision support; they do not establish provider attestation, certification, compliance, production authorization, quantum advantage, or operating authority.
 
@@ -36,7 +36,7 @@ v2.3.0 preserves the bounded sovereignty assessment and adds optional Auditable 
 
 Use only the versioned public contracts that fit your boundary:
 
-- [Toolkit v2.2.0 automation](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.3.0/automation) for inventory checks, policy findings, reports, and a human Decision Pack.
+- [Toolkit v2.3.0 automation](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.3.0/automation) for inventory checks, policy findings, reports, and a human Decision Pack.
 - [Agentic AI Governance v0.1.0-alpha.1 schemas](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance/tree/v0.1.0-alpha.1/schemas) for experimental authority, passport, evidence, validation, expiry, and revocation artifacts.
 - [Portfolio repository contracts](docs/REPOSITORY_CONTRACTS.md) for reference-only handoffs that do not transfer approval, truth, certification, or operational authority.
 
