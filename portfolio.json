@@ -22,10 +22,10 @@
         "GOVERN",
         "MEASURE"
       ],
-      "version": "v2.2.0",
-      "maturity": "v2.2.0 · working public reference toolkit",
-      "finished_outcome": "Reproducible AI Governance Decision Pack and bounded sovereignty assessment",
-      "authority_boundary": "Decision Pack and sovereignty assessment support human review and decision; they do not approve, certify, attest provider behavior, or authorize deployment.",
+      "version": "v2.3.0",
+      "maturity": "v2.3.0 · working public reference toolkit",
+      "finished_outcome": "Reproducible Decision Pack, bounded sovereignty assessment, and optional assurance/accountability profiles",
+      "authority_boundary": "Decision Pack, sovereignty assessment, and optional profiles support human review and evidence; they do not approve, certify, attest provider behavior, establish quantum advantage, or authorize deployment.",
       "upstream": [
         "ai-governance-os"
       ],
