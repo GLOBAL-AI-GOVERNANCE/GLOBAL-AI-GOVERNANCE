@@ -116,3 +116,5 @@ This portfolio includes a working public reference toolkit, an experimental alph
 Repository checks establish bounded technical consistency for the included artifacts. They do not establish operational safety, factual truth of submitted declarations, legal compliance, certification, production authorization, institutional approval, or fitness for every environment.
 
 **Start narrow. Govern one system. Produce one decision-ready outcome. Capture proof. Repeat.**
+
+Repository content is provided under the Apache License 2.0 unless a linked repository states its own license.
