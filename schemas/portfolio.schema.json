@@ -132,7 +132,7 @@
           ],
           "properties": {
             "candidate": {
-              "const": "OPA Enforcement Bridge reference implementation"
+              "const": "OPA Enforcement Bridge and synthetic Agent Incident Readiness lifecycle reference implementations"
             },
             "status": {
               "const": "MERGED_UNRELEASED"

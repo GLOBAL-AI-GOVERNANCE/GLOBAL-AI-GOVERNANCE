@@ -115,7 +115,7 @@ def validate_manifest(manifest: dict) -> list[dict]:
         fail("Peace OS development candidate record is incorrect")
 
     expected_agentic_candidate = {
-        "candidate": "OPA Enforcement Bridge reference implementation",
+        "candidate": "OPA Enforcement Bridge and synthetic Agent Incident Readiness lifecycle reference implementations",
         "status": "MERGED_UNRELEASED",
         "published_release": "v0.1.0-alpha.2",
     }

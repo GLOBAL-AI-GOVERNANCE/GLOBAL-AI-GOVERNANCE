@@ -64,7 +64,7 @@ Partnership does not imply endorsement, certification, production authorization,
 
 Published release identities remain controlling. Merged development work is tracked separately so development state does not silently become a release claim.
 
-- **Agentic AI Governance:** the bounded OPA Enforcement Bridge reference implementation is merged and unreleased with current-main status `DEFINED / VERIFIED`. It makes policy decisions over established validation results and performs no external enforcement. The published release remains `v0.1.0-alpha.2`.
+- **Agentic AI Governance:** the bounded OPA Enforcement Bridge and synthetic Agent Incident Readiness lifecycle reference implementations are merged and unreleased with current-main status `DEFINED / VERIFIED`. The lifecycle demonstrates authorized, policy-denied, revoked, rollback-rejected, and distinct new-passport reauthorized states while preserving terminal revocation of the original passport. It performs no external enforcement. The published release remains `v0.1.0-alpha.2`.
 - **Verified Vulnerability Governance:** the bounded synthetic crypto-migration closure reference is merged and unreleased. It uses the existing governed-remediation contract and does not evidence real migration, deployment, or independent retesting. The published pre-release identity remains `v0.1.3`.
 - **AI Cyber Resilience Framework:** `v0.2.0 Continuous Assurance Thread`, including the optional synthetic crypto-agility reference, is merged and unreleased. The published release remains `v0.1.1`.
 - **Peace OS: Crisis Room:** `Post-RC2 Portfolio Operating Disposition Reference` is merged and unreleased. The published browser review candidate remains `v0.3.0-rc2`, and its documented stable-release holds remain open.
