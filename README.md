@@ -12,7 +12,7 @@ Choose one public path. Each route names the capability and maturity that exist 
 
 ### USE
 
-Open the [live local-first governance browser](https://global-ai-governance.github.io/global-ai-governance-toolkit/). The hosted browser reflects current `main` and remains distinct from the tagged [v2.1.0 — Decision-Ready Governance](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/tag/v2.1.0) release.
+Open the [live local-first governance browser](https://global-ai-governance.github.io/global-ai-governance-toolkit/). The hosted browser reflects current `main`. The controlling tagged reference is [v2.2.0 - AI Sovereignty Control Layer](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/tag/v2.2.0).
 
 ```text
 AI system inventory
@@ -28,13 +28,15 @@ AI system inventory
 2. Review normalization, findings, machine outputs, and the Decision Pack.
 3. Load one authorized CSV when appropriate; approval, restrictions, risk acceptance, rollback, and shutdown remain human-owned.
 
-For a reproducible tagged reference path, use the released [v2.1.0 five-minute workflow](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.1.0#quick-start).
+For a reproducible tagged reference path, use the released [v2.2.0 five-minute workflow](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.2.0#quick-start).
+
+v2.2.0 also includes a bounded AI sovereignty assessment path for declared data-retention and training controls, model/provider dependency, compute assurance, permissions, auditability, rollback, and owned context. It remains decision support, not provider attestation, certification, compliance determination, or authorization.
 
 ### INTEGRATE
 
 Use only the versioned public contracts that fit your boundary:
 
-- [Toolkit v2.1.0 automation](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.1.0/automation) for inventory checks, policy findings, reports, and a human Decision Pack.
+- [Toolkit v2.2.0 automation](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.2.0/automation) for inventory checks, policy findings, reports, and a human Decision Pack.
 - [Agentic AI Governance v0.1.0-alpha.1 schemas](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance/tree/v0.1.0-alpha.1/schemas) for experimental authority, passport, evidence, validation, expiry, and revocation artifacts.
 - [Portfolio repository contracts](docs/REPOSITORY_CONTRACTS.md) for reference-only handoffs that do not transfer approval, truth, certification, or operational authority.
 
@@ -42,7 +44,7 @@ Published tags remain controlling. Merged or local development work is not a rel
 
 ### PARTNER
 
-Start with one bounded, evidence-producing pilot: one authorized inventory, one accountable human owner, one Decision Pack, and one documented decision boundary. Use the flagship's [public contribution process](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/blob/v2.1.0/CONTRIBUTING.md) to propose a reproducible use case, fixture, documentation improvement, or integration adapter.
+Start with one bounded, evidence-producing pilot: one authorized inventory, one accountable human owner, one Decision Pack, and one documented decision boundary. Use the flagship's [public contribution process](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/blob/v2.2.0/CONTRIBUTING.md) to propose a reproducible use case, fixture, documentation improvement, or integration adapter.
 
 Partnership does not imply endorsement, certification, production authorization, compliance, or acceptance of submitted claims. Do not include confidential, personal, regulated, or otherwise protected information in public contributions.
 
@@ -50,7 +52,7 @@ Partnership does not imply endorsement, certification, production authorization,
 
 | Lifecycle role | Repository | Current maturity | Finished outcome |
 |---|---|---|---|
-| **GOVERN + MEASURE** | [Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit) | **v2.1.0 · working public reference toolkit** | Reproducible AI Governance Decision Pack |
+| **GOVERN + MEASURE** | [Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit) | **v2.2.0 · working public reference toolkit** | Reproducible AI Governance Decision Pack and bounded sovereignty assessment |
 | **AUTHORIZE** | [Agentic AI Governance](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance) | **v0.1.0-alpha.1 · experimental public alpha** | Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts |
 | **DESIGN ENFORCEMENT** | [Governed Systems Administration](https://github.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration) | **Pre-alpha · preimplementation · independent semantic review required · no execution capability** | Proposed human-governed administration request, review, validation, and evidence contracts |
 | **OBSERVE + VERIFY + CLOSE** | [Verified Vulnerability Governance](https://github.com/GLOBAL-AI-GOVERNANCE/verified-vulnerability-governance) | **v0.1.3 · verified-closure pre-release** | Evidence-linked vulnerability ownership, remediation, retesting, and closure |
@@ -102,6 +104,7 @@ The repositories are complementary. They do not all implement every lifecycle st
 - No evidence, no claim.
 - No verification, no closure.
 - No shutdown path, no frontier release.
+- No sovereignty, no strategic AI.
 - AI may assist. Humans retain authority.
 
 ## Evidence Boundary
