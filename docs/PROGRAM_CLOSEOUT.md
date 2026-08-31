@@ -4,6 +4,8 @@ Status: **COMPLETE for the current portfolio hardening and assurance-integration
 
 This closeout covers the bounded M0-M9 GitHub engineering program. It does not mean every repository is production-ready, stable, certified, or operationally validated.
 
+Historical bounded snapshot: this record closes the M0-M9 hardening and assurance-integration scope as of its original closeout. For current published release identities and merged-unreleased development, use the profile README.
+
 ## Completed scope
 
 - M0: exact public baseline and evidence capture;
@@ -17,7 +19,7 @@ This closeout covers the bounded M0-M9 GitHub engineering program. It does not m
 - M8: public profile convergence and explicit development/release truth;
 - M9: final repository, protection, CI, release-boundary, open-PR, and closeout snapshot.
 
-## Published release state
+## Published release state in the original M0-M9 closeout context
 
 Published releases remain controlling:
 
