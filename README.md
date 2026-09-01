@@ -50,6 +50,8 @@ Partnership does not imply endorsement, certification, production authorization,
 
 ## Portfolio
 
+[Understand repository maturity → Maturity Model](docs/MATURITY_MODEL.md)
+
 | Lifecycle role | Repository | Current maturity | Finished outcome |
 |---|---|---|---|
 | **GOVERN + MEASURE** | [Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit) | **v2.3.0 · working public reference toolkit** | Reproducible Decision Pack, bounded sovereignty assessment, and optional assurance/accountability profiles |
