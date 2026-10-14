@@ -83,10 +83,10 @@ def main() -> None:
 
     doc = DOC.read_text(encoding="utf-8")
     for phrase in (
-        "COMPLETE for the current portfolio hardening and assurance-integration scope",
-        "does not mean every repository is production-ready",
-        "separate reviewed release gate",
-        "not failures of this closeout",
+        "Published release identities remain controlling",
+        "Merged development work does not silently become a release claim",
+        "establish only the properties they directly test",
+        "does not establish legal compliance, certification, operational safety",
     ):
         if phrase not in doc:
             fail(f"PROGRAM_CLOSEOUT.md boundary missing: {phrase}")

@@ -1,54 +1,7 @@
-# Program Closeout
+# Maturity Boundaries
 
-Status: **COMPLETE for the current portfolio hardening and assurance-integration scope.**
+Published release identities remain controlling. Merged development work does not silently become a release claim.
 
-This closeout covers the bounded M0-M9 GitHub engineering program. It does not mean every repository is production-ready, stable, certified, or operationally validated.
+Repository checks, schemas, synthetic examples, and deterministic artifacts establish only the properties they directly test.
 
-Historical bounded snapshot: this record closes the M0-M9 hardening and assurance-integration scope as of its original closeout. For current published release identities and merged-unreleased development, use the profile README.
-
-## Completed scope
-
-- M0: exact public baseline and evidence capture;
-- M1: account-level GitHub community/governance foundation and profile control plane;
-- M2: Agentic dependency closure without changing Agent Trust Passport semantics;
-- M3: ACRF Continuous Assurance Thread development candidate;
-- M4: bounded repository-local interoperability;
-- M5: reciprocal portfolio handoff graph and portfolio V&V;
-- M6: protected default branches across the eight portfolio repositories plus `.github`;
-- M7: Peace OS reference-only operating-disposition handoff with deployed browser regression evidence;
-- M8: public profile convergence and explicit development/release truth;
-- M9: final repository, protection, CI, release-boundary, open-PR, and closeout snapshot.
-
-## Published release state in the original M0-M9 closeout context
-
-Published releases remain controlling:
-
-- AI Cyber Resilience Framework: `v0.1.1`;
-- Peace OS: Crisis Room: `v0.3.0-rc2` public browser review candidate.
-
-Merged development work does not silently promote those release identities.
-
-## Merged, unreleased development
-
-- Agentic AI Governance: bounded OPA Enforcement Bridge and synthetic Agent Incident Readiness lifecycle reference implementations (`DEFINED / VERIFIED` on current `main`), with external enforcement and release promotion not established;
-- Verified Vulnerability Governance: bounded synthetic crypto-migration closure reference using the existing governed-remediation contract, with real migration and independent retesting not established;
-- AI Cyber Resilience Framework: `v0.2.0 Continuous Assurance Thread` plus the optional synthetic crypto-agility reference;
-- Peace OS: `Post-RC2 Portfolio Operating Disposition Reference`.
-
-## Deferred release and maturity gates
-
-The ACRF `v0.2.0` public tag/release remains a separate reviewed release gate.
-
-The Agentic OPA bridge and Agent Incident Readiness lifecycle demonstration remain unreleased. The lifecycle preserves policy-denial/revocation separation, terminal revocation of the original passport, and distinct new-passport reauthorization. A second independently maintained verifier remains an external gate, and selecting any later release identity remains a separate steward decision.
-
-Peace OS stable release remains held on the evidence classes documented in its own `VERIFICATION.md` and `PUBLIC_RELEASE_GATE.md`, including human accessibility, real-device, cross-browser, print/PDF, subject-matter, Godot, Windows, and other stable-release evidence.
-
-Those holds are not failures of this closeout. They are deliberately preserved product-maturity boundaries.
-
-## Evidence boundary
-
-Repository checks, branch rules, CI, schemas, synthetic examples, browser journeys, and deterministic artifacts establish only the properties they directly test.
-
-This closeout does not establish legal compliance, certification, operational safety, production authorization, institutional approval, real-world factual truth, or fitness for every environment.
-
-Future work should reopen the smallest applicable gate when new evidence, a release decision, or a material requirement changes.
+This portfolio does not establish legal compliance, certification, operational safety, production authorization, institutional approval, real-world factual truth, or fitness for every environment.
