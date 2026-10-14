@@ -39,6 +39,7 @@ Use only the versioned public contracts that fit your boundary:
 - [Toolkit v2.3.0 automation](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.3.0/automation) for inventory checks, policy findings, reports, and a human Decision Pack.
 - [Agentic AI Governance v0.1.0-alpha.2 schemas](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance/tree/v0.1.0-alpha.2/schemas) for experimental authority, passport, evidence, validation, expiry, and revocation artifacts.
 - [Portfolio repository contracts](docs/REPOSITORY_CONTRACTS.md) for reference-only handoffs that do not transfer approval, truth, certification, or operational authority.
+- [Global AI Assurance Envelope](docs/GLOBAL_AI_ASSURANCE_ENVELOPE.md) for the portfolio-level reference-only interoperability object (authority_effect: NONE).
 
 Published tags remain controlling. Merged or local development work is not a released interface until its own release gate passes.
 
@@ -56,10 +57,10 @@ Partnership does not imply endorsement, certification, production authorization,
 |---|---|---|---|
 | **GOVERN + MEASURE** | [Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit) | **v2.3.0 · working public reference toolkit** | Reproducible Decision Pack, bounded sovereignty assessment, and optional assurance/accountability profiles |
 | **AUTHORIZE** | [Agentic AI Governance](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance) | **v0.1.0-alpha.2 · experimental public alpha** | Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts |
-| **DESIGN ENFORCEMENT** | [Governed Systems Administration](https://github.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration) | **Pre-alpha · preimplementation · independent semantic review required · no execution capability** | Proposed human-governed administration request, review, validation, and evidence contracts |
+| **DESIGN / MEDIATE ENFORCEMENT** | [Governed Systems Administration](https://github.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration) | **Pre-alpha · preimplementation · independent semantic review required · no execution capability** | Proposed human-governed administration request, review, validation, and evidence contracts |
 | **OBSERVE + VERIFY + CLOSE** | [Verified Vulnerability Governance](https://github.com/GLOBAL-AI-GOVERNANCE/verified-vulnerability-governance) | **v0.1.3 · verified-closure pre-release** | Evidence-linked vulnerability ownership, remediation, retesting, and closure |
 | **CONTAIN + RECOVER** | [AI Cyber Resilience Framework](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework) | **v0.1.1 · public defensive reference** | Boundary assessment, evidence cards, and architecture-hardening backlog |
-| **DECIDE + LEARN** | [Peace OS: Crisis Room](https://github.com/GLOBAL-AI-GOVERNANCE/peace-os-crisis-room) | **v0.3.0-rc2 · published public browser review candidate · stable, human-validation, Godot, and Windows gates open** | Fictional crisis-verification simulation and after-action review |
+| **DECIDE + LEARN** | [Peace OS](https://github.com/GLOBAL-AI-GOVERNANCE/peace-os) | **v0.3.0-rc2 · published public browser review candidate · stable, human-validation, Godot, and Windows gates open** | Fictional crisis-verification simulation and after-action review |
 | **FOUNDATION** | [AI Governance Foundations](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-os) | **v1.1 · foundational governance model and template set** | Inventory, ownership, risk, control, monitoring, and reporting foundations |
 
 ## Development Baseline
@@ -69,7 +70,7 @@ Published release identities remain controlling. Merged development work is trac
 - **Agentic AI Governance:** the bounded OPA Enforcement Bridge and synthetic Agent Incident Readiness lifecycle reference implementations are merged and unreleased with current-main status `DEFINED / VERIFIED`. The lifecycle demonstrates authorized, policy-denied, revoked, rollback-rejected, and distinct new-passport reauthorized states while preserving terminal revocation of the original passport. It performs no external enforcement. The published release remains `v0.1.0-alpha.2`.
 - **Verified Vulnerability Governance:** the bounded synthetic crypto-migration closure reference is merged and unreleased. It uses the existing governed-remediation contract and does not evidence real migration, deployment, or independent retesting. The published pre-release identity remains `v0.1.3`.
 - **AI Cyber Resilience Framework:** `v0.2.0 Continuous Assurance Thread`, including the optional synthetic crypto-agility reference, is merged and unreleased. The published release remains `v0.1.1`.
-- **Peace OS: Crisis Room:** `Post-RC2 Portfolio Operating Disposition Reference` is merged and unreleased. The published browser review candidate remains `v0.3.0-rc2`, and its documented stable-release holds remain open.
+- **Peace OS:** `Post-RC2 Portfolio Operating Disposition Reference` is merged and unreleased. The published browser review candidate remains `v0.3.0-rc2`, and its documented stable-release holds remain open.
 
 These development handoffs are reference-only. They do not silently become release claims, production authorization, certification, operational truth, or permission to act.
 
@@ -79,6 +80,9 @@ The portfolio demonstrates bounded interoperability across repositories without 
 
 - [Governed Vulnerability Remediation integrated reference](docs/GOVERNED_VULNERABILITY_REMEDIATION_REFERENCE.md)
 - [NIST AI RMF 1.0 bounded portfolio mapping](docs/NIST_AI_RMF_1_0_MAPPING.md)
+- [Global AI Assurance Envelope](docs/GLOBAL_AI_ASSURANCE_ENVELOPE.md)
+- [Problem-Solving Model](docs/PROBLEM_SOLVING_MODEL.md)
+- [NYC Validation Case Study (proposed)](docs/NYC_VALIDATION_CASE_STUDY.md)
 
 The references are synthetic and reference-only. They do not prove real remediation, independent retesting, operational assurance, compliance, certification, or permission to act.
 
@@ -87,7 +91,7 @@ The references are synthetic and reference-only. They do not prove real remediat
 ```text
 Govern
 → Authorize
-→ Enforce
+→ Design / Mediate Enforcement
 → Observe
 → Verify
 → Contain
@@ -96,7 +100,7 @@ Govern
 → Learn
 ```
 
-The repositories are complementary. They do not all implement every lifecycle stage, and they do not share one maturity level.
+The repositories are complementary. They do not all implement every lifecycle stage, and they do not share one maturity level. Enforcement design and mediation exist; execution capability does not.
 
 ## Operating Principles
 
@@ -106,6 +110,7 @@ The repositories are complementary. They do not all implement every lifecycle st
 - No verification, no closure.
 - No shutdown path, no frontier release.
 - No sovereignty, no strategic AI.
+- No problem without a path to closure.
 - AI may assist. Humans retain authority.
 
 ## Evidence Boundary
