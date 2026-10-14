@@ -1,6 +1,6 @@
 # Problem-Solving Model
 
-GLOBAL-AI-GOVERNANCE converts real AI problems into bounded, evidence-driven, testable solutions and keeps them open until verified closure or an explicitly documented external dependency.
+The portfolio converts AI governance problems into bounded, evidence-driven, testable solutions and keeps them open until verified closure or an explicitly documented external dependency.
 
 ## Loop
 
