@@ -10,6 +10,7 @@ These contracts define how repositories should compose without becoming one mono
 - No verification, no closure.
 - No shutdown path, no frontier release.
 - AI may assist. Humans retain authority.
+- No problem without a path to closure.
 
 ## Handoff contract
 
@@ -24,6 +25,23 @@ A repository-to-repository handoff should identify:
 - compatibility and supersession rules when semantics change.
 
 A receiving repository should consume a foreign semantic object through a documented adapter or reference. It should not silently redefine the object.
+
+## Minimal reference object (Assurance Envelope)
+
+```json
+{
+  "source_repository": "...",
+  "artifact_type": "...",
+  "artifact_id": "...",
+  "schema_version": "...",
+  "subject_id": "...",
+  "artifact_digest": "sha256:...",
+  "generated_at": "...",
+  "authority_effect": "NONE"
+}
+```
+
+Native semantic objects remain owned by their originating repositories. The envelope assembles references only. Authority effect remains NONE until an authorized institutional decision explicitly changes it.
 
 ## Independence contract
 
