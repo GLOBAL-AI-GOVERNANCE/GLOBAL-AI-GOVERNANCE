@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the final internal synthetic reference and bounded mapping."""
+"""Validate the final synthetic reference and bounded mapping."""
 
 from __future__ import annotations
 import json
@@ -96,10 +96,10 @@ def main() -> None:
 
     scope = SCOPE_DOC.read_text(encoding="utf-8")
     for phrase in (
-        "independent human review",
+        "Independent human review",
         "external contributors",
-        "does not create or promote a release",
         "Published release identities remain controlling",
+        "do not establish operational safety",
     ):
         if phrase.lower() not in scope.lower():
             fail(f"scope boundary text missing: {phrase}")
@@ -108,7 +108,6 @@ def main() -> None:
     for path in (
         "docs/GOVERNED_VULNERABILITY_REMEDIATION_REFERENCE.md",
         "docs/NIST_AI_RMF_1_0_MAPPING.md",
-        "docs/FINAL_INTERNAL_UPDATE_SCOPE.md",
     ):
         if path not in readme:
             fail(f"README link missing: {path}")
