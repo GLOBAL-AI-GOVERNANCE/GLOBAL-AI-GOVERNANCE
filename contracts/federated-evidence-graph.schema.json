@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "federated-evidence-graph.schema.json",
+  "title": "Federated Governance Evidence Graph",
+  "description": "Reference graph of independently owned artifacts. JSON Schema defines node and edge structure. The graph validator enforces binding, supersession, and contradiction rules. Edges do not copy payloads and do not grant authority. AUTHORIZES is not a relationship.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "graph_id", "reference_only", "authority_effect", "nodes", "edges"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "1.0.0"},
+    "graph_id": {"type": "string", "minLength": 1},
+    "reference_only": {"type": "boolean", "const": true},
+    "authority_effect": {"type": "string", "const": "NONE"},
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "node_id", "artifact_type", "source_repository", "source_commit", "artifact_id",
+          "schema_version", "subject_id", "configuration_digest", "artifact_digest",
+          "observed_or_generated_at", "currency", "authority_effect"
+        ],
+        "properties": {
+          "node_id": {"type": "string", "minLength": 1},
+          "artifact_type": {"type": "string", "minLength": 1},
+          "source_repository": {"type": "string", "minLength": 1},
+          "source_commit": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+          "artifact_id": {"type": "string", "minLength": 1},
+          "schema_version": {"type": "string", "minLength": 1},
+          "subject_id": {"type": "string", "minLength": 1},
+          "configuration_digest": {"type": "string", "pattern": "^sha256:[a-f0-9]{64}$"},
+          "artifact_digest": {"type": "string", "pattern": "^sha256:[a-f0-9]{64}$"},
+          "observed_or_generated_at": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"},
+          "currency": {"type": "string", "enum": ["CURRENT", "SUPERSEDED", "HISTORICAL"]},
+          "authority_effect": {"type": "string", "const": "NONE"}
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "edge_id", "from_node", "to_node", "relationship", "subject_binding",
+          "configuration_binding", "reconciliation_ref", "limitations"
+        ],
+        "properties": {
+          "edge_id": {"type": "string", "minLength": 1},
+          "from_node": {"type": "string", "minLength": 1},
+          "to_node": {"type": "string", "minLength": 1},
+          "relationship": {
+            "type": "string",
+            "enum": ["SUPPORTS", "QUALIFIES", "CONTRADICTS", "SUPERSEDES", "DEPENDS_ON", "REQUIRES", "INVALIDATES", "RECOVERS_FROM", "TRANSFERS_TO", "REQUALIFIES"]
+          },
+          "subject_binding": {"type": "string", "minLength": 1},
+          "configuration_binding": {"type": "string", "pattern": "^sha256:[a-f0-9]{64}$"},
+          "reconciliation_ref": {"type": "string"},
+          "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    }
+  }
+}

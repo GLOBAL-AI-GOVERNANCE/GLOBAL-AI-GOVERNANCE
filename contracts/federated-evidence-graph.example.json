@@ -1,0 +1,214 @@
+{
+  "schema_version": "1.0.0",
+  "graph_id": "federated-evidence-graph-synthetic-001",
+  "reference_only": true,
+  "authority_effect": "NONE",
+  "nodes": [
+    {
+      "node_id": "node-evidence",
+      "artifact_type": "evidence-object",
+      "source_repository": "ai-governance-os",
+      "source_commit": "e6e66af80d13eb014fd8ad96d97fb24873b856a4",
+      "artifact_id": "sample-data/assurance-kernel/evidence-object.json",
+      "schema_version": "1.0.0",
+      "subject_id": "synthetic-subject-alpha",
+      "configuration_digest": "sha256:abababababababababababababababababababababababababababababababab",
+      "artifact_digest": "sha256:c0281692c168a53c14535ebe8b84e70c0fc0cd891287e3b859c9510cfb4bcabc",
+      "observed_or_generated_at": "2026-10-15T00:00:00Z",
+      "currency": "CURRENT",
+      "authority_effect": "NONE"
+    },
+    {
+      "node_id": "node-unknown",
+      "artifact_type": "unknown-object",
+      "source_repository": "ai-governance-os",
+      "source_commit": "e6e66af80d13eb014fd8ad96d97fb24873b856a4",
+      "artifact_id": "sample-data/assurance-kernel/unknown-object.json",
+      "schema_version": "1.0.0",
+      "subject_id": "synthetic-subject-alpha",
+      "configuration_digest": "sha256:abababababababababababababababababababababababababababababababab",
+      "artifact_digest": "sha256:4f5bc9d8831aa8f1bb92fabb1576202daf00fd968c16626aa704a5f50c819818",
+      "observed_or_generated_at": "2026-10-15T00:00:00Z",
+      "currency": "CURRENT",
+      "authority_effect": "NONE"
+    },
+    {
+      "node_id": "node-exit-success",
+      "artifact_type": "dependency-exit-evidence",
+      "source_repository": "ai-cyber-resilience-framework",
+      "source_commit": "e14e69d81a8078b42cd83df763c8087f6d6de478",
+      "artifact_id": "examples/dependency-exit/synthetic-exit-record.json",
+      "schema_version": "1.0.0",
+      "subject_id": "synthetic-subject-alpha",
+      "configuration_digest": "sha256:abababababababababababababababababababababababababababababababab",
+      "artifact_digest": "sha256:65ea380c1ff5fb018527b75b4ba7e8aa53931d89c6fde8de9a1e8c30c42fb93d",
+      "observed_or_generated_at": "2026-10-15T00:00:00Z",
+      "currency": "CURRENT",
+      "authority_effect": "NONE"
+    },
+    {
+      "node_id": "node-exit-failed",
+      "artifact_type": "dependency-exit-evidence",
+      "source_repository": "ai-cyber-resilience-framework",
+      "source_commit": "e14e69d81a8078b42cd83df763c8087f6d6de478",
+      "artifact_id": "examples/dependency-exit/synthetic-exit-failed.json",
+      "schema_version": "1.0.0",
+      "subject_id": "synthetic-subject-alpha",
+      "configuration_digest": "sha256:abababababababababababababababababababababababababababababababab",
+      "artifact_digest": "sha256:eebf99ee7c4e77967e6a994bac4eddf408904dcdd9d7a2f4ceb04cb34eedc256",
+      "observed_or_generated_at": "2026-10-15T00:00:00Z",
+      "currency": "CURRENT",
+      "authority_effect": "NONE"
+    },
+    {
+      "node_id": "node-succession-failed",
+      "artifact_type": "succession-evidence-record",
+      "source_repository": "ai-governance-os",
+      "source_commit": "e6e66af80d13eb014fd8ad96d97fb24873b856a4",
+      "artifact_id": "sample-data/succession-evidence-failed.json",
+      "schema_version": "1.0.0",
+      "subject_id": "synthetic-capability-alpha",
+      "configuration_digest": "sha256:2b1900cb48cdd75c750cad9cd03620fd34162af8fe45dbc2161ebbbb91e2c89d",
+      "artifact_digest": "sha256:5d0d6a48de070e1934e519886d82d8ee2836d31f1d42ec61b6b1a7fc21384a3d",
+      "observed_or_generated_at": "2026-10-15T00:00:00Z",
+      "currency": "CURRENT",
+      "authority_effect": "NONE"
+    },
+    {
+      "node_id": "node-passport",
+      "artifact_type": "agent-trust-passport",
+      "source_repository": "agentic-ai-governance",
+      "source_commit": "2124aeaadf236303c584ac150a5ea61ca787d3f0",
+      "artifact_id": "examples/passports/unsigned-valid.json",
+      "schema_version": "1.0.0",
+      "subject_id": "agent.synthetic.quickstart",
+      "configuration_digest": "sha256:c63be29f6cf63061b8791b22f12596b13b5e010c95fb791f4e02e018461d973d",
+      "artifact_digest": "sha256:c63be29f6cf63061b8791b22f12596b13b5e010c95fb791f4e02e018461d973d",
+      "observed_or_generated_at": "2026-10-15T00:00:00Z",
+      "currency": "CURRENT",
+      "authority_effect": "NONE"
+    },
+    {
+      "node_id": "node-closure",
+      "artifact_type": "verified-closure",
+      "source_repository": "verified-vulnerability-governance",
+      "source_commit": "9eebbb3f316ef6feb42a8c270e4755420474a1be",
+      "artifact_id": "examples/governed-remediation/reference.json",
+      "schema_version": "1.0.0",
+      "subject_id": "governed-remediation.synthetic.001",
+      "configuration_digest": "sha256:97445c8dd25680c1dbbb15b59e397eb6226fffd5632a1b7bd0f532e249b753f0",
+      "artifact_digest": "sha256:97445c8dd25680c1dbbb15b59e397eb6226fffd5632a1b7bd0f532e249b753f0",
+      "observed_or_generated_at": "2026-10-15T00:00:00Z",
+      "currency": "CURRENT",
+      "authority_effect": "NONE"
+    },
+    {
+      "node_id": "node-peace",
+      "artifact_type": "operating-disposition-reference",
+      "source_repository": "peace-os",
+      "source_commit": "613e393c3b056d75847a267550e3b9b703ba0edf",
+      "artifact_id": "examples/portfolio/operating-disposition-reference.json",
+      "schema_version": "1.0.0",
+      "subject_id": "peace-operating-disposition-reference",
+      "configuration_digest": "sha256:dea4601e4532fbbca047e2f58029c28a918a63504e925740f0dea671fd607692",
+      "artifact_digest": "sha256:dea4601e4532fbbca047e2f58029c28a918a63504e925740f0dea671fd607692",
+      "observed_or_generated_at": "2026-10-15T00:00:00Z",
+      "currency": "CURRENT",
+      "authority_effect": "NONE"
+    },
+    {
+      "node_id": "node-mission",
+      "artifact_type": "mission-assurance-profile",
+      "source_repository": "global-ai-governance-toolkit",
+      "source_commit": "2cfc842136c2f5a18c7574e8411422744f8ee9aa",
+      "artifact_id": "automation/contracts/profiles/mission-assurance.schema.json",
+      "schema_version": "1.0.0",
+      "subject_id": "mission-assurance-v0.1",
+      "configuration_digest": "sha256:4427f08406bf0a25e2e26964603276ffdcea87529b76d1d961e0b8bba5f580ad",
+      "artifact_digest": "sha256:4427f08406bf0a25e2e26964603276ffdcea87529b76d1d961e0b8bba5f580ad",
+      "observed_or_generated_at": "2026-10-15T00:00:00Z",
+      "currency": "CURRENT",
+      "authority_effect": "NONE"
+    },
+    {
+      "node_id": "node-ml",
+      "artifact_type": "machine-learning-assurance-profile",
+      "source_repository": "global-ai-governance-toolkit",
+      "source_commit": "2cfc842136c2f5a18c7574e8411422744f8ee9aa",
+      "artifact_id": "automation/contracts/profiles/machine-learning-assurance.schema.json",
+      "schema_version": "1.0.0",
+      "subject_id": "machine-learning-assurance-v0.1",
+      "configuration_digest": "sha256:b7b41607d0ab1ced0d5c7c73d024f4acc999adc63d5ff092a3c02cdf636bd7cd",
+      "artifact_digest": "sha256:b7b41607d0ab1ced0d5c7c73d024f4acc999adc63d5ff092a3c02cdf636bd7cd",
+      "observed_or_generated_at": "2026-10-15T00:00:00Z",
+      "currency": "CURRENT",
+      "authority_effect": "NONE"
+    },
+    {
+      "node_id": "node-recovery",
+      "artifact_type": "synthetic-recovery-reference",
+      "source_repository": "ai-cyber-resilience-framework",
+      "source_commit": "e14e69d81a8078b42cd83df763c8087f6d6de478",
+      "artifact_id": "synthetic-recovery-current",
+      "schema_version": "1.0.0",
+      "subject_id": "synthetic-supersession-alpha",
+      "configuration_digest": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+      "artifact_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "observed_or_generated_at": "2026-10-15T00:00:00Z",
+      "currency": "CURRENT",
+      "authority_effect": "NONE"
+    },
+    {
+      "node_id": "node-recovery-prior",
+      "artifact_type": "synthetic-recovery-reference",
+      "source_repository": "ai-cyber-resilience-framework",
+      "source_commit": "e14e69d81a8078b42cd83df763c8087f6d6de478",
+      "artifact_id": "synthetic-recovery-prior",
+      "schema_version": "1.0.0",
+      "subject_id": "synthetic-supersession-alpha",
+      "configuration_digest": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+      "artifact_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "observed_or_generated_at": "2026-10-15T00:00:00Z",
+      "currency": "SUPERSEDED",
+      "authority_effect": "NONE"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "edge-unknown-evidence",
+      "from_node": "node-unknown",
+      "to_node": "node-evidence",
+      "relationship": "SUPPORTS",
+      "subject_binding": "synthetic-subject-alpha",
+      "configuration_binding": "sha256:abababababababababababababababababababababababababababababababab",
+      "reconciliation_ref": "",
+      "limitations": [
+        "reference only; no authority transfer"
+      ]
+    },
+    {
+      "edge_id": "edge-exit-evidence",
+      "from_node": "node-exit-success",
+      "to_node": "node-evidence",
+      "relationship": "DEPENDS_ON",
+      "subject_binding": "synthetic-subject-alpha",
+      "configuration_binding": "sha256:abababababababababababababababababababababababababababababababab",
+      "reconciliation_ref": "",
+      "limitations": [
+        "reference only; no authority transfer"
+      ]
+    },
+    {
+      "edge_id": "edge-recovery-supersedes",
+      "from_node": "node-recovery",
+      "to_node": "node-recovery-prior",
+      "relationship": "SUPERSEDES",
+      "subject_binding": "synthetic-supersession-alpha",
+      "configuration_binding": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+      "reconciliation_ref": "",
+      "limitations": [
+        "reference only; no authority transfer"
+      ]
+    }
+  ]
+}

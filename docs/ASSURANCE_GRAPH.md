@@ -46,3 +46,12 @@ A receiving repository should reject or hold an unsupported handoff rather than 
 - operational truth from a simulation.
 
 `contracts/handoffs.json` is the machine-readable portfolio graph used by `tools/validate_integration.py`.
+
+## Federated evidence graph
+
+`contracts/federated-evidence-graph.example.json` is a reference graph. Nodes point at native artifacts by repository, 40-character source commit, and digest. They do not copy those artifacts. JSON Schema defines node and edge structure. `tools/validate_evidence_graph.py` enforces binding, supersession, and contradiction rules. Schema validity alone does not establish a relationship.
+
+Edges may use only neutral relationships: SUPPORTS, QUALIFIES, CONTRADICTS, SUPERSEDES, DEPENDS_ON, REQUIRES, INVALIDATES, RECOVERS_FROM, TRANSFERS_TO, and REQUALIFIES. The graph has no AUTHORIZES relationship. `authority_effect` remains `NONE`.
+
+A contradiction between current artifacts requires an explicit reconciliation reference. A superseded artifact cannot remain current.
+
