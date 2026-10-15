@@ -1,0 +1,91 @@
+name: Cross-Estate Reproduction
+
+on:
+  pull_request:
+    paths:
+      - contracts/cross-estate-reproduction.lock.json
+      - contracts/federated-evidence-graph.example.json
+      - contracts/federated-evidence-graph.schema.json
+      - tools/validate_evidence_graph.py
+      - tools/validate_integration.py
+      - tools/verify_cross_estate_reproduction.py
+      - .github/workflows/cross-estate-reproduction.yml
+  push:
+    branches:
+      - main
+    paths:
+      - contracts/cross-estate-reproduction.lock.json
+      - contracts/federated-evidence-graph.example.json
+      - contracts/federated-evidence-graph.schema.json
+      - tools/validate_evidence_graph.py
+      - tools/validate_integration.py
+      - tools/verify_cross_estate_reproduction.py
+      - .github/workflows/cross-estate-reproduction.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cross-estate-reproduction:
+    name: cross-estate reproduction
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out control plane
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Check out locked repositories
+        run: |
+          set -euo pipefail
+          python3 -B - << 'PY'
+          import json
+          import os
+          import subprocess
+          from pathlib import Path
+
+          lock = json.loads(Path("contracts/cross-estate-reproduction.lock.json").read_text(encoding="utf-8"))
+          root = Path(os.environ["RUNNER_TEMP"]) / "estate"
+          root.mkdir(parents=True, exist_ok=True)
+          for item in lock["repositories"]:
+              name = item["repository"]
+              sha = item["commit_sha"]
+              dest = root / name
+              dest.mkdir()
+              subprocess.run(["git", "init", "-q", str(dest)], check=True)
+              subprocess.run(
+                  ["git", "-C", str(dest), "remote", "add", "origin", f"https://github.com/GLOBAL-AI-GOVERNANCE/{name}.git"],
+                  check=True,
+              )
+              subprocess.run(["git", "-C", str(dest), "fetch", "--depth", "1", "origin", sha], check=True)
+              subprocess.run(["git", "-C", str(dest), "checkout", "--detach", "FETCH_HEAD"], check=True)
+              head = subprocess.check_output(["git", "-C", str(dest), "rev-parse", "HEAD"], text=True).strip()
+              if head != sha:
+                  raise SystemExit(f"{name} checked out {head}, lock requires {sha}")
+          PY
+
+      - name: Validate federated evidence graph
+        run: python3 -B tools/validate_evidence_graph.py
+
+      - name: Validate portfolio integration
+        run: python3 -B tools/validate_integration.py
+
+      - name: Verify pinned cross-estate reproduction
+        run: python3 -B tools/verify_cross_estate_reproduction.py --workspace "${RUNNER_TEMP}/estate"
+
+      - name: Validate referenced succession evidence
+        working-directory: ${{ runner.temp }}/estate/ai-governance-os
+        run: |
+          python3 -B tools/validate_succession_evidence.py sample-data/succession-evidence-failed.json
+          python3 -B -m unittest discover -s tests -p 'test_succession_evidence.py' -v
+
+      - name: Validate referenced dependency-exit evidence
+        working-directory: ${{ runner.temp }}/estate/ai-cyber-resilience-framework
+        run: |
+          python3 -B tools/validate_dependency_exit.py examples/dependency-exit/synthetic-exit-failed.json
+          python3 -B tools/validate_dependency_exit.py examples/dependency-exit/synthetic-exit-record.json
+          python3 -B -m unittest discover -s tests -p 'test_dependency_exit.py' -v
+
+      - name: Run toolkit challenge tests
+        working-directory: ${{ runner.temp }}/estate/global-ai-governance-toolkit
+        run: python3 -B -m unittest automation.tests.test_mission_assurance_challenge -v

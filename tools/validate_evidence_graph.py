@@ -9,9 +9,11 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 GRAPH = ROOT / "contracts" / "federated-evidence-graph.example.json"
+SCHEMA = ROOT / "contracts" / "federated-evidence-graph.schema.json"
 PORTFOLIO = ROOT / "portfolio.json"
 DIGEST = re.compile(r"^sha256:[a-f0-9]{64}$")
 TIMESTAMP = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
+COMMIT = re.compile(r"^[a-f0-9]{40}$")
 RELATIONSHIPS = {
     "SUPPORTS",
     "QUALIFIES",
@@ -28,6 +30,7 @@ NODE_KEYS = {
     "node_id",
     "artifact_type",
     "source_repository",
+    "source_commit",
     "artifact_id",
     "schema_version",
     "subject_id",
@@ -80,6 +83,7 @@ def validate_graph(graph: dict[str, Any], repositories: set[str] | None = None) 
         _require(isinstance(node, dict) and set(node) == NODE_KEYS, "unsupported node fields")
         _require(node["node_id"] not in by_id, f"duplicate node: {node['node_id']}")
         _require(node["source_repository"] in repositories, f"unsupported source repository: {node['source_repository']}")
+        _require(COMMIT.fullmatch(str(node.get("source_commit", ""))), "malformed source_commit")
         for key in ("artifact_type", "artifact_id", "schema_version", "subject_id"):
             _require(isinstance(node[key], str) and node[key].strip(), f"node {key} required")
         _require(DIGEST.fullmatch(node["configuration_digest"]), "node configuration digest malformed")
@@ -135,6 +139,10 @@ def prove_negatives(graph: dict[str, Any]) -> None:
         "duplicate edge": {**graph, "edges": [edge, *graph["edges"]]},
         "unsupported relationship": {**graph, "edges": [{**edge, "relationship": "AUTHORIZES"}]},
         "authority_effect": {**graph, "nodes": [{**node, "authority_effect": "AUTHORIZE"}, *graph["nodes"][1:]]},
+        "missing source_commit": {**graph, "nodes": [{key: value for key, value in node.items() if key != "source_commit"}, *graph["nodes"][1:]]},
+        "malformed source_commit": {**graph, "nodes": [{**node, "source_commit": "not-a-commit"}, *graph["nodes"][1:]]},
+        "malformed node": {**graph, "nodes": [{**node, "unexpected": "bad"}, *graph["nodes"][1:]]},
+        "malformed edge": {**graph, "edges": [{**edge, "unexpected": "bad"}]},
         "superseded artifact treated as current": {
             **graph,
             "nodes": [
@@ -166,8 +174,25 @@ def prove_negatives(graph: dict[str, Any]) -> None:
         raise ContractError(f"negative graph case was accepted: {label}")
 
 
+def assert_schema_alignment() -> None:
+    schema = json.loads(SCHEMA.read_text(encoding="utf-8"))
+    node = schema["properties"]["nodes"]["items"]
+    edge = schema["properties"]["edges"]["items"]
+    _require(schema.get("additionalProperties") is False, "graph schema must reject unknown fields")
+    _require(node.get("additionalProperties") is False, "node schema must reject unknown fields")
+    _require(edge.get("additionalProperties") is False, "edge schema must reject unknown fields")
+    _require(set(node["required"]) == NODE_KEYS, "node schema required fields diverged")
+    _require(set(edge["required"]) == EDGE_KEYS, "edge schema required fields diverged")
+    _require(set(edge["properties"]["relationship"]["enum"]) == RELATIONSHIPS, "relationship enum diverged")
+    _require("AUTHORIZES" not in edge["properties"]["relationship"]["enum"], "AUTHORIZES must remain impossible")
+    _require(node["properties"]["source_commit"]["pattern"] == r"^[a-f0-9]{40}$", "source_commit pattern diverged")
+    _require(node["properties"]["authority_effect"].get("const") == "NONE", "node authority const diverged")
+    _require(schema["properties"]["authority_effect"].get("const") == "NONE", "graph authority const diverged")
+
+
 def main() -> None:
     graph = json.loads(GRAPH.read_text(encoding="utf-8"))
+    assert_schema_alignment()
     result = validate_graph(graph)
     prove_negatives(graph)
     print(json.dumps(result, sort_keys=True))
