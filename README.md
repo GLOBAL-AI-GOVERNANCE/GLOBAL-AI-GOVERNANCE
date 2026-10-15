@@ -39,6 +39,7 @@ Use only the versioned public contracts that fit your boundary:
 - [Toolkit v2.3.0 automation](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.3.0/automation) for inventory checks, policy findings, reports, and a human Decision Pack.
 - [Agentic AI Governance v0.1.0-alpha.2 schemas](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance/tree/v0.1.0-alpha.2/schemas) for experimental authority, passport, evidence, validation, expiry, and revocation artifacts.
 - [Portfolio repository contracts](docs/REPOSITORY_CONTRACTS.md) for reference-only handoffs that do not transfer approval, truth, certification, or operational authority.
+- [Global AI Assurance Envelope](docs/GLOBAL_AI_ASSURANCE_ENVELOPE.md) for the portfolio-level reference-only interoperability object (authority_effect: NONE).
 
 Published tags remain controlling. Merged or local development work is not a released interface until its own release gate passes.
 
@@ -79,6 +80,9 @@ The portfolio demonstrates bounded interoperability across repositories without 
 
 - [Governed Vulnerability Remediation integrated reference](docs/GOVERNED_VULNERABILITY_REMEDIATION_REFERENCE.md)
 - [NIST AI RMF 1.0 bounded portfolio mapping](docs/NIST_AI_RMF_1_0_MAPPING.md)
+- [Global AI Assurance Envelope](docs/GLOBAL_AI_ASSURANCE_ENVELOPE.md)
+- [Problem-Solving Model](docs/PROBLEM_SOLVING_MODEL.md)
+- [Independent Validation Pattern](docs/INDEPENDENT_VALIDATION_PATTERN.md)
 
 The references are synthetic and reference-only. They do not prove real remediation, independent retesting, operational assurance, compliance, certification, or permission to act.
 
@@ -106,6 +110,7 @@ The repositories are complementary. They do not all implement every lifecycle st
 - No verification, no closure.
 - No shutdown path, no frontier release.
 - No sovereignty, no strategic AI.
+- No problem without a path to closure.
 - AI may assist. Humans retain authority.
 
 ## Evidence Boundary
