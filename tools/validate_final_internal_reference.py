@@ -18,7 +18,7 @@ EXPECTED_STAGES = [
     ("DESIGN_ENFORCEMENT", "governed-systems-administration", "tests/golden/administration-evidence-record.json"),
     ("OBSERVE_VERIFY_CLOSE", "verified-vulnerability-governance", "examples/governed-remediation/reference.json"),
     ("CONTAIN_RECOVER", "ai-cyber-resilience-framework", "examples/secure-inference-cell/reference-bundle.json"),
-    ("DECIDE_LEARN", "peace-os-crisis-room", "examples/portfolio/operating-disposition-reference.json"),
+    ("DECIDE_LEARN", "peace-os", "examples/portfolio/operating-disposition-reference.json"),
 ]
 
 def fail(message: str) -> None:

@@ -48,7 +48,7 @@
     },
     {
       "stage": "DECIDE_LEARN",
-      "repository": "peace-os-crisis-room",
+      "repository": "peace-os",
       "artifact_path": "examples/portfolio/operating-disposition-reference.json",
       "simulation_only": true
     }
