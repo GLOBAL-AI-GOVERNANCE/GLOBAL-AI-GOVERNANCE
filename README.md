@@ -57,10 +57,10 @@ Partnership does not imply endorsement, certification, production authorization,
 |---|---|---|---|
 | **GOVERN + MEASURE** | [Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit) | **v2.3.0 · working public reference toolkit** | Reproducible Decision Pack, bounded sovereignty assessment, and optional assurance/accountability profiles |
 | **AUTHORIZE** | [Agentic AI Governance](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance) | **v0.1.0-alpha.2 · experimental public alpha** | Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts |
-| **DESIGN / MEDIATE ENFORCEMENT** | [Governed Systems Administration](https://github.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration) | **Pre-alpha · preimplementation · independent semantic review required · no execution capability** | Proposed human-governed administration request, review, validation, and evidence contracts |
+| **DESIGN ENFORCEMENT** | [Governed Systems Administration](https://github.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration) | **Pre-alpha · preimplementation · independent semantic review required · no execution capability** | Proposed human-governed administration request, review, validation, and evidence contracts |
 | **OBSERVE + VERIFY + CLOSE** | [Verified Vulnerability Governance](https://github.com/GLOBAL-AI-GOVERNANCE/verified-vulnerability-governance) | **v0.1.3 · verified-closure pre-release** | Evidence-linked vulnerability ownership, remediation, retesting, and closure |
 | **CONTAIN + RECOVER** | [AI Cyber Resilience Framework](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework) | **v0.1.1 · public defensive reference** | Boundary assessment, evidence cards, and architecture-hardening backlog |
-| **DECIDE + LEARN** | [Peace OS](https://github.com/GLOBAL-AI-GOVERNANCE/peace-os) | **v0.3.0-rc2 · published public browser review candidate · stable, human-validation, Godot, and Windows gates open** | Fictional crisis-verification simulation and after-action review |
+| **DECIDE + LEARN** | [Peace OS: Crisis Room](https://github.com/GLOBAL-AI-GOVERNANCE/peace-os-crisis-room) | **v0.3.0-rc2 · published public browser review candidate · stable, human-validation, Godot, and Windows gates open** | Fictional crisis-verification simulation and after-action review |
 | **FOUNDATION** | [AI Governance Foundations](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-os) | **v1.1 · foundational governance model and template set** | Inventory, ownership, risk, control, monitoring, and reporting foundations |
 
 ## Development Baseline
@@ -70,7 +70,7 @@ Published release identities remain controlling. Merged development work is trac
 - **Agentic AI Governance:** the bounded OPA Enforcement Bridge and synthetic Agent Incident Readiness lifecycle reference implementations are merged and unreleased with current-main status `DEFINED / VERIFIED`. The lifecycle demonstrates authorized, policy-denied, revoked, rollback-rejected, and distinct new-passport reauthorized states while preserving terminal revocation of the original passport. It performs no external enforcement. The published release remains `v0.1.0-alpha.2`.
 - **Verified Vulnerability Governance:** the bounded synthetic crypto-migration closure reference is merged and unreleased. It uses the existing governed-remediation contract and does not evidence real migration, deployment, or independent retesting. The published pre-release identity remains `v0.1.3`.
 - **AI Cyber Resilience Framework:** `v0.2.0 Continuous Assurance Thread`, including the optional synthetic crypto-agility reference, is merged and unreleased. The published release remains `v0.1.1`.
-- **Peace OS:** `Post-RC2 Portfolio Operating Disposition Reference` is merged and unreleased. The published browser review candidate remains `v0.3.0-rc2`, and its documented stable-release holds remain open.
+- **Peace OS: Crisis Room:** `Post-RC2 Portfolio Operating Disposition Reference` is merged and unreleased. The published browser review candidate remains `v0.3.0-rc2`, and its documented stable-release holds remain open.
 
 These development handoffs are reference-only. They do not silently become release claims, production authorization, certification, operational truth, or permission to act.
 
@@ -82,7 +82,7 @@ The portfolio demonstrates bounded interoperability across repositories without 
 - [NIST AI RMF 1.0 bounded portfolio mapping](docs/NIST_AI_RMF_1_0_MAPPING.md)
 - [Global AI Assurance Envelope](docs/GLOBAL_AI_ASSURANCE_ENVELOPE.md)
 - [Problem-Solving Model](docs/PROBLEM_SOLVING_MODEL.md)
-- [NYC Validation Case Study (proposed)](docs/NYC_VALIDATION_CASE_STUDY.md)
+- [Independent Validation Pattern](docs/INDEPENDENT_VALIDATION_PATTERN.md)
 
 The references are synthetic and reference-only. They do not prove real remediation, independent retesting, operational assurance, compliance, certification, or permission to act.
 
@@ -91,7 +91,7 @@ The references are synthetic and reference-only. They do not prove real remediat
 ```text
 Govern
 → Authorize
-→ Design / Mediate Enforcement
+→ Enforce
 → Observe
 → Verify
 → Contain
@@ -100,7 +100,7 @@ Govern
 → Learn
 ```
 
-The repositories are complementary. They do not all implement every lifecycle stage, and they do not share one maturity level. Enforcement design and mediation exist; execution capability does not.
+The repositories are complementary. They do not all implement every lifecycle stage, and they do not share one maturity level.
 
 ## Operating Principles
 
