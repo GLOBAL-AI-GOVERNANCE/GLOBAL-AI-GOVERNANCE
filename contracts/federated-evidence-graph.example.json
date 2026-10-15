@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0.0",
+  "graph_id": "federated-evidence-graph-synthetic-001",
+  "reference_only": true,
+  "authority_effect": "NONE",
+  "nodes": [
+    {
+      "node_id": "node-binding",
+      "artifact_type": "assurance-context-binding",
+      "source_repository": "ai-governance-os",
+      "artifact_id": "sample-data/assurance-context-binding.json",
+      "schema_version": "1.0.0",
+      "subject_id": "synthetic-subject-alpha",
+      "configuration_digest": "sha256:abababababababababababababababababababababababababababababababab",
+      "artifact_digest": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "observed_or_generated_at": "2026-10-15T00:00:00Z",
+      "currency": "CURRENT",
+      "authority_effect": "NONE"
+    },
+    {
+      "node_id": "node-mission",
+      "artifact_type": "mission-assurance-profile",
+      "source_repository": "global-ai-governance-toolkit",
+      "artifact_id": "mission-assurance-v0.1",
+      "schema_version": "1.0.0",
+      "subject_id": "synthetic-subject-alpha",
+      "configuration_digest": "sha256:abababababababababababababababababababababababababababababababab",
+      "artifact_digest": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "observed_or_generated_at": "2026-10-15T00:00:00Z",
+      "currency": "CURRENT",
+      "authority_effect": "NONE"
+    },
+    {
+      "node_id": "node-passport",
+      "artifact_type": "agent-trust-passport",
+      "source_repository": "agentic-ai-governance",
+      "artifact_id": "synthetic-passport-ref",
+      "schema_version": "1.0.0",
+      "subject_id": "synthetic-subject-alpha",
+      "configuration_digest": "sha256:abababababababababababababababababababababababababababababababab",
+      "artifact_digest": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "observed_or_generated_at": "2026-10-15T00:00:00Z",
+      "currency": "CURRENT",
+      "authority_effect": "NONE"
+    },
+    {
+      "node_id": "node-closure",
+      "artifact_type": "verified-closure",
+      "source_repository": "verified-vulnerability-governance",
+      "artifact_id": "synthetic-closure-ref",
+      "schema_version": "1.0.0",
+      "subject_id": "synthetic-subject-alpha",
+      "configuration_digest": "sha256:abababababababababababababababababababababababababababababababab",
+      "artifact_digest": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observed_or_generated_at": "2026-10-15T00:00:00Z",
+      "currency": "CURRENT",
+      "authority_effect": "NONE"
+    },
+    {
+      "node_id": "node-recovery",
+      "artifact_type": "recovery-reference",
+      "source_repository": "ai-cyber-resilience-framework",
+      "artifact_id": "synthetic-recovery-current",
+      "schema_version": "1.0.0",
+      "subject_id": "synthetic-subject-alpha",
+      "configuration_digest": "sha256:abababababababababababababababababababababababababababababababab",
+      "artifact_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "observed_or_generated_at": "2026-10-15T00:00:00Z",
+      "currency": "CURRENT",
+      "authority_effect": "NONE"
+    },
+    {
+      "node_id": "node-recovery-prior",
+      "artifact_type": "recovery-reference",
+      "source_repository": "ai-cyber-resilience-framework",
+      "artifact_id": "synthetic-recovery-prior",
+      "schema_version": "1.0.0",
+      "subject_id": "synthetic-subject-alpha",
+      "configuration_digest": "sha256:abababababababababababababababababababababababababababababababab",
+      "artifact_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "observed_or_generated_at": "2026-10-15T00:00:00Z",
+      "currency": "SUPERSEDED",
+      "authority_effect": "NONE"
+    },
+    {
+      "node_id": "node-peace",
+      "artifact_type": "operating-disposition-reference",
+      "source_repository": "peace-os",
+      "artifact_id": "synthetic-disposition-ref",
+      "schema_version": "1.0.0",
+      "subject_id": "synthetic-subject-alpha",
+      "configuration_digest": "sha256:abababababababababababababababababababababababababababababababab",
+      "artifact_digest": "sha256:9999999999999999999999999999999999999999999999999999999999999999",
+      "observed_or_generated_at": "2026-10-15T00:00:00Z",
+      "currency": "CURRENT",
+      "authority_effect": "NONE"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "edge-mission-binding",
+      "from_node": "node-mission",
+      "to_node": "node-binding",
+      "relationship": "DEPENDS_ON",
+      "subject_binding": "synthetic-subject-alpha",
+      "configuration_binding": "sha256:abababababababababababababababababababababababababababababababab",
+      "reconciliation_ref": "",
+      "limitations": [
+        "reference only; no authority transfer"
+      ]
+    },
+    {
+      "edge_id": "edge-passport-mission",
+      "from_node": "node-passport",
+      "to_node": "node-mission",
+      "relationship": "QUALIFIES",
+      "subject_binding": "synthetic-subject-alpha",
+      "configuration_binding": "sha256:abababababababababababababababababababababababababababababababab",
+      "reconciliation_ref": "",
+      "limitations": [
+        "reference only; no authority transfer"
+      ]
+    },
+    {
+      "edge_id": "edge-closure-recovery",
+      "from_node": "node-closure",
+      "to_node": "node-recovery",
+      "relationship": "SUPPORTS",
+      "subject_binding": "synthetic-subject-alpha",
+      "configuration_binding": "sha256:abababababababababababababababababababababababababababababababab",
+      "reconciliation_ref": "",
+      "limitations": [
+        "reference only; no authority transfer"
+      ]
+    },
+    {
+      "edge_id": "edge-recovery-supersedes",
+      "from_node": "node-recovery",
+      "to_node": "node-recovery-prior",
+      "relationship": "SUPERSEDES",
+      "subject_binding": "synthetic-subject-alpha",
+      "configuration_binding": "sha256:abababababababababababababababababababababababababababababababab",
+      "reconciliation_ref": "",
+      "limitations": [
+        "reference only; no authority transfer"
+      ]
+    },
+    {
+      "edge_id": "edge-peace-recovery",
+      "from_node": "node-peace",
+      "to_node": "node-recovery",
+      "relationship": "REQUIRES",
+      "subject_binding": "synthetic-subject-alpha",
+      "configuration_binding": "sha256:abababababababababababababababababababababababababababababababab",
+      "reconciliation_ref": "",
+      "limitations": [
+        "reference only; no authority transfer"
+      ]
+    }
+  ]
+}

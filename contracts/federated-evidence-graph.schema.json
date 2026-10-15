@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "federated-evidence-graph.schema.json",
+  "title": "Federated Governance Evidence Graph",
+  "description": "Reference graph of independently owned artifacts. Edges do not copy payloads and do not grant authority. AUTHORIZES is not a relationship.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "graph_id", "reference_only", "authority_effect", "nodes", "edges"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "1.0.0"},
+    "graph_id": {"type": "string", "minLength": 1},
+    "reference_only": {"type": "boolean", "const": true},
+    "authority_effect": {"type": "string", "const": "NONE"},
+    "nodes": {"type": "array", "minItems": 1},
+    "edges": {"type": "array"}
+  }
+}

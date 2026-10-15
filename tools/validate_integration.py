@@ -183,6 +183,15 @@ def main() -> None:
         if not rejected:
             fail(f"negative binding test did not reject: {name}")
 
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("validate_evidence_graph", ROOT / "tools" / "validate_evidence_graph.py")
+    graph_module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(graph_module)
+    try:
+        graph_module.main()
+    except graph_module.ContractError as exc:
+        fail(str(exc))
+
     print(
         "Integration validation passed: portfolio graph, reciprocal handoffs, "
         "reference-only boundaries, failure behavior, ACRF candidate state, "
