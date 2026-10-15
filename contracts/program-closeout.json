@@ -7,13 +7,13 @@
   "evidence_boundary": "Repository and workflow checks prove only the bounded technical properties they test. They do not establish legal compliance, certification, operational safety, production authorization, institutional approval, or real-world truth.",
   "merged_unreleased_development": {
     "ai-cyber-resilience-framework": "v0.2.0 Continuous Assurance Thread",
-    "peace-os-crisis-room": "Post-RC2 Portfolio Operating Disposition Reference"
+    "peace-os": "Post-RC2 Portfolio Operating Disposition Reference"
   },
   "program": "GLOBAL AI GOVERNANCE portfolio hardening and assurance integration",
   "protected_default_branches": 9,
   "published_release_state": {
     "ai-cyber-resilience-framework": "v0.1.1",
-    "peace-os-crisis-room": "v0.3.0-rc2"
+    "peace-os": "v0.3.0-rc2"
   },
   "schema_version": "1.0.0",
   "scope": "M0-M9",
