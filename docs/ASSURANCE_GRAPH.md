@@ -55,3 +55,8 @@ Edges may use only neutral relationships: SUPPORTS, QUALIFIES, CONTRADICTS, SUPE
 
 A contradiction between current artifacts requires an explicit reconciliation reference. A superseded artifact cannot remain current.
 
+## Federated mission bindings
+
+A golden-thread subject binding relates a native subject and configuration to the synthetic mission thread without changing the native object.
+
+`SAME_SUBJECT` means the native and thread identifiers are identical. `COMPONENT_OF` is an explicit synthetic component relationship. `SUPPORTING_EVIDENCE_FOR` is an explicit synthetic evidence relationship. None of these grants authority or establishes external authenticity. Clean-environment reproduction verifies the declared binding; it does not verify a real-world relationship.
