@@ -11,6 +11,7 @@ PORTFOLIO = ROOT / "portfolio.json"
 HANDOFFS = ROOT / "contracts" / "handoffs.json"
 SCHEMA = ROOT / "contracts" / "portfolio-handoff.schema.json"
 EXAMPLE = ROOT / "contracts" / "portfolio-handoff.example.json"
+BINDING_REF = ROOT / "contracts" / "assurance-context-binding.reference.json"
 
 ALLOWED_FAILURE = {
     "FAIL_CLOSED",
@@ -28,6 +29,18 @@ REQUIRED_HANDOFF_KEYS = {
     "failure_behavior",
     "authority_boundary",
 }
+BINDING_REQUIRED = {
+    "schema_version",
+    "handoff_id",
+    "source_repository",
+    "target_repository",
+    "source_artifact_type",
+    "source_artifact_id",
+    "source_version",
+    "reference_only",
+    "authority_effect",
+}
+EXPECTED_BINDING_SOURCE = "fad094618e723acec14a8cdc905d1cfcbdf58813"
 
 
 def fail(message: str) -> None:
@@ -44,11 +57,35 @@ def load(path: Path) -> dict:
     return value
 
 
+def _validate_binding_reference(obj: dict) -> None:
+    if set(obj) != BINDING_REQUIRED:
+        raise SystemExit("unexpected key set on binding reference")
+    if obj.get("schema_version") != "1.0.0":
+        raise SystemExit("schema_version must be 1.0.0")
+    if obj.get("handoff_id") != "foundation-to-toolkit":
+        raise SystemExit("handoff_id must be foundation-to-toolkit")
+    if obj.get("source_repository") != "ai-governance-os":
+        raise SystemExit("source_repository must be ai-governance-os")
+    if obj.get("target_repository") != "global-ai-governance-toolkit":
+        raise SystemExit("target_repository must be global-ai-governance-toolkit")
+    if obj.get("source_artifact_id") != "sample-data/assurance-context-binding.json":
+        raise SystemExit("source_artifact_id mismatch")
+    if obj.get("source_version") != EXPECTED_BINDING_SOURCE:
+        raise SystemExit("source_version must match immutable upstream commit")
+    if obj.get("reference_only") is not True:
+        raise SystemExit("reference_only must be true")
+    if obj.get("authority_effect") != "NONE":
+        raise SystemExit("authority_effect must be NONE")
+    if not obj.get("source_artifact_type"):
+        raise SystemExit("source_artifact_type required")
+
+
 def main() -> None:
     portfolio = load(PORTFOLIO)
     handoff_doc = load(HANDOFFS)
     schema = load(SCHEMA)
     example = load(EXAMPLE)
+    binding_ref = load(BINDING_REF)
 
     if portfolio.get("integration_contract_version") != "1.0.0":
         fail("portfolio integration_contract_version must be 1.0.0")
@@ -118,9 +155,38 @@ def main() -> None:
     if schema_props.get("reference_only", {}).get("const") is not True:
         fail("portfolio-handoff schema must require reference_only=true")
 
+    # Positive binding reference
+    try:
+        _validate_binding_reference(binding_ref)
+    except SystemExit as exc:
+        fail(f"positive binding reference rejected: {exc}")
+
+    # Negative binding references
+    negatives = [
+        ("changed source", lambda d: d.update({"source_repository": "other"})),
+        ("unsupported target", lambda d: d.update({"target_repository": "unknown"})),
+        ("incorrect handoff", lambda d: d.update({"handoff_id": "wrong"})),
+        ("malformed commit", lambda d: d.update({"source_version": "not-a-sha"})),
+        ("false reference_only", lambda d: d.update({"reference_only": False})),
+        ("non-NONE authority", lambda d: d.update({"authority_effect": "AUTHORIZE"})),
+        ("missing field", lambda d: d.pop("source_artifact_id", None)),
+        ("unsupported field", lambda d: d.update({"extra": "bad"})),
+    ]
+    for name, mutator in negatives:
+        bad = json.loads(json.dumps(binding_ref))
+        mutator(bad)
+        rejected = False
+        try:
+            _validate_binding_reference(bad)
+        except SystemExit:
+            rejected = True
+        if not rejected:
+            fail(f"negative binding test did not reject: {name}")
+
     print(
         "Integration validation passed: portfolio graph, reciprocal handoffs, "
-        "reference-only boundaries, failure behavior, and ACRF candidate state are consistent."
+        "reference-only boundaries, failure behavior, ACRF candidate state, "
+        "and Assurance Context Binding reference (positive+negative) are consistent."
     )
 
 
