@@ -119,7 +119,7 @@
         "agentic-ai-governance",
         "verified-vulnerability-governance",
         "ai-cyber-resilience-framework",
-        "peace-os-crisis-room"
+        "peace-os"
       ],
       "properties": {
         "agentic-ai-governance": {
@@ -182,7 +182,7 @@
             }
           }
         },
-        "peace-os-crisis-room": {
+        "peace-os": {
           "type": "object",
           "additionalProperties": false,
           "required": [
