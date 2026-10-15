@@ -111,7 +111,7 @@ def validate_manifest(manifest: dict) -> list[dict]:
         "status": "MERGED_UNRELEASED",
         "published_release": "v0.3.0-rc2",
     }
-    if candidates.get("peace-os-crisis-room") != expected_peace_candidate:
+    if candidates.get("peace-os") != expected_peace_candidate:
         fail("Peace OS development candidate record is incorrect")
 
     expected_agentic_candidate = {
@@ -251,7 +251,7 @@ def main() -> None:
         fail("GSA pre-alpha review boundary is missing")
 
     if not re.search(
-        r"peace-os-crisis-room.*v0\.3\.0-rc2.*published public browser review candidate",
+        r"peace-os.*v0\.3\.0-rc2.*published public browser review candidate",
         text,
         re.IGNORECASE | re.DOTALL,
     ):
