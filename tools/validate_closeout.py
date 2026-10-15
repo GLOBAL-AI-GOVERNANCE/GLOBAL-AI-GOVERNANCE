@@ -40,14 +40,14 @@ def main() -> None:
 
     expected_release = {
         "ai-cyber-resilience-framework": "v0.1.1",
-        "peace-os-crisis-room": "v0.3.0-rc2",
+        "peace-os": "v0.3.0-rc2",
     }
     if closeout.get("published_release_state") != expected_release:
         fail("published release state is incorrect")
 
     expected_dev = {
         "ai-cyber-resilience-framework": "v0.2.0 Continuous Assurance Thread",
-        "peace-os-crisis-room": "Post-RC2 Portfolio Operating Disposition Reference",
+        "peace-os": "Post-RC2 Portfolio Operating Disposition Reference",
     }
     if closeout.get("merged_unreleased_development") != expected_dev:
         fail("merged unreleased development state is incorrect")
@@ -59,7 +59,7 @@ def main() -> None:
         "published_release": "v0.1.1",
     }:
         fail("ACRF portfolio candidate is inconsistent with closeout")
-    if candidates.get("peace-os-crisis-room") != {
+    if candidates.get("peace-os") != {
         "candidate": "Post-RC2 Portfolio Operating Disposition Reference",
         "status": "MERGED_UNRELEASED",
         "published_release": "v0.3.0-rc2",
