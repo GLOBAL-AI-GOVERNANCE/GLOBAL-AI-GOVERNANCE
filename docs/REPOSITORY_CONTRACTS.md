@@ -43,6 +43,12 @@ A receiving repository should consume a foreign semantic object through a docume
 
 Native semantic objects remain owned by their originating repositories. The envelope assembles references only. Authority effect remains NONE until an authorized institutional decision explicitly changes it.
 
+## Assurance Context Binding reference
+
+`contracts/assurance-context-binding.reference.json` records an immutable portfolio handoff reference to the Assurance Context Binding synthetic fixture in ai-governance-os at commit `fad094618e723acec14a8cdc905d1cfcbdf58813`.
+
+It uses the existing foundation-to-toolkit handoff identifier. It is reference-only with authority_effect NONE. It does not transfer authority, prove authenticity of external systems, or alter the six-edge handoff graph.
+
 ## Independence contract
 
 Every repository should remain understandable and testable from its own README, local artifacts, and validation commands. Portfolio integration is additive, not a prerequisite for basic comprehension.
