@@ -3,27 +3,146 @@
   "reference_only": true,
   "authority_effect": "NONE",
   "repositories": [
-    {"repository": "ai-governance-os", "commit_sha": "e6e66af80d13eb014fd8ad96d97fb24873b856a4"},
-    {"repository": "global-ai-governance-toolkit", "commit_sha": "2cfc842136c2f5a18c7574e8411422744f8ee9aa"},
-    {"repository": "agentic-ai-governance", "commit_sha": "2124aeaadf236303c584ac150a5ea61ca787d3f0"},
-    {"repository": "governed-systems-administration", "commit_sha": "1eaa85c415b35cac42ce186b2bb179fc856d0054"},
-    {"repository": "verified-vulnerability-governance", "commit_sha": "9eebbb3f316ef6feb42a8c270e4755420474a1be"},
-    {"repository": "ai-cyber-resilience-framework", "commit_sha": "e14e69d81a8078b42cd83df763c8087f6d6de478"},
-    {"repository": "peace-os", "commit_sha": "613e393c3b056d75847a267550e3b9b703ba0edf"},
-    {"repository": ".github", "commit_sha": "5917deda84022d8a892a94373e82f7f1030acb40"}
+    {
+      "repository": "ai-governance-os",
+      "commit_sha": "e6e66af80d13eb014fd8ad96d97fb24873b856a4"
+    },
+    {
+      "repository": "global-ai-governance-toolkit",
+      "commit_sha": "cf906ef62c114a16b017a073c30f74933b8399e5"
+    },
+    {
+      "repository": "agentic-ai-governance",
+      "commit_sha": "2124aeaadf236303c584ac150a5ea61ca787d3f0"
+    },
+    {
+      "repository": "governed-systems-administration",
+      "commit_sha": "1eaa85c415b35cac42ce186b2bb179fc856d0054"
+    },
+    {
+      "repository": "verified-vulnerability-governance",
+      "commit_sha": "9eebbb3f316ef6feb42a8c270e4755420474a1be"
+    },
+    {
+      "repository": "ai-cyber-resilience-framework",
+      "commit_sha": "e14e69d81a8078b42cd83df763c8087f6d6de478"
+    },
+    {
+      "repository": "peace-os",
+      "commit_sha": "613e393c3b056d75847a267550e3b9b703ba0edf"
+    },
+    {
+      "repository": ".github",
+      "commit_sha": "5917deda84022d8a892a94373e82f7f1030acb40"
+    }
   ],
   "artifacts": [
-    {"repository": "ai-governance-os", "commit_sha": "e6e66af80d13eb014fd8ad96d97fb24873b856a4", "path": "sample-data/succession-evidence-failed.json", "sha256": "5d0d6a48de070e1934e519886d82d8ee2836d31f1d42ec61b6b1a7fc21384a3d", "artifact_type": "succession-evidence-record", "authority_effect": "NONE", "expected_outcome": "FAILED", "expected_subject_id": "synthetic-capability-alpha", "expected_configuration_digest": "sha256:2b1900cb48cdd75c750cad9cd03620fd34162af8fe45dbc2161ebbbb91e2c89d"},
-    {"repository": "ai-governance-os", "commit_sha": "e6e66af80d13eb014fd8ad96d97fb24873b856a4", "path": "sample-data/assurance-kernel/evidence-object.json", "sha256": "c0281692c168a53c14535ebe8b84e70c0fc0cd891287e3b859c9510cfb4bcabc", "artifact_type": "evidence-object", "authority_effect": "NONE", "expected_subject_id": "synthetic-subject-alpha", "expected_configuration_digest": "sha256:abababababababababababababababababababababababababababababababab"},
-    {"repository": "ai-governance-os", "commit_sha": "e6e66af80d13eb014fd8ad96d97fb24873b856a4", "path": "sample-data/assurance-kernel/unknown-object.json", "sha256": "4f5bc9d8831aa8f1bb92fabb1576202daf00fd968c16626aa704a5f50c819818", "artifact_type": "unknown-object", "authority_effect": "NONE", "expected_subject_id": "synthetic-subject-alpha", "expected_configuration_digest": "sha256:abababababababababababababababababababababababababababababababab"},
-    {"repository": "ai-cyber-resilience-framework", "commit_sha": "e14e69d81a8078b42cd83df763c8087f6d6de478", "path": "examples/dependency-exit/synthetic-exit-failed.json", "sha256": "eebf99ee7c4e77967e6a994bac4eddf408904dcdd9d7a2f4ceb04cb34eedc256", "artifact_type": "dependency-exit-evidence", "authority_effect": "NONE", "expected_outcome": "FAILED", "expected_subject_id": "synthetic-subject-alpha", "expected_configuration_digest": "sha256:abababababababababababababababababababababababababababababababab"},
-    {"repository": "ai-cyber-resilience-framework", "commit_sha": "e14e69d81a8078b42cd83df763c8087f6d6de478", "path": "examples/dependency-exit/synthetic-exit-record.json", "sha256": "65ea380c1ff5fb018527b75b4ba7e8aa53931d89c6fde8de9a1e8c30c42fb93d", "artifact_type": "dependency-exit-evidence", "authority_effect": "NONE", "expected_outcome": "SUCCESS"},
-    {"repository": "agentic-ai-governance", "commit_sha": "2124aeaadf236303c584ac150a5ea61ca787d3f0", "path": "examples/passports/unsigned-valid.json", "sha256": "c63be29f6cf63061b8791b22f12596b13b5e010c95fb791f4e02e018461d973d", "artifact_type": "agent-trust-passport", "authority_effect": "NONE"},
-    {"repository": "verified-vulnerability-governance", "commit_sha": "9eebbb3f316ef6feb42a8c270e4755420474a1be", "path": "examples/governed-remediation/reference.json", "sha256": "97445c8dd25680c1dbbb15b59e397eb6226fffd5632a1b7bd0f532e249b753f0", "artifact_type": "verified-closure", "authority_effect": "NONE"},
-    {"repository": "peace-os", "commit_sha": "613e393c3b056d75847a267550e3b9b703ba0edf", "path": "examples/portfolio/operating-disposition-reference.json", "sha256": "dea4601e4532fbbca047e2f58029c28a918a63504e925740f0dea671fd607692", "artifact_type": "operating-disposition-reference", "authority_effect": "NONE"},
-    {"repository": "governed-systems-administration", "commit_sha": "1eaa85c415b35cac42ce186b2bb179fc856d0054", "path": "schemas/administration-evidence-record.schema.json", "sha256": "93547eeffaa181c359d4532e226a0816bb558208e1e294debd0152b2c0f1b0a7", "artifact_type": "administration-evidence-record", "authority_effect": "NONE"},
-    {"repository": "global-ai-governance-toolkit", "commit_sha": "2cfc842136c2f5a18c7574e8411422744f8ee9aa", "path": "automation/assurance/mission-assurance/challenge/golden-thread.json", "sha256": "b39237ce78e6f7676530fbbe355b4e2683ce91f9028f175721e80f12ca2ad135", "artifact_type": "mission-assurance-challenge", "authority_effect": "NONE"},
-    {"repository": "global-ai-governance-toolkit", "commit_sha": "2cfc842136c2f5a18c7574e8411422744f8ee9aa", "path": "automation/contracts/profiles/mission-assurance.schema.json", "sha256": "4427f08406bf0a25e2e26964603276ffdcea87529b76d1d961e0b8bba5f580ad", "artifact_type": "mission-assurance-profile", "authority_effect": "NONE"},
-    {"repository": "global-ai-governance-toolkit", "commit_sha": "2cfc842136c2f5a18c7574e8411422744f8ee9aa", "path": "automation/contracts/profiles/machine-learning-assurance.schema.json", "sha256": "b7b41607d0ab1ced0d5c7c73d024f4acc999adc63d5ff092a3c02cdf636bd7cd", "artifact_type": "machine-learning-assurance-profile", "authority_effect": "NONE"}
+    {
+      "repository": "ai-governance-os",
+      "commit_sha": "e6e66af80d13eb014fd8ad96d97fb24873b856a4",
+      "path": "sample-data/succession-evidence-failed.json",
+      "sha256": "5d0d6a48de070e1934e519886d82d8ee2836d31f1d42ec61b6b1a7fc21384a3d",
+      "artifact_type": "succession-evidence-record",
+      "authority_effect": "NONE",
+      "expected_outcome": "FAILED",
+      "expected_subject_id": "synthetic-capability-alpha",
+      "expected_configuration_digest": "sha256:2b1900cb48cdd75c750cad9cd03620fd34162af8fe45dbc2161ebbbb91e2c89d"
+    },
+    {
+      "repository": "ai-governance-os",
+      "commit_sha": "e6e66af80d13eb014fd8ad96d97fb24873b856a4",
+      "path": "sample-data/assurance-kernel/evidence-object.json",
+      "sha256": "c0281692c168a53c14535ebe8b84e70c0fc0cd891287e3b859c9510cfb4bcabc",
+      "artifact_type": "evidence-object",
+      "authority_effect": "NONE",
+      "expected_subject_id": "synthetic-subject-alpha",
+      "expected_configuration_digest": "sha256:abababababababababababababababababababababababababababababababab"
+    },
+    {
+      "repository": "ai-governance-os",
+      "commit_sha": "e6e66af80d13eb014fd8ad96d97fb24873b856a4",
+      "path": "sample-data/assurance-kernel/unknown-object.json",
+      "sha256": "4f5bc9d8831aa8f1bb92fabb1576202daf00fd968c16626aa704a5f50c819818",
+      "artifact_type": "unknown-object",
+      "authority_effect": "NONE",
+      "expected_subject_id": "synthetic-subject-alpha",
+      "expected_configuration_digest": "sha256:abababababababababababababababababababababababababababababababab"
+    },
+    {
+      "repository": "ai-cyber-resilience-framework",
+      "commit_sha": "e14e69d81a8078b42cd83df763c8087f6d6de478",
+      "path": "examples/dependency-exit/synthetic-exit-failed.json",
+      "sha256": "eebf99ee7c4e77967e6a994bac4eddf408904dcdd9d7a2f4ceb04cb34eedc256",
+      "artifact_type": "dependency-exit-evidence",
+      "authority_effect": "NONE",
+      "expected_outcome": "FAILED",
+      "expected_subject_id": "synthetic-subject-alpha",
+      "expected_configuration_digest": "sha256:abababababababababababababababababababababababababababababababab"
+    },
+    {
+      "repository": "ai-cyber-resilience-framework",
+      "commit_sha": "e14e69d81a8078b42cd83df763c8087f6d6de478",
+      "path": "examples/dependency-exit/synthetic-exit-record.json",
+      "sha256": "65ea380c1ff5fb018527b75b4ba7e8aa53931d89c6fde8de9a1e8c30c42fb93d",
+      "artifact_type": "dependency-exit-evidence",
+      "authority_effect": "NONE",
+      "expected_outcome": "SUCCESS"
+    },
+    {
+      "repository": "agentic-ai-governance",
+      "commit_sha": "2124aeaadf236303c584ac150a5ea61ca787d3f0",
+      "path": "examples/passports/unsigned-valid.json",
+      "sha256": "c63be29f6cf63061b8791b22f12596b13b5e010c95fb791f4e02e018461d973d",
+      "artifact_type": "agent-trust-passport",
+      "authority_effect": "NONE"
+    },
+    {
+      "repository": "verified-vulnerability-governance",
+      "commit_sha": "9eebbb3f316ef6feb42a8c270e4755420474a1be",
+      "path": "examples/governed-remediation/reference.json",
+      "sha256": "97445c8dd25680c1dbbb15b59e397eb6226fffd5632a1b7bd0f532e249b753f0",
+      "artifact_type": "verified-closure",
+      "authority_effect": "NONE"
+    },
+    {
+      "repository": "peace-os",
+      "commit_sha": "613e393c3b056d75847a267550e3b9b703ba0edf",
+      "path": "examples/portfolio/operating-disposition-reference.json",
+      "sha256": "dea4601e4532fbbca047e2f58029c28a918a63504e925740f0dea671fd607692",
+      "artifact_type": "operating-disposition-reference",
+      "authority_effect": "NONE"
+    },
+    {
+      "repository": "governed-systems-administration",
+      "commit_sha": "1eaa85c415b35cac42ce186b2bb179fc856d0054",
+      "path": "schemas/administration-evidence-record.schema.json",
+      "sha256": "93547eeffaa181c359d4532e226a0816bb558208e1e294debd0152b2c0f1b0a7",
+      "artifact_type": "administration-evidence-record",
+      "authority_effect": "NONE"
+    },
+    {
+      "repository": "global-ai-governance-toolkit",
+      "commit_sha": "cf906ef62c114a16b017a073c30f74933b8399e5",
+      "path": "automation/assurance/mission-assurance/challenge/golden-thread.json",
+      "sha256": "6a44837e43e14b135cca0f4996c33db9f4d34ff629b5dd6135f5ba671df23f6d",
+      "artifact_type": "mission-assurance-challenge",
+      "authority_effect": "NONE"
+    },
+    {
+      "repository": "global-ai-governance-toolkit",
+      "commit_sha": "cf906ef62c114a16b017a073c30f74933b8399e5",
+      "path": "automation/contracts/profiles/mission-assurance.schema.json",
+      "sha256": "4427f08406bf0a25e2e26964603276ffdcea87529b76d1d961e0b8bba5f580ad",
+      "artifact_type": "mission-assurance-profile",
+      "authority_effect": "NONE"
+    },
+    {
+      "repository": "global-ai-governance-toolkit",
+      "commit_sha": "cf906ef62c114a16b017a073c30f74933b8399e5",
+      "path": "automation/contracts/profiles/machine-learning-assurance.schema.json",
+      "sha256": "b7b41607d0ab1ced0d5c7c73d024f4acc999adc63d5ff092a3c02cdf636bd7cd",
+      "artifact_type": "machine-learning-assurance-profile",
+      "authority_effect": "NONE"
+    }
   ]
 }
