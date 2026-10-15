@@ -100,11 +100,11 @@
         "verified-vulnerability-governance"
       ],
       "downstream": [
-        "peace-os-crisis-room"
+        "peace-os"
       ]
     },
     {
-      "repository": "peace-os-crisis-room",
+      "repository": "peace-os",
       "display_name": "Peace OS: Crisis Room",
       "lifecycle_roles": [
         "DECIDE",
@@ -152,7 +152,7 @@
       "status": "MERGED_UNRELEASED",
       "published_release": "v0.1.1"
     },
-    "peace-os-crisis-room": {
+    "peace-os": {
       "candidate": "Post-RC2 Portfolio Operating Disposition Reference",
       "status": "MERGED_UNRELEASED",
       "published_release": "v0.3.0-rc2"

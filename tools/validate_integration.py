@@ -100,7 +100,7 @@ def main() -> None:
         ("agentic-ai-governance", "governed-systems-administration"),
         ("global-ai-governance-toolkit", "verified-vulnerability-governance"),
         ("verified-vulnerability-governance", "ai-cyber-resilience-framework"),
-        ("ai-cyber-resilience-framework", "peace-os-crisis-room"),
+        ("ai-cyber-resilience-framework", "peace-os"),
     }
     actual_edges = {
         (item["source_repository"], item["target_repository"])

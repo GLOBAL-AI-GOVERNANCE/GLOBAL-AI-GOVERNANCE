@@ -59,7 +59,7 @@
       "source_artifact": "operating disposition / assurance state reference",
       "source_repository": "ai-cyber-resilience-framework",
       "target_input": "fictional decision and after-action learning context",
-      "target_repository": "peace-os-crisis-room"
+      "target_repository": "peace-os"
     }
   ],
   "schema_version": "1.0.0"
