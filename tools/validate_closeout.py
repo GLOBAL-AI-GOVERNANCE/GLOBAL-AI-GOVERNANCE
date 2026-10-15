@@ -70,6 +70,10 @@ def main() -> None:
         fail("closeout schema does not bind COMPLETE")
     if schema.get("properties", {}).get("protected_default_branches", {}).get("const") != 9:
         fail("closeout schema does not bind protected branch count")
+    for section in ("published_release_state", "merged_unreleased_development"):
+        keys = set(schema.get("properties", {}).get(section, {}).get("properties", {}))
+        if "peace-os" not in keys or "peace-os-crisis-room" in keys:
+            fail(f"closeout schema {section} must use the peace-os repository identity")
 
     readme = README.read_text(encoding="utf-8")
     for phrase in (
