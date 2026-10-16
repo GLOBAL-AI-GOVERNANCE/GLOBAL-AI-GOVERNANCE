@@ -53,7 +53,9 @@
           "authority_boundary",
           "upstream",
           "downstream",
-          "classification"
+          "classification",
+          "owner_boundary",
+          "published_release"
         ],
         "properties": {
           "repository": {

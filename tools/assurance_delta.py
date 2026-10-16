@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 """Experimental Assurance Delta.
 
-Deterministic research utility. Given materially changed node(s), returns the
-affected nodes/claims requiring reassessment (IMPACT SET).
+Returns an IMPACT SET for materially changed nodes. The result is not an
+authorization, not completed requalification, and not a declaration that
+evidence is invalid. It claims nothing beyond the declared graph.
 
-Rules:
-- INVALIDATES and dependency relationships propagate impact.
-- Unrelated evidence remains untouched.
-- Unknown graph relationships fail conservatively.
-- Tool never changes authority.
-- Tool never declares requalification complete.
-- Marked experimental.
+Direction is the explicit table below. It is not inferred from relationship
+names at runtime. The same table is stated in docs/ASSURANCE_GRAPH.md.
+
+- DEPENDS_ON and REQUIRES: a change to `to` places `from` in the impact set.
+- INVALIDATES and REQUALIFIES: a change to `from` places `to` in the impact set.
 """
 from __future__ import annotations
 
@@ -21,47 +20,102 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 GRAPH = ROOT / "contracts" / "federated-evidence-graph.example.json"
-PROPAGATING = {"INVALIDATES", "DEPENDS_ON", "REQUIRES", "REQUALIFIES"}
+
+KNOWN_RELATIONSHIPS = {
+    "SUPPORTS",
+    "QUALIFIES",
+    "CONTRADICTS",
+    "SUPERSEDES",
+    "DEPENDS_ON",
+    "REQUIRES",
+    "INVALIDATES",
+    "RECOVERS_FROM",
+    "TRANSFERS_TO",
+    "REQUALIFIES",
+}
+
+# target: change(to_node) impacts from_node.
+# source: change(from_node) impacts to_node.
+DIRECTION = {
+    "DEPENDS_ON": "target",
+    "REQUIRES": "target",
+    "INVALIDATES": "source",
+    "REQUALIFIES": "source",
+}
+
+NOTE = (
+    "IMPACT SET only. Experimental. Does not authorize, complete requalification, "
+    "declare evidence invalid, or claim causal truth beyond the declared graph."
+)
+
+
+def _result(condition: str, bounded: bool, impact: set[str], note: str = NOTE) -> dict[str, Any]:
+    return {
+        "experimental": True,
+        "condition": condition,
+        "bounded": bounded,
+        "impact_set": sorted(item for item in impact if item),
+        "authority_effect": "NONE",
+        "note": note,
+    }
 
 
 def impact_set(changed: list[str], graph: dict[str, Any] | None = None) -> dict[str, Any]:
     if graph is None:
         graph = json.loads(GRAPH.read_text(encoding="utf-8"))
-    nodes = {n["node_id"]: n for n in graph.get("nodes", [])}
-    edges = graph.get("edges", [])
+    nodes = {node["node_id"] for node in graph.get("nodes", []) if isinstance(node, dict)}
+    edges = [edge for edge in graph.get("edges", []) if isinstance(edge, dict)]
+    missing = [node for node in changed if node not in nodes]
+    if missing:
+        return _result(
+            "INVALID_INPUT",
+            False,
+            set(),
+            "Changed node is not in the graph. Result is not a bounded impact set.",
+        )
+
+    unknown = [edge for edge in edges if edge.get("relationship") not in KNOWN_RELATIONSHIPS]
     affected = set(changed)
-    unknown = False
-    # Conservative propagation
-    changed_flag = True
-    while changed_flag:
-        changed_flag = False
+    pending = list(changed)
+    guard = 0
+    limit = len(nodes) + len(edges) + len(changed) + 1
+    while pending:
+        guard += 1
+        if guard > limit:
+            return _result("CONSERVATIVE_REVIEW", False, affected, "Propagation did not terminate inside the graph bound.")
+        current = pending.pop()
         for edge in edges:
-            rel = edge.get("relationship")
-            if rel not in PROPAGATING and rel not in {"SUPPORTS", "QUALIFIES", "CONTRADICTS", "SUPERSEDES", "RECOVERS_FROM", "TRANSFERS_TO"}:
-                unknown = True
-            if edge.get("from_node") in affected and rel in PROPAGATING:
-                to = edge.get("to_node")
-                if to not in affected:
-                    affected.add(to)
-                    changed_flag = True
+            direction = DIRECTION.get(edge.get("relationship"))
+            if direction == "target" and edge.get("to_node") == current:
+                other = edge.get("from_node")
+            elif direction == "source" and edge.get("from_node") == current:
+                other = edge.get("to_node")
+            else:
+                continue
+            if other not in affected and other in nodes:
+                affected.add(other)
+                pending.append(other)
+
     if unknown:
-        # Conservative: require review of all connected
-        for edge in edges:
-            if edge.get("from_node") in affected or edge.get("to_node") in affected:
-                affected.add(edge.get("from_node"))
-                affected.add(edge.get("to_node"))
-    return {
-        "experimental": True,
-        "impact_set": sorted(affected),
-        "authority_effect": "NONE",
-        "note": "IMPACT SET only. Does not complete requalification or change authority. Unknown relationships fail conservatively.",
-    }
+        review = set(affected)
+        grew = True
+        while grew:
+            grew = False
+            for edge in unknown:
+                ends = {edge.get("from_node"), edge.get("to_node")}
+                if review & ends and not ends <= review:
+                    review |= {item for item in ends if item in nodes}
+                    grew = True
+        return _result(
+            "CONSERVATIVE_REVIEW",
+            False,
+            review,
+            "Unknown relationship requires conservative review. This is not a bounded impact set.",
+        )
+    return _result("IMPACT_SET", True, affected)
 
 
 def main() -> None:
-    if len(sys.argv) < 2:
-        print(json.dumps(impact_set([]), indent=2))
-        return
     print(json.dumps(impact_set(sys.argv[1:]), indent=2))
 
 

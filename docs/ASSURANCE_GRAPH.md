@@ -53,6 +53,17 @@ A receiving repository should reject or hold an unsupported handoff rather than 
 
 Edges may use only neutral relationships: SUPPORTS, QUALIFIES, CONTRADICTS, SUPERSEDES, DEPENDS_ON, REQUIRES, INVALIDATES, RECOVERS_FROM, TRANSFERS_TO, and REQUALIFIES. The graph has no AUTHORIZES relationship. `authority_effect` remains `NONE`.
 
+Experimental assurance delta uses one declared direction table. It does not infer direction from relationship names at runtime.
+
+| Relationship | Direction | Impact |
+|---|---|---|
+| DEPENDS_ON | `from` depends on `to` | A change to `to` places `from` in the impact set |
+| REQUIRES | `from` requires `to` | A change to `to` places `from` in the impact set |
+| INVALIDATES | `from` invalidates `to` | A change to `from` places `to` in the impact set |
+| REQUALIFIES | `from` requalifies `to` | A change to `from` places `to` in the impact set |
+
+SUPPORTS, QUALIFIES, CONTRADICTS, SUPERSEDES, RECOVERS_FROM, and TRANSFERS_TO are known and do not propagate impact. An unknown relationship requires conservative review. The output is an impact set only. It does not authorize, complete requalification, declare evidence invalid, or claim causal truth beyond the declared graph.
+
 A contradiction between current artifacts requires an explicit reconciliation reference. A superseded artifact cannot remain current.
 
 ## Federated mission bindings
