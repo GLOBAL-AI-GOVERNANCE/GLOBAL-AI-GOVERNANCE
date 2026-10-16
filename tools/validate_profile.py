@@ -68,6 +68,9 @@ REQUIRED_REPOSITORY_KEYS = {
     "authority_boundary",
     "upstream",
     "downstream",
+    "classification",
+    "owner_boundary",
+    "published_release",
 }
 
 

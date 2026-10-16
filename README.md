@@ -62,6 +62,9 @@ Partnership does not imply endorsement, certification, production authorization,
 | **CONTAIN + RECOVER** | [AI Cyber Resilience Framework](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework) | **v0.1.1 · public defensive reference** | Boundary assessment, evidence cards, and architecture-hardening backlog |
 | **DECIDE + LEARN** | [Peace OS: Crisis Room](https://github.com/GLOBAL-AI-GOVERNANCE/peace-os) | **v0.3.0-rc2 · published public browser review candidate · stable, human-validation, Godot, and Windows gates open** | Fictional crisis-verification simulation and after-action review |
 | **FOUNDATION** | [AI Governance Foundations](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-os) | **v1.1 · foundational governance model and template set** | Inventory, ownership, risk, control, monitoring, and reporting foundations |
+| **ADJUNCT** | [Containment Ledger](https://github.com/GLOBAL-AI-GOVERNANCE/containment-ledger) | **Local-only browser instrument for domain/path/evidence marking and human disposition** | Bounded review instrument beside the resilience framework; authority_effect NONE |
+| **GOVERNANCE META** | [Community Health](https://github.com/GLOBAL-AI-GOVERNANCE/.github) | **Account-level default community health and repository governance files** | Consistent contribution, support, and security-reporting boundaries |
+| **PROFILE CONTROL** | [Global AI Governance](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE) | **Public Start Here profile for the open-source portfolio** | Portfolio truth registry, federated evidence graph, and cross-estate reproduction |
 
 ## Development Baseline
 

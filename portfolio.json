@@ -23,7 +23,7 @@
         "MEASURE"
       ],
       "version": "v2.3.0",
-      "maturity": "v2.3.0 · working public reference toolkit",
+      "maturity": "v2.3.0 \u00b7 working public reference toolkit",
       "finished_outcome": "Reproducible Decision Pack, bounded sovereignty assessment, and optional assurance/accountability profiles",
       "authority_boundary": "Decision Pack, sovereignty assessment, and optional profiles support human review and evidence; they do not approve, certify, attest provider behavior, establish quantum advantage, or authorize deployment.",
       "upstream": [
@@ -32,7 +32,10 @@
       "downstream": [
         "agentic-ai-governance",
         "verified-vulnerability-governance"
-      ]
+      ],
+      "classification": "CORE",
+      "owner_boundary": "GLOBAL-AI-GOVERNANCE",
+      "published_release": "v2.3.0"
     },
     {
       "repository": "agentic-ai-governance",
@@ -41,7 +44,7 @@
         "AUTHORIZE"
       ],
       "version": "v0.1.0-alpha.2",
-      "maturity": "v0.1.0-alpha.2 · experimental public alpha",
+      "maturity": "v0.1.0-alpha.2 \u00b7 experimental public alpha",
       "finished_outcome": "Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts",
       "authority_boundary": "Passport and validation artifacts express bounded machine-readable authority semantics; production authorization remains human-governed and environment-specific.",
       "upstream": [
@@ -49,7 +52,10 @@
       ],
       "downstream": [
         "governed-systems-administration"
-      ]
+      ],
+      "classification": "CORE",
+      "owner_boundary": "GLOBAL-AI-GOVERNANCE",
+      "published_release": "v0.1.0-alpha.2"
     },
     {
       "repository": "governed-systems-administration",
@@ -58,13 +64,16 @@
         "DESIGN ENFORCEMENT"
       ],
       "version": null,
-      "maturity": "Pre-alpha · preimplementation · independent semantic review required · no execution capability",
+      "maturity": "Pre-alpha \u00b7 preimplementation \u00b7 independent semantic review required \u00b7 no execution capability",
       "finished_outcome": "Proposed human-governed administration request, review, validation, and evidence contracts",
       "authority_boundary": "The repository is preimplementation and provides no execution capability.",
       "upstream": [
         "agentic-ai-governance"
       ],
-      "downstream": []
+      "downstream": [],
+      "classification": "CORE",
+      "owner_boundary": "GLOBAL-AI-GOVERNANCE",
+      "published_release": null
     },
     {
       "repository": "verified-vulnerability-governance",
@@ -75,7 +84,7 @@
         "CLOSE"
       ],
       "version": "v0.1.3",
-      "maturity": "v0.1.3 · verified-closure pre-release",
+      "maturity": "v0.1.3 \u00b7 verified-closure pre-release",
       "finished_outcome": "Evidence-linked vulnerability ownership, remediation, retesting, and closure",
       "authority_boundary": "Closure is evidence-driven and human-authorized; repository checks do not establish enterprise deployment or independent operational retesting services.",
       "upstream": [
@@ -83,7 +92,10 @@
       ],
       "downstream": [
         "ai-cyber-resilience-framework"
-      ]
+      ],
+      "classification": "CORE",
+      "owner_boundary": "GLOBAL-AI-GOVERNANCE",
+      "published_release": "v0.1.3"
     },
     {
       "repository": "ai-cyber-resilience-framework",
@@ -93,7 +105,7 @@
         "RECOVER"
       ],
       "version": "v0.1.1",
-      "maturity": "v0.1.1 · public defensive reference",
+      "maturity": "v0.1.1 \u00b7 public defensive reference",
       "finished_outcome": "Boundary assessment, evidence cards, and architecture-hardening backlog",
       "authority_boundary": "The framework is a public defensive reference, not executable operational software, certification, or proof that a deployed control works.",
       "upstream": [
@@ -101,7 +113,10 @@
       ],
       "downstream": [
         "peace-os"
-      ]
+      ],
+      "classification": "CORE",
+      "owner_boundary": "GLOBAL-AI-GOVERNANCE",
+      "published_release": "v0.1.1"
     },
     {
       "repository": "peace-os",
@@ -111,13 +126,16 @@
         "LEARN"
       ],
       "version": "v0.3.0-rc2",
-      "maturity": "v0.3.0-rc2 · published public browser review candidate · stable, human-validation, Godot, and Windows gates open",
+      "maturity": "v0.3.0-rc2 \u00b7 published public browser review candidate \u00b7 stable, human-validation, Godot, and Windows gates open",
       "finished_outcome": "Fictional crisis-verification simulation and after-action review",
       "authority_boundary": "The experience is a fictional learning and review candidate, not an operational intelligence, emergency, attribution, certification, or autonomous-release system.",
       "upstream": [
         "ai-cyber-resilience-framework"
       ],
-      "downstream": []
+      "downstream": [],
+      "classification": "CORE",
+      "owner_boundary": "GLOBAL-AI-GOVERNANCE",
+      "published_release": "v0.3.0-rc2"
     },
     {
       "repository": "ai-governance-os",
@@ -126,12 +144,69 @@
         "FOUNDATION"
       ],
       "version": "v1.1",
-      "maturity": "v1.1 · foundational governance model and template set",
+      "maturity": "v1.1 \u00b7 foundational governance model and template set",
       "finished_outcome": "Inventory, ownership, risk, control, monitoring, and reporting foundations",
       "authority_boundary": "Foundational models and templates provide reference structure; they do not independently establish approval, compliance, certification, or production authorization.",
       "upstream": [],
       "downstream": [
         "global-ai-governance-toolkit"
+      ],
+      "classification": "CORE",
+      "owner_boundary": "GLOBAL-AI-GOVERNANCE",
+      "published_release": "v1.1"
+    },
+    {
+      "repository": "containment-ledger",
+      "display_name": "Containment Ledger",
+      "classification": "ADJUNCT",
+      "lifecycle_roles": [
+        "CONTAIN"
+      ],
+      "version": null,
+      "maturity": "Local-only browser instrument for domain/path/evidence marking and human disposition",
+      "finished_outcome": "Bounded review instrument beside the resilience framework; authority_effect NONE",
+      "authority_boundary": "Separate review instrument. Does not change published framework release or confer authority.",
+      "owner_boundary": "GLOBAL-AI-GOVERNANCE",
+      "published_release": null,
+      "upstream": [
+        "ai-cyber-resilience-framework"
+      ],
+      "downstream": []
+    },
+    {
+      "repository": ".github",
+      "display_name": "Community Health and Governance Meta",
+      "classification": "GOVERNANCE_META",
+      "lifecycle_roles": [
+        "GOVERN"
+      ],
+      "version": null,
+      "maturity": "Account-level default community health and repository governance files",
+      "finished_outcome": "Consistent contribution, support, and security-reporting boundaries",
+      "authority_boundary": "Infrastructure only. Not a product, framework, runtime, certification, or source of operational authority.",
+      "owner_boundary": "GLOBAL-AI-GOVERNANCE",
+      "published_release": null,
+      "upstream": [],
+      "downstream": []
+    },
+    {
+      "repository": "GLOBAL-AI-GOVERNANCE",
+      "display_name": "Global AI Governance Profile",
+      "classification": "PROFILE_CONTROL",
+      "lifecycle_roles": [
+        "GOVERN",
+        "MEASURE"
+      ],
+      "version": null,
+      "maturity": "Public Start Here profile for the open-source portfolio",
+      "finished_outcome": "Portfolio truth registry, federated evidence graph, and cross-estate reproduction",
+      "authority_boundary": "Profile and control plane. Does not authorize operation or create new authority.",
+      "owner_boundary": "GLOBAL-AI-GOVERNANCE",
+      "published_release": null,
+      "upstream": [],
+      "downstream": [
+        "global-ai-governance-toolkit",
+        "ai-governance-os"
       ]
     }
   ],

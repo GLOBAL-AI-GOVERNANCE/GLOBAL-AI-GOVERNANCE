@@ -52,7 +52,8 @@
           "finished_outcome",
           "authority_boundary",
           "upstream",
-          "downstream"
+          "downstream",
+          "classification"
         ],
         "properties": {
           "repository": {
@@ -105,6 +106,25 @@
               "type": "string",
               "minLength": 1
             }
+          },
+          "classification": {
+            "type": "string",
+            "enum": [
+              "CORE",
+              "ADJUNCT",
+              "PROFILE_CONTROL",
+              "GOVERNANCE_META"
+            ]
+          },
+          "owner_boundary": {
+            "type": "string",
+            "minLength": 1
+          },
+          "published_release": {
+            "type": [
+              "string",
+              "null"
+            ]
           }
         }
       }
