@@ -25,8 +25,16 @@ gag-mcp                        # stdio; or: gag-mcp --http --port 8000
 
 The repository was renamed from `gag-mcp` (the old URL redirects). The command `gag-mcp`, the Python package `gag_mcp`, and the `GAG_MCP_*` environment variables are unchanged.
 
+Local use (stdio) needs no network or token. Any remote use needs an HTTPS endpoint you host yourself, `GAG_MCP_ALLOWED_HOSTS` set to the hostname clients use, and `GAG_MCP_BEARER_TOKEN` set to a random secret of at least 32 characters; the server refuses to start on a network-reachable bind without both. Every remote request must send `Authorization: Bearer TOKEN`. The token is a static shared secret, not OAuth. Replace `/ABS/PATH`, `YOUR-HOST`, and `TOKEN` with your own values.
+
+```bash
+GAG_MCP_ALLOWED_HOSTS=YOUR-HOST GAG_MCP_BEARER_TOKEN=TOKEN gag-mcp --http --host 0.0.0.0 --port 8000
+```
+
+**Provider connections: NOT VERIFIED.** Protocol compatibility is tested with the official MCP Python SDK client and the MCP Inspector. None of the provider recipes below has been tested against a live provider.
+
 <details>
-<summary><b>Claude</b> (Claude Desktop, stdio)</summary>
+<summary><b>Claude Desktop</b> (local, stdio)</summary>
 
 ```json
 {
@@ -36,47 +44,49 @@ The repository was renamed from `gag-mcp` (the old URL redirects). The command `
 }
 ```
 
-Remote: Claude custom connector, or the Anthropic Messages API MCP connector, pointed at `https://YOUR-HOST/mcp`.
+Remote (NOT VERIFIED): the Anthropic Messages API MCP connector with `"authorization_token": "TOKEN"`. A Claude.ai custom connector works only if your organization can add an `authorization: Bearer TOKEN` request header; otherwise it cannot connect, because this server does not implement OAuth.
 </details>
 
 <details>
-<summary><b>ChatGPT</b> (OpenAI Responses API, remote MCP)</summary>
+<summary><b>OpenAI Responses API</b> (remote MCP, NOT VERIFIED)</summary>
 
 ```json
 {
   "type": "mcp",
   "server_label": "gag",
   "server_url": "https://YOUR-HOST/mcp",
+  "headers": { "Authorization": "Bearer TOKEN" },
   "allowed_tools": ["check_inventory", "build_decision_pack", "validate_passport"],
   "require_approval": "never"
 }
 ```
 
-ChatGPT developer mode accepts the same `https://YOUR-HOST/mcp` URL as a custom connector.
+ChatGPT on the web (developer mode or custom apps) is **not supported**: it offers OAuth or no authentication and cannot send the static bearer token this server requires.
 </details>
 
 <details>
-<summary><b>Grok</b> (xAI API, remote MCP)</summary>
+<summary><b>xAI API</b> (remote MCP, NOT VERIFIED)</summary>
 
 ```json
 {
   "type": "mcp",
   "server_label": "gag",
   "server_url": "https://YOUR-HOST/mcp",
+  "headers": { "Authorization": "Bearer TOKEN" },
   "allowed_tools": ["check_inventory", "build_decision_pack", "validate_passport"]
 }
 ```
 
-grok.com connectors accept the same `https://YOUR-HOST/mcp` URL as a custom connector.
+grok.com consumer connectors: whether they can send a static `Authorization: Bearer` header is unverified. If they cannot, they cannot connect to this server.
 </details>
 
-Remote platforms need a public HTTPS endpoint. A hosted Global AI Governance endpoint is not yet available; self-host with `gag-mcp --http`. Full per-platform setup lives in the AI Governance MCP README.
+No hosted Global AI Governance endpoint exists. Full per-platform setup, the auth model, and self-hosting options are in the [AI Governance MCP README](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp#readme).
 
 ## For labs and teams
 
 **Run a pilot:** one authorized AI system inventory, one accountable owner, one Decision Pack, and one documented decision boundary. Pilots can cover agent authority and passports, vulnerability closure evidence, cyber-resilience boundaries, or wiring AI Governance MCP into an internal agent platform.
 
-**Contact:** open a thread in [GitHub Discussions](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/discussions) with your use case. Do not post confidential, personal, or regulated information.
+**Contact:** start with the [Pilots and integrations: start here](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/discussions/29) thread, or open a new thread in [GitHub Discussions](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/discussions) with your use case. Do not post confidential, personal, or regulated information.
 
 ## Product Map
 
@@ -104,7 +114,7 @@ Choose one public path. Each route names the capability and maturity that exist 
 
 Open the [live local-first governance browser](https://global-ai-governance.github.io/global-ai-governance-toolkit/). The hosted browser reflects current `main`. The controlling tagged reference is [v2.3.0 - Assurance & Accountability Profiles](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/tag/v2.3.0).
 
-```text
+```
 AI system inventory
 → normalization and schema validation
 → preliminary risk tier
@@ -182,7 +192,7 @@ The references are synthetic and reference-only. They do not prove real remediat
 
 ## Shared Governance Lifecycle
 
-```text
+```
 Govern
 → Authorize
 → Enforce
