@@ -1,10 +1,100 @@
 # Global AI Governance
 
-**Open-source engineering for governable, verifiable, resilient, and accountable AI.**
+**Novel governance solutions the world needs now.**
 
-*Transforming AI chaos into aligned order.*
+Open, non-authorizing governance infrastructure that AI agents and the teams behind them can call: evidence in, decision-ready outcomes out, humans in charge.
 
-Global AI Governance turns AI uncertainty into evidence, controls, human decisions, and repeatable governance outcomes.
+**[Connect your agent](#for-ai-agents)** · **[Run a pilot](#for-labs-and-teams)** · **[Read the spec](docs/GLOBAL_AI_ASSURANCE_ENVELOPE.md)** · [Live toolkit](https://global-ai-governance.github.io/global-ai-governance-toolkit/)
+
+Every Global AI Governance output carries `authority_effect: NONE`. The tools prepare evidence and decision support; approval, deployment, risk acceptance, and shutdown stay with accountable humans.
+
+## For AI agents
+
+Compatible with MCP-based agents. Not affiliated with or endorsed by any AI lab or platform.
+
+**Read first:** [`llms.txt`](https://global-ai-governance.github.io/global-ai-governance-toolkit/llms.txt) and [`machine-interface.json`](https://global-ai-governance.github.io/global-ai-governance-toolkit/machine-interface.json) describe the versioned contracts, schemas, and entry points without scraping prose.
+
+<!-- PENDING: llms.txt goes live only after the toolkit agent-discovery commit is merged and Pages redeploys. gag-mcp links resolve only after the gag-mcp repository is published. Do not push this README before both. -->
+
+**Use it in your agent in 5 minutes** with [`gag-mcp`](https://github.com/GLOBAL-AI-GOVERNANCE/gag-mcp), a read-only MCP server with three tools: `check_inventory`, `build_decision_pack`, and `validate_passport`.
+
+```bash
+git clone https://github.com/GLOBAL-AI-GOVERNANCE/gag-mcp && cd gag-mcp
+python3 -m venv .venv && . .venv/bin/activate && pip install -e .
+./scripts/fetch_upstreams.sh   # pinned, read-only copies of the reference repositories
+gag-mcp                        # stdio; or: gag-mcp --http --port 8000
+```
+
+<details>
+<summary><b>Claude</b> (Claude Desktop, stdio)</summary>
+
+```json
+{
+  "mcpServers": {
+    "gag": { "command": "/ABS/PATH/gag-mcp/.venv/bin/gag-mcp" }
+  }
+}
+```
+
+Remote: Claude custom connector, or the Anthropic Messages API MCP connector, pointed at `https://YOUR-HOST/mcp`.
+</details>
+
+<details>
+<summary><b>ChatGPT</b> (OpenAI Responses API, remote MCP)</summary>
+
+```json
+{
+  "type": "mcp",
+  "server_label": "gag",
+  "server_url": "https://YOUR-HOST/mcp",
+  "allowed_tools": ["check_inventory", "build_decision_pack", "validate_passport"],
+  "require_approval": "never"
+}
+```
+
+ChatGPT developer mode accepts the same `https://YOUR-HOST/mcp` URL as a custom connector.
+</details>
+
+<details>
+<summary><b>Grok</b> (xAI API, remote MCP)</summary>
+
+```json
+{
+  "type": "mcp",
+  "server_label": "gag",
+  "server_url": "https://YOUR-HOST/mcp",
+  "allowed_tools": ["check_inventory", "build_decision_pack", "validate_passport"]
+}
+```
+
+grok.com connectors accept the same `https://YOUR-HOST/mcp` URL as a custom connector.
+</details>
+
+Remote platforms need a public HTTPS endpoint. A hosted Global AI Governance endpoint is not yet available; self-host with `gag-mcp --http`. Full per-platform setup lives in the gag-mcp README.
+
+## For labs and teams
+
+**Run a pilot:** one authorized AI system inventory, one accountable owner, one Decision Pack, and one documented decision boundary. Pilots can cover agent authority and passports, vulnerability closure evidence, cyber-resilience boundaries, or wiring `gag-mcp` into an internal agent platform.
+
+<!-- PENDING USER CHOICE: contact channel. GitHub Discussions is a placeholder and must be enabled on this repository before push. -->
+
+**Contact:** open a thread in [GitHub Discussions](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/discussions) with your use case. Do not post confidential, personal, or regulated information.
+
+## Product Map
+
+| Product | What you get | Status | Open |
+|---|---|---|---|
+| Toolkit | Inventory to findings to human Decision Pack | v2.3.0 · released | [Site](https://global-ai-governance.github.io/global-ai-governance-toolkit/) · [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit) |
+| gag-mcp | Toolkit and passport checks inside any MCP-based agent | v0.1.0 · preview, publication pending | [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/gag-mcp) |
+| Agentic AI Governance | Agent authority, passport, expiry, and revocation schemas | v0.1.0-alpha.2 · experimental | [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance) |
+| Verified Vulnerability Governance | Evidence-linked remediation and verified closure | v0.1.3 · pre-release | [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/verified-vulnerability-governance) |
+| AI Cyber Resilience Framework | Boundary assessment and hardening backlog | v0.1.1 · reference framework | [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework) |
+| Containment Ledger | Browser instrument for one structural security review | Unreleased · public instrument | [Site](https://global-ai-governance.github.io/containment-ledger/) · [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/containment-ledger) |
+| Peace OS: Crisis Room | Fictional crisis-verification exercise | v0.3.0-rc2 · review candidate | [Site](https://global-ai-governance.github.io/peace-os/) · [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/peace-os) |
+| Governed Systems Administration | Proposed governed administration contracts | Pre-alpha · design only | [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration) |
+| AI Governance Foundations | Governance model, registers, and templates | v1.1 · foundational | [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-os) |
+
+Lifecycle roles, controlling maturity, and evidence boundaries for each repository are in the Portfolio table below.
 
 ## Start Here
 
@@ -122,3 +212,11 @@ Repository checks establish bounded technical consistency for the included artif
 **Start narrow. Govern one system. Produce one decision-ready outcome. Capture proof. Repeat.**
 
 Repository content is provided under the Apache License 2.0 unless a linked repository states its own license.
+
+<details>
+<summary>A note from the founder</summary>
+
+<!-- OPTIONAL: personalize or remove before push. Faith or mission language belongs only here. -->
+
+Global AI Governance exists to bring novel solutions, from out of this world, to problems the world needs solved now: AI that is visible, owned, evidenced, and answerable to people. The work is offered openly so any team, lab, or agent can build on it.
+</details>
