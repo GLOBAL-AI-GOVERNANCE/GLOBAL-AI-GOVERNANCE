@@ -28,7 +28,9 @@ The repository was renamed from `gag-mcp` (the old URL redirects). The command `
 Local use (stdio) needs no network or token. Any remote use needs an HTTPS endpoint you host yourself, `GAG_MCP_ALLOWED_HOSTS` set to the hostname clients use, and `GAG_MCP_BEARER_TOKEN` set to a random secret of at least 32 characters; the server refuses to start on a network-reachable bind without both. Every remote request must send `Authorization: Bearer TOKEN`. The token is a static shared secret, not OAuth. Replace `/ABS/PATH`, `YOUR-HOST`, and `TOKEN` with your own values.
 
 ```bash
-GAG_MCP_ALLOWED_HOSTS=YOUR-HOST GAG_MCP_BEARER_TOKEN=TOKEN gag-mcp --http --host 0.0.0.0 --port 8000
+export GAG_MCP_ALLOWED_HOSTS=YOUR-HOST
+export GAG_MCP_BEARER_TOKEN=TOKEN
+gag-mcp --http --host 0.0.0.0 --port 8000
 ```
 
 **Provider connections: NOT VERIFIED.** Protocol compatibility is tested with the official MCP Python SDK client and the MCP Inspector. None of the provider recipes below has been tested against a live provider.
