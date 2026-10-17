@@ -30,11 +30,15 @@ Other browser experiences: [Containment Ledger](https://global-ai-governance.git
 
 Published tags remain controlling for released interfaces; newer merged code is not automatically a released contract. Integrations must preserve the source system's authority and evidence boundaries.
 
+<a id="for-labs-and-teams"></a>
+
 ### PARTNER
 
 A pilot starts with one authorized inventory, one accountable human owner, one Decision Pack, and one documented decision boundary. [Discuss a pilot or integration](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/discussions/29), or use the [contribution guidelines](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/blob/v2.3.0/CONTRIBUTING.md) for reproducible public improvements.
 
 Participation does not imply endorsement or certification. **Do not include confidential**, personal, regulated, or protected information in public Discussions or contributions.
+
+<a id="product-map"></a>
 
 ## Portfolio
 

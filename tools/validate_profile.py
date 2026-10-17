@@ -37,6 +37,13 @@ REQUIRED_BOUNDARIES = (
     "production authorization",
 )
 
+# Section anchors that other repository READMEs link to. Each must stay
+# immediately before the section it names so inbound links keep landing there.
+INBOUND_SECTION_ANCHORS = {
+    "for-labs-and-teams": "### PARTNER",
+    "product-map": "## Portfolio",
+}
+
 FORBIDDEN_TEXT = (
     "[v2.2.0 five-minute workflow]",
     "[Toolkit v2.2.0 automation]",
@@ -267,6 +274,11 @@ def main() -> None:
         re.IGNORECASE | re.DOTALL,
     ):
         fail("Peace OS RC2 repository and bounded maturity are not connected")
+
+    for anchor, heading in INBOUND_SECTION_ANCHORS.items():
+        marker = f'<a id="{anchor}"></a>\n\n{heading}\n'
+        if text.count(f'id="{anchor}"') != 1 or marker not in text:
+            fail(f"inbound section anchor must directly precede its heading: {anchor}")
 
     if "\t" in text:
         fail("README contains tab characters")
