@@ -12,8 +12,8 @@ The browser tools run locally in your browser. The MCP server is available as so
 
 ### USE
 
-1. Open the [Toolkit](https://global-ai-governance.github.io/global-ai-governance-toolkit/) and select **Run sample**. No login or upload is required for the browser workflow.
-2. Review the findings and download the AI Governance Decision Pack. The sample may pass its bounded checks; that is not a deployment decision.
+1. Open the [Toolkit](https://global-ai-governance.github.io/global-ai-governance-toolkit/) and select **Run sample** (a synthetic clean inventory) or **Run example with gaps** (a synthetic inventory that shows governance findings). No login or upload is required for the browser workflow.
+2. Review the findings and download the AI Governance Decision Pack. Neither example is a real security assessment. The clean sample may pass its bounded checks; a passing result is not a deployment decision and does not authorize deployment.
 3. The hosted Toolkit reflects current `main`. For a pinned implementation, use the [v2.3.0 release](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/tag/v2.3.0) and its [quick start](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.3.0#quick-start).
 
 Other browser experiences: [Containment Ledger](https://global-ai-governance.github.io/containment-ledger/) for security-boundary review; [Peace OS: Crisis Room](https://global-ai-governance.github.io/peace-os/) for a fictional crisis-verification exercise.
