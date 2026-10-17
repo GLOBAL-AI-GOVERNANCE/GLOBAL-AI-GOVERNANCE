@@ -5,11 +5,11 @@
   "repositories": [
     {
       "repository": "ai-governance-os",
-      "commit_sha": "e6e66af80d13eb014fd8ad96d97fb24873b856a4"
+      "commit_sha": "9aa9f4d42527832828c29886db18d79bf480e021"
     },
     {
       "repository": "global-ai-governance-toolkit",
-      "commit_sha": "cf906ef62c114a16b017a073c30f74933b8399e5"
+      "commit_sha": "23ea4820fbf2f1509c23d4b47414461b001f266b"
     },
     {
       "repository": "agentic-ai-governance",
@@ -39,7 +39,7 @@
   "artifacts": [
     {
       "repository": "ai-governance-os",
-      "commit_sha": "e6e66af80d13eb014fd8ad96d97fb24873b856a4",
+      "commit_sha": "9aa9f4d42527832828c29886db18d79bf480e021",
       "path": "sample-data/succession-evidence-failed.json",
       "sha256": "5d0d6a48de070e1934e519886d82d8ee2836d31f1d42ec61b6b1a7fc21384a3d",
       "artifact_type": "succession-evidence-record",
@@ -50,7 +50,7 @@
     },
     {
       "repository": "ai-governance-os",
-      "commit_sha": "e6e66af80d13eb014fd8ad96d97fb24873b856a4",
+      "commit_sha": "9aa9f4d42527832828c29886db18d79bf480e021",
       "path": "sample-data/assurance-kernel/evidence-object.json",
       "sha256": "c0281692c168a53c14535ebe8b84e70c0fc0cd891287e3b859c9510cfb4bcabc",
       "artifact_type": "evidence-object",
@@ -60,7 +60,7 @@
     },
     {
       "repository": "ai-governance-os",
-      "commit_sha": "e6e66af80d13eb014fd8ad96d97fb24873b856a4",
+      "commit_sha": "9aa9f4d42527832828c29886db18d79bf480e021",
       "path": "sample-data/assurance-kernel/unknown-object.json",
       "sha256": "4f5bc9d8831aa8f1bb92fabb1576202daf00fd968c16626aa704a5f50c819818",
       "artifact_type": "unknown-object",
@@ -122,27 +122,67 @@
     },
     {
       "repository": "global-ai-governance-toolkit",
-      "commit_sha": "cf906ef62c114a16b017a073c30f74933b8399e5",
+      "commit_sha": "23ea4820fbf2f1509c23d4b47414461b001f266b",
       "path": "automation/assurance/mission-assurance/challenge/golden-thread.json",
-      "sha256": "6a44837e43e14b135cca0f4996c33db9f4d34ff629b5dd6135f5ba671df23f6d",
+      "sha256": "48e2507fc474af0b1efadbd91fdc56e1241eb1dac2ab1a127e43f390757e51d5",
       "artifact_type": "mission-assurance-challenge",
       "authority_effect": "NONE"
     },
     {
       "repository": "global-ai-governance-toolkit",
-      "commit_sha": "cf906ef62c114a16b017a073c30f74933b8399e5",
+      "commit_sha": "23ea4820fbf2f1509c23d4b47414461b001f266b",
       "path": "automation/contracts/profiles/mission-assurance.schema.json",
-      "sha256": "4427f08406bf0a25e2e26964603276ffdcea87529b76d1d961e0b8bba5f580ad",
+      "sha256": "a1f834dd220499c9d937e8b051e5dfd783e0e4918e976dbfecce65428c9bff8a",
       "artifact_type": "mission-assurance-profile",
       "authority_effect": "NONE"
     },
     {
       "repository": "global-ai-governance-toolkit",
-      "commit_sha": "cf906ef62c114a16b017a073c30f74933b8399e5",
+      "commit_sha": "23ea4820fbf2f1509c23d4b47414461b001f266b",
       "path": "automation/contracts/profiles/machine-learning-assurance.schema.json",
       "sha256": "b7b41607d0ab1ced0d5c7c73d024f4acc999adc63d5ff092a3c02cdf636bd7cd",
       "artifact_type": "machine-learning-assurance-profile",
       "authority_effect": "NONE"
+    },
+    {
+      "repository": "ai-governance-os",
+      "commit_sha": "9aa9f4d42527832828c29886db18d79bf480e021",
+      "path": "sample-data/assurance-kernel/qualification-evidence-record.json",
+      "sha256": "71a1604fdfcbc627f31f6042ccb78187c89a357b8d8a6a9fc3679341f40e0bfc",
+      "artifact_type": "qualification-evidence-record",
+      "authority_effect": "NONE",
+      "expected_outcome": "QUALIFIED",
+      "expected_subject_id": "synthetic-subject-alpha",
+      "expected_configuration_digest": "sha256:abababababababababababababababababababababababababababababababab",
+      "expected_human_review_required": true,
+      "expected_reference_only": true
+    },
+    {
+      "repository": "ai-governance-os",
+      "commit_sha": "9aa9f4d42527832828c29886db18d79bf480e021",
+      "path": "sample-data/assurance-kernel/unresolved-decision-record.json",
+      "sha256": "d4fdf59fdcb672dcc5e0a98e814bdaebb1784b29e58b566d883d539c6df1f751",
+      "artifact_type": "unresolved-decision-record",
+      "authority_effect": "NONE",
+      "expected_status": "OPEN",
+      "expected_subject_id": "synthetic-subject-alpha",
+      "expected_configuration_digest": "sha256:abababababababababababababababababababababababababababababababab",
+      "expected_reference_only": true
+    },
+    {
+      "repository": "ai-governance-os",
+      "commit_sha": "9aa9f4d42527832828c29886db18d79bf480e021",
+      "path": "sample-data/assurance-kernel/protected-concern-disposition-record.json",
+      "sha256": "5d2bc295f8d6f678eb27cbbad7ac6a8e25abd77bfadd0afbc4b3bf2ad133a396",
+      "artifact_type": "protected-concern-disposition-record",
+      "authority_effect": "NONE",
+      "expected_status": "ACTIVE",
+      "expected_assurance_effect": "QUESTIONED",
+      "expected_revalidation_required": true,
+      "expected_subject_id": "synthetic-subject-alpha",
+      "expected_configuration_digest": "sha256:abababababababababababababababababababababababababababababababab",
+      "expected_human_review_required": true,
+      "expected_reference_only": true
     }
   ]
 }

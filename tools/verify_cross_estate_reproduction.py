@@ -137,6 +137,94 @@ def _binding_payloads(thread: dict[str, Any], workspace: Path) -> dict[str, dict
     return payloads
 
 
+def _prove_institutional_records(thread: dict[str, Any], payloads: dict[str, dict]) -> None:
+    required = (
+        "qualification-evidence-record",
+        "unresolved-decision-record",
+        "protected-concern-disposition-record",
+    )
+    for name in required:
+        _require(name in payloads, f"institutional payload missing: {name}")
+        payload = payloads[name]
+        _require(payload.get("authority_effect") == "NONE", f"institutional record grants authority: {name}")
+        _require(payload.get("reference_only") is True, f"institutional record is not reference-only: {name}")
+        if "human_review_required" in payload:
+            _require(payload["human_review_required"] is True, f"institutional record drops human review: {name}")
+        private = {"reporter_identity", "allegation", "reporter", "personnel_record"} & set(payload)
+        _require(not private, f"institutional record contains private content: {name}")
+
+    def match(summary_name: str, reference_id: str, keys: tuple[str, ...]) -> None:
+        summary = thread.get(summary_name)
+        payload = payloads[reference_id]
+        _require(isinstance(summary, dict), f"{summary_name} required")
+        for key in keys:
+            _require(summary.get(key) == payload.get(key), f"{summary_name} does not match the pinned candidate: {key}")
+        _require(summary.get("authority_effect") == "NONE", f"{summary_name} grants authority")
+
+    match(
+        "qualification_summary",
+        "qualification-evidence-record",
+        (
+            "qualification_id",
+            "principal_ref",
+            "role",
+            "scope",
+            "subject_id",
+            "configuration_digest",
+            "competence_evidence_refs",
+            "qualified_from",
+            "expires_at",
+            "outcome",
+            "authority_effect",
+        ),
+    )
+    qualification = payloads["qualification-evidence-record"]
+    _require(qualification["qualified_from"] < qualification["expires_at"], "qualification interval is invalid")
+    _require(qualification["outcome"] == "QUALIFIED", "pinned qualification is not QUALIFIED")
+    match(
+        "decision_summary",
+        "unresolved-decision-record",
+        (
+            "decision_id",
+            "subject_id",
+            "configuration_digest",
+            "owner_ref",
+            "deadline",
+            "blocking",
+            "status",
+            "escalation_route_ref",
+            "authority_effect",
+        ),
+    )
+    _require(payloads["unresolved-decision-record"]["status"] == "OPEN", "pinned decision is not OPEN")
+    _require(payloads["unresolved-decision-record"]["blocking"] is True, "pinned decision is not blocking")
+    match(
+        "concern_summary",
+        "protected-concern-disposition-record",
+        (
+            "concern_disposition_id",
+            "subject_id",
+            "configuration_digest",
+            "assurance_effect",
+            "status",
+            "revalidation_required",
+            "authority_effect",
+        ),
+    )
+    concern = payloads["protected-concern-disposition-record"]
+    _require(concern["status"] == "ACTIVE", "pinned concern is not ACTIVE")
+    _require(concern["revalidation_required"] is True, "pinned concern does not require revalidation")
+    scenarios = {item["id"]: item for item in thread.get("scenarios", []) if isinstance(item, dict)}
+    _require(scenarios.get("institutional-qualified-support", {}).get("expect") == "PASS", "qualified support case missing")
+    _require(scenarios.get("absence-not-nonexistence", {}).get("expect") == "PASS", "absence case missing")
+    for scenario_id, item in scenarios.items():
+        if scenario_id.startswith(("qualification-", "decision-", "concern-")):
+            _require(item.get("expect") == "FAIL", f"hostile case would pass: {scenario_id}")
+    limitations = " ".join(thread.get("limitations") or []).lower()
+    _require("no unresolved decision exists" in limitations, "decision absence is treated as proof")
+    _require("no protected concern exists" in limitations, "concern absence is treated as proof")
+
+
 def prove_binding_negatives(thread: dict[str, Any], workspace: Path, artifacts: list[dict]) -> None:
     payloads = _binding_payloads(thread, workspace)
 
@@ -259,6 +347,16 @@ def verify(workspace: Path) -> dict[str, Any]:
                 _require(payload["reference_only"] is True, f"artifact is not reference-only: {rel}")
             if "expected_outcome" in artifact:
                 _require(payload.get("outcome") == artifact["expected_outcome"], f"outcome mismatch: {rel}")
+            if "expected_status" in artifact:
+                _require(payload.get("status") == artifact["expected_status"], f"status mismatch: {rel}")
+            if "expected_assurance_effect" in artifact:
+                _require(payload.get("assurance_effect") == artifact["expected_assurance_effect"], f"assurance effect mismatch: {rel}")
+            if "expected_revalidation_required" in artifact:
+                _require(payload.get("revalidation_required") is artifact["expected_revalidation_required"], f"revalidation mismatch: {rel}")
+            if artifact.get("expected_human_review_required") is True:
+                _require(payload.get("human_review_required") is True, f"human review is not required: {rel}")
+            if artifact.get("expected_reference_only") is True:
+                _require(payload.get("reference_only") is True, f"artifact is not reference-only: {rel}")
             if "expected_subject_id" in artifact and "subject_id" in payload:
                 _require(payload["subject_id"] == artifact["expected_subject_id"], f"subject mismatch: {rel}")
             if "expected_configuration_digest" in artifact and "configuration_digest" in payload:
@@ -306,6 +404,7 @@ def verify(workspace: Path) -> dict[str, Any]:
             by_subject[subject] = config
     payloads = _binding_payloads(thread, workspace)
     bindings = _validate_federated_bindings(thread, payloads)
+    _prove_institutional_records(thread, payloads)
     prove_binding_negatives(thread, workspace, artifacts)
     for node in graph.get("nodes", []):
         name = node["source_repository"]
@@ -332,9 +431,13 @@ def verify(workspace: Path) -> dict[str, Any]:
         "artifacts": len(artifacts),
         "bindings": bindings,
         "artifact_reproduction": "VERIFIED",
+        "institutional_artifact_reproduction": "VERIFIED",
         "federated_binding_consistency": "VERIFIED",
         "real_world_relationship_authenticity": "NOT_VERIFIED",
-        "note": "Clean-environment reproduction of pinned synthetic references. Synthetic bindings are not external authenticity, certification, or operational readiness.",
+        "real_evaluator_competence": "NOT_VERIFIED",
+        "concern_truth": "NOT_VERIFIED",
+        "operational_readiness": "NOT_VERIFIED",
+        "note": "Clean-environment reproduction of pinned synthetic references. Candidate reproduction is not external authenticity, real competence, concern truth, certification, or operational readiness.",
     }
 
 

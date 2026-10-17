@@ -68,6 +68,9 @@ REQUIRED_REPOSITORY_KEYS = {
     "authority_boundary",
     "upstream",
     "downstream",
+    "classification",
+    "owner_boundary",
+    "published_release",
 }
 
 
@@ -156,6 +159,14 @@ def validate_manifest(manifest: dict) -> list[dict]:
                 fail(f"repository entry {index} has duplicate values in {key}")
         if item["version"] is not None and not isinstance(item["version"], str):
             fail(f"repository entry {index} has invalid version")
+        if item.get("owner_boundary") != "GLOBAL-AI-GOVERNANCE":
+            fail(f"repository entry {index} has invalid owner_boundary")
+        if item.get("published_release") is not None and (
+            not isinstance(item.get("published_release"), str) or not item["published_release"].strip()
+        ):
+            fail(f"repository entry {index} has invalid published_release")
+        if item.get("classification") not in {"CORE", "ADJUNCT", "PROFILE_CONTROL", "GOVERNANCE_META"}:
+            fail(f"repository entry {index} has invalid classification")
         names.append(item["repository"])
 
     if len(names) != len(set(names)):
