@@ -164,13 +164,11 @@
       ],
       "version": null,
       "maturity": "Local-only browser instrument for domain/path/evidence marking and human disposition",
-      "finished_outcome": "Bounded review instrument beside the resilience framework; authority_effect NONE",
+      "finished_outcome": "Independent structural review instrument; shares vocabulary with the AI Cyber Resilience Framework; no code, data, or release dependency; authority_effect NONE",
       "authority_boundary": "Separate review instrument. Does not change published framework release or confer authority.",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
       "published_release": null,
-      "upstream": [
-        "ai-cyber-resilience-framework"
-      ],
+      "upstream": [],
       "downstream": []
     },
     {
