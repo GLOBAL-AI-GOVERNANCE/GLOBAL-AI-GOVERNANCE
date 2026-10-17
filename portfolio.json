@@ -174,6 +174,25 @@
       "downstream": []
     },
     {
+      "repository": "ai-governance-mcp",
+      "display_name": "AI Governance Model Context Protocol Server",
+      "classification": "ADJUNCT",
+      "lifecycle_roles": [
+        "INTEGRATE"
+      ],
+      "version": null,
+      "maturity": "v0.1.0 preview \u00b7 source only \u00b7 no hosted endpoint",
+      "finished_outcome": "Read-only Model Context Protocol (MCP) tools wrapping the toolkit and passport validator; authority_effect NONE",
+      "authority_boundary": "Tool results are decision support only. Command gag-mcp and package gag_mcp. Does not approve, certify, authorize, or accept risk.",
+      "owner_boundary": "GLOBAL-AI-GOVERNANCE",
+      "published_release": null,
+      "upstream": [
+        "global-ai-governance-toolkit",
+        "agentic-ai-governance"
+      ],
+      "downstream": []
+    },
+    {
       "repository": ".github",
       "display_name": "Community Health and Governance Meta",
       "classification": "GOVERNANCE_META",
