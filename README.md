@@ -10,20 +10,20 @@ Every Global AI Governance output carries `authority_effect: NONE`. The tools pr
 
 ## For AI agents
 
-Compatible with MCP-based agents. Not affiliated with or endorsed by any AI lab or platform.
+Compatible with Model Context Protocol (MCP) based agents. MCP is an open standard that lets AI assistants call external tools. Not affiliated with or endorsed by any AI lab or platform.
 
 **Read first:** [`llms.txt`](https://global-ai-governance.github.io/global-ai-governance-toolkit/llms.txt) and [`machine-interface.json`](https://global-ai-governance.github.io/global-ai-governance-toolkit/machine-interface.json) describe the versioned contracts, schemas, and entry points without scraping prose.
 
-<!-- PENDING: llms.txt goes live only after the toolkit agent-discovery commit is merged and Pages redeploys. gag-mcp links resolve only after the gag-mcp repository is published. Do not push this README before both. -->
-
-**Use it in your agent in 5 minutes** with [`gag-mcp`](https://github.com/GLOBAL-AI-GOVERNANCE/gag-mcp), a read-only MCP server with three tools: `check_inventory`, `build_decision_pack`, and `validate_passport`.
+**Use it in your agent in 5 minutes** with the [AI Governance Model Context Protocol Server](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp) (AI Governance MCP), a read-only server with three tools: `check_inventory`, `build_decision_pack`, and `validate_passport`.
 
 ```bash
-git clone https://github.com/GLOBAL-AI-GOVERNANCE/gag-mcp && cd gag-mcp
+git clone https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp && cd ai-governance-mcp
 python3 -m venv .venv && . .venv/bin/activate && pip install -e .
 ./scripts/fetch_upstreams.sh   # pinned, read-only copies of the reference repositories
 gag-mcp                        # stdio; or: gag-mcp --http --port 8000
 ```
+
+The repository was renamed from `gag-mcp` (the old URL redirects). The command `gag-mcp`, the Python package `gag_mcp`, and the `GAG_MCP_*` environment variables are unchanged.
 
 <details>
 <summary><b>Claude</b> (Claude Desktop, stdio)</summary>
@@ -31,7 +31,7 @@ gag-mcp                        # stdio; or: gag-mcp --http --port 8000
 ```json
 {
   "mcpServers": {
-    "gag": { "command": "/ABS/PATH/gag-mcp/.venv/bin/gag-mcp" }
+    "gag": { "command": "/ABS/PATH/ai-governance-mcp/.venv/bin/gag-mcp" }
   }
 }
 ```
@@ -70,13 +70,11 @@ ChatGPT developer mode accepts the same `https://YOUR-HOST/mcp` URL as a custom 
 grok.com connectors accept the same `https://YOUR-HOST/mcp` URL as a custom connector.
 </details>
 
-Remote platforms need a public HTTPS endpoint. A hosted Global AI Governance endpoint is not yet available; self-host with `gag-mcp --http`. Full per-platform setup lives in the gag-mcp README.
+Remote platforms need a public HTTPS endpoint. A hosted Global AI Governance endpoint is not yet available; self-host with `gag-mcp --http`. Full per-platform setup lives in the AI Governance MCP README.
 
 ## For labs and teams
 
-**Run a pilot:** one authorized AI system inventory, one accountable owner, one Decision Pack, and one documented decision boundary. Pilots can cover agent authority and passports, vulnerability closure evidence, cyber-resilience boundaries, or wiring `gag-mcp` into an internal agent platform.
-
-<!-- PENDING USER CHOICE: contact channel. GitHub Discussions is a placeholder and must be enabled on this repository before push. -->
+**Run a pilot:** one authorized AI system inventory, one accountable owner, one Decision Pack, and one documented decision boundary. Pilots can cover agent authority and passports, vulnerability closure evidence, cyber-resilience boundaries, or wiring AI Governance MCP into an internal agent platform.
 
 **Contact:** open a thread in [GitHub Discussions](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/discussions) with your use case. Do not post confidential, personal, or regulated information.
 
@@ -85,14 +83,16 @@ Remote platforms need a public HTTPS endpoint. A hosted Global AI Governance end
 | Product | What you get | Status | Open |
 |---|---|---|---|
 | Toolkit | Inventory to findings to human Decision Pack | v2.3.0 · released | [Site](https://global-ai-governance.github.io/global-ai-governance-toolkit/) · [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit) |
-| gag-mcp | Toolkit and passport checks inside any MCP-based agent | v0.1.0 · preview | [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/gag-mcp) |
+| AI Governance MCP | Toolkit and passport checks inside any MCP-based agent | v0.1.0 · preview | [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp) |
 | Agentic AI Governance | Agent authority, passport, expiry, and revocation schemas | v0.1.0-alpha.2 · experimental | [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance) |
 | Verified Vulnerability Governance | Evidence-linked remediation and verified closure | v0.1.3 · pre-release | [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/verified-vulnerability-governance) |
 | AI Cyber Resilience Framework | Boundary assessment and hardening backlog | v0.1.1 · reference framework | [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework) |
-| Containment Ledger | Browser instrument for one structural security review | Unreleased · public instrument | [Site](https://global-ai-governance.github.io/containment-ledger/) · [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/containment-ledger) |
+| Containment Ledger: Security Boundary Review | Local browser review of security domains, boundary paths, evidence marks, and a human disposition | Unreleased · public instrument | [Site](https://global-ai-governance.github.io/containment-ledger/) · [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/containment-ledger) |
 | Peace OS: Crisis Room | Fictional crisis-verification exercise | v0.3.0-rc2 · review candidate | [Site](https://global-ai-governance.github.io/peace-os/) · [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/peace-os) |
 | Governed Systems Administration | Proposed governed administration contracts | Pre-alpha · design only | [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration) |
-| AI Governance Foundations | Governance model, registers, and templates | v1.1 · foundational | [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-os) |
+| AI Governance Foundations | The original foundation: governance model, registers, and templates | v1.1 · foundational | [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-os) |
+
+AI Governance Foundations (`ai-governance-os`, first published as AI Governance OS v1.1 in May 2026) is the portfolio's original foundation; the toolkit and later repositories build on its doctrine, registers, and templates. Containment Ledger is independent of the AI Cyber Resilience Framework and records a review only: it does not enforce boundaries or verify evidence.
 
 Lifecycle roles, controlling maturity, and evidence boundaries for each repository are in the Portfolio table below.
 
@@ -215,8 +215,6 @@ Repository content is provided under the Apache License 2.0 unless a linked repo
 
 <details>
 <summary>A note from the founder</summary>
-
-<!-- OPTIONAL: personalize or remove before push. Faith or mission language belongs only here. -->
 
 Global AI Governance exists to bring novel solutions, from out of this world, to problems the world needs solved now: AI that is visible, owned, evidenced, and answerable to people. The work is offered openly so any team, lab, or agent can build on it.
 </details>
