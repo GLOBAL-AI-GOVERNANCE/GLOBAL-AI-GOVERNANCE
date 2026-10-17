@@ -85,7 +85,7 @@ Remote platforms need a public HTTPS endpoint. A hosted Global AI Governance end
 | Product | What you get | Status | Open |
 |---|---|---|---|
 | Toolkit | Inventory to findings to human Decision Pack | v2.3.0 · released | [Site](https://global-ai-governance.github.io/global-ai-governance-toolkit/) · [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit) |
-| gag-mcp | Toolkit and passport checks inside any MCP-based agent | v0.1.0 · preview, publication pending | [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/gag-mcp) |
+| gag-mcp | Toolkit and passport checks inside any MCP-based agent | v0.1.0 · preview | [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/gag-mcp) |
 | Agentic AI Governance | Agent authority, passport, expiry, and revocation schemas | v0.1.0-alpha.2 · experimental | [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance) |
 | Verified Vulnerability Governance | Evidence-linked remediation and verified closure | v0.1.3 · pre-release | [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/verified-vulnerability-governance) |
 | AI Cyber Resilience Framework | Boundary assessment and hardening backlog | v0.1.1 · reference framework | [Repo](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework) |
