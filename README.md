@@ -30,13 +30,7 @@ Other browser experiences: [Containment Ledger](https://global-ai-governance.git
 
 Published tags remain controlling for released interfaces; newer merged code is not automatically a released contract. Integrations must preserve the source system's authority and evidence boundaries.
 
-<a id="for-labs-and-teams"></a>
-
-### PARTNER
-
-A pilot starts with one authorized inventory, one accountable human owner, one Decision Pack, and one documented decision boundary. Use the [contribution guidelines](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/blob/v2.3.0/CONTRIBUTING.md) for reproducible public improvements.
-
-Use of these materials does not imply endorsement or certification. **Do not include confidential**, personal, regulated, or protected information in contributions.
+Use of these materials does not imply endorsement or certification. Do not include confidential, personal, regulated, or protected information in public repository surfaces.
 
 <a id="product-map"></a>
 
@@ -53,7 +47,7 @@ Nine product and reference repositories plus two public infrastructure repositor
 - **[Peace OS: Crisis Room](https://github.com/GLOBAL-AI-GOVERNANCE/peace-os)** · [Open app](https://global-ai-governance.github.io/peace-os/) — v0.3.0-rc2 · published public browser review candidate · stable, human-validation, Godot, and Windows gates open. Fictional crisis-verification simulation and after-action review.
 - **[Governed Systems Administration](https://github.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration)** — Pre-alpha · preimplementation · independent semantic review required · no execution capability. Proposed human-governed administration request, review, validation, and evidence contracts.
 - **[AI Governance Foundations](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-os)** — v1.1 · foundational governance model and template set. Inventory, ownership, risk, control, monitoring, and reporting foundations.
-- **[Community Health and Governance Meta](https://github.com/GLOBAL-AI-GOVERNANCE/.github)** — Account-level default community health and repository governance files. Consistent contribution, support, and security-reporting boundaries.
+- **[Repository Governance Defaults](https://github.com/GLOBAL-AI-GOVERNANCE/.github)** — Account-level default repository governance files. Consistent security-boundary, claims-integrity, release-governance, and change-control defaults.
 - **[Global AI Governance Profile](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE)** — Public Start Here profile for the open-source portfolio. Portfolio truth registry, federated evidence graph, and cross-estate reproduction.
 
 [Repository maturity definitions](docs/MATURITY_MODEL.md) explain what these labels do and do not establish. AI Governance Foundations is the original foundation; Containment Ledger is independent of the AI Cyber Resilience Framework.
