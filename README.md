@@ -4,7 +4,7 @@
 
 Turn an AI-system inventory into governance findings, reproducible evidence, and a decision-ready handoff. AI tools support human review and decision; consequential authority stays with accountable people.
 
-**[Try the Toolkit](https://global-ai-governance.github.io/global-ai-governance-toolkit/)** · **[Connect an AI agent](https://global-ai-governance.github.io/global-ai-governance-toolkit/connect.html#agents)** · **[Explore a pilot](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/discussions/29)**
+**[Try the Toolkit](https://global-ai-governance.github.io/global-ai-governance-toolkit/)** · **[Connect an AI agent](https://global-ai-governance.github.io/global-ai-governance-toolkit/connect.html#agents)**
 
 The browser tools run locally in your browser. The MCP server is available as source for local installation or operator-hosted self-hosting; **Global AI Governance operates no hosted MCP endpoint**. Outputs are non-authorizing (`authority_effect: NONE`).
 
@@ -34,9 +34,9 @@ Published tags remain controlling for released interfaces; newer merged code is 
 
 ### PARTNER
 
-A pilot starts with one authorized inventory, one accountable human owner, one Decision Pack, and one documented decision boundary. [Discuss a pilot or integration](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/discussions/29), or use the [contribution guidelines](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/blob/v2.3.0/CONTRIBUTING.md) for reproducible public improvements.
+A pilot starts with one authorized inventory, one accountable human owner, one Decision Pack, and one documented decision boundary. Use the [contribution guidelines](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/blob/v2.3.0/CONTRIBUTING.md) for reproducible public improvements.
 
-Participation does not imply endorsement or certification. **Do not include confidential**, personal, regulated, or protected information in public Discussions or contributions.
+Use of these materials does not imply endorsement or certification. **Do not include confidential**, personal, regulated, or protected information in contributions.
 
 <a id="product-map"></a>
 
