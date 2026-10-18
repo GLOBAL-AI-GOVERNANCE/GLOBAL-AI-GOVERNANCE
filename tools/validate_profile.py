@@ -18,7 +18,6 @@ REQUIRED_HEADINGS = (
     "## Start Here",
     "### USE",
     "### INTEGRATE",
-    "### PARTNER",
     "## Portfolio",
     "## Development Baseline",
     "## Shared Governance Lifecycle",
@@ -40,7 +39,6 @@ REQUIRED_BOUNDARIES = (
 # Section anchors that other repository READMEs link to. Each must stay
 # immediately before the section it names so inbound links keep landing there.
 INBOUND_SECTION_ANCHORS = {
-    "for-labs-and-teams": "### PARTNER",
     "product-map": "## Portfolio",
 }
 
@@ -62,7 +60,6 @@ REQUIRED_JOURNEY_LINKS = (
     "global-ai-governance-toolkit/tree/v2.3.0#quick-start",
     "global-ai-governance-toolkit/tree/v2.3.0/automation",
     "agentic-ai-governance/tree/v0.1.0-alpha.2/schemas",
-    "global-ai-governance-toolkit/blob/v2.3.0/CONTRIBUTING.md",
 )
 
 REQUIRED_REPOSITORY_KEYS = {
@@ -233,8 +230,8 @@ def main() -> None:
 
     journey = text.split("## Start Here", 1)[1].split("## Portfolio", 1)[0]
     journey_headings = re.findall(r"^### ([A-Z]+)$", journey, re.MULTILINE)
-    if journey_headings != ["USE", "INTEGRATE", "PARTNER"]:
-        fail("first-time journey must contain exactly USE, INTEGRATE, PARTNER in order")
+    if journey_headings != ["USE", "INTEGRATE"]:
+        fail("first-time journey must contain exactly USE, INTEGRATE in order")
     for link in REQUIRED_JOURNEY_LINKS:
         if link not in journey:
             fail(f"first-time journey route is missing: {link}")

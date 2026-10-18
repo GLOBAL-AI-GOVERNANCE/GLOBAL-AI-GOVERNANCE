@@ -192,14 +192,14 @@
     },
     {
       "repository": ".github",
-      "display_name": "Community Health and Governance Meta",
+      "display_name": "Repository Governance Defaults",
       "classification": "GOVERNANCE_META",
       "lifecycle_roles": [
         "GOVERN"
       ],
       "version": null,
-      "maturity": "Account-level default community health and repository governance files",
-      "finished_outcome": "Consistent contribution, support, and security-reporting boundaries",
+      "maturity": "Account-level default repository governance files",
+      "finished_outcome": "Consistent security-boundary, claims-integrity, release-governance, and change-control defaults",
       "authority_boundary": "Infrastructure only. Not a product, framework, runtime, certification, or source of operational authority.",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
       "published_release": null,
