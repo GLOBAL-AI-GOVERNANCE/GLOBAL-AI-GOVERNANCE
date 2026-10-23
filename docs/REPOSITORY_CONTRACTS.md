@@ -2,6 +2,8 @@
 
 These contracts define how repositories should compose without becoming one monolith.
 
+`portfolio.json` is the machine-readable portfolio truth. `contracts/handoffs.json` is the machine-readable handoff catalog. Together they provide contract discovery. No duplicate contract catalog is maintained.
+
 ## Shared invariants
 
 - No inventory, no governance.

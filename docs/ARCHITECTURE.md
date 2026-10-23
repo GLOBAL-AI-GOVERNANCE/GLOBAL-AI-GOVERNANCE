@@ -7,7 +7,8 @@ The profile repository is the **portfolio control plane**. It records repository
 ## Shared lifecycle
 
 ```text
-Govern
+Assess
+→ Govern
 → Authorize
 → Enforce
 → Observe
@@ -16,6 +17,7 @@ Govern
 → Recover
 → Measure
 → Learn
+→ Reassess
 ```
 
 Repositories do not all implement every stage and do not share one maturity level.
