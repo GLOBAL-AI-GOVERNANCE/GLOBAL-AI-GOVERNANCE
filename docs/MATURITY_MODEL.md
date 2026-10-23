@@ -10,3 +10,11 @@ Maturity labels communicate what evidence exists today. They are not quality ran
 - **Working public reference toolkit:** an end-to-end reference workflow is implemented and testable within its stated boundary.
 
 Repository-specific language remains authoritative when it is more precise than these portfolio categories.
+
+## Repository maturity is not organizational AI maturity
+
+Repository maturity labels describe the development, release, and evidence status of Global AI Governance repositories.
+
+Organizational AI maturity is a separate Toolkit assessment. A human determines that position under a versioned framework adapter. The Toolkit checks whether submitted evidence can carry the determination.
+
+Neither label is a quality ranking, certification, compliance result, or authorization.

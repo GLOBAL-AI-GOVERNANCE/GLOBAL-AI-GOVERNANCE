@@ -4,6 +4,7 @@
   "profile_repository": "GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE",
   "flagship_repository": "global-ai-governance-toolkit",
   "shared_lifecycle": [
+    "Assess",
     "Govern",
     "Authorize",
     "Enforce",
@@ -12,20 +13,23 @@
     "Contain",
     "Recover",
     "Measure",
-    "Learn"
+    "Learn",
+    "Reassess"
   ],
   "repositories": [
     {
       "repository": "global-ai-governance-toolkit",
       "display_name": "Global AI Governance Toolkit",
       "lifecycle_roles": [
+        "ASSESS",
         "GOVERN",
-        "MEASURE"
+        "MEASURE",
+        "REASSESS"
       ],
-      "version": "v2.3.0",
-      "maturity": "v2.3.0 \u00b7 working public reference toolkit",
-      "finished_outcome": "Reproducible Decision Pack, bounded sovereignty assessment, and optional assurance/accountability profiles",
-      "authority_boundary": "Decision Pack, sovereignty assessment, and optional profiles support human review and evidence; they do not approve, certify, attest provider behavior, establish quantum advantage, or authorize deployment.",
+      "version": "v2.5.0",
+      "maturity": "v2.5.0 \u00b7 working public reference toolkit",
+      "finished_outcome": "Reproducible Decision Pack, bounded sovereignty assessment, assurance/accountability profiles, and organizational AI maturity evidence assessment",
+      "authority_boundary": "Organizational maturity is accountable-human determined. Automation verifies submitted evidence. It does not certify, independently declare maturity, approve deployment, or transfer authority.",
       "upstream": [
         "ai-governance-os"
       ],
@@ -35,7 +39,7 @@
       ],
       "classification": "CORE",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
-      "published_release": "v2.3.0"
+      "published_release": "v2.5.0"
     },
     {
       "repository": "agentic-ai-governance",
