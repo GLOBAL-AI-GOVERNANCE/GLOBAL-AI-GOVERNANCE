@@ -26,8 +26,8 @@
         "MEASURE",
         "REASSESS"
       ],
-      "version": "v2.5.1",
-      "maturity": "v2.5.1 \u00b7 working public reference toolkit",
+      "version": "v2.5.2",
+      "maturity": "v2.5.2 \u00b7 working public reference toolkit",
       "finished_outcome": "Reproducible Decision Pack, bounded sovereignty assessment, assurance/accountability profiles, and organizational AI maturity evidence assessment",
       "authority_boundary": "Organizational maturity is accountable-human determined. Automation verifies submitted evidence. It does not certify, independently declare maturity, approve deployment, or transfer authority.",
       "upstream": [
@@ -39,7 +39,7 @@
       ],
       "classification": "CORE",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
-      "published_release": "v2.5.1"
+      "published_release": "v2.5.2"
     },
     {
       "repository": "agentic-ai-governance",
