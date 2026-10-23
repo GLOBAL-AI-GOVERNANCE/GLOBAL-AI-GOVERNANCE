@@ -1,10 +1,12 @@
 # Global AI Governance
 
-**Evidence-led governance for AI systems and agents.**
+Governance tools and evidence-driven decision support.
 
-Turn an AI-system inventory into governance findings, reproducible evidence, and a decision-ready handoff. AI tools support human review and decision; consequential authority stays with accountable people.
+Assess an inventory, examine findings, and prepare a reproducible result for human review and decision. Consequential authority stays with accountable people.
 
-**[Try the Toolkit](https://global-ai-governance.github.io/global-ai-governance-toolkit/)** · **[Connect an AI agent](https://global-ai-governance.github.io/global-ai-governance-toolkit/connect.html#agents)**
+**[Try the Toolkit](https://global-ai-governance.github.io/global-ai-governance-toolkit/)** — run a sample in the browser. No install.
+
+**[Connect tools](https://global-ai-governance.github.io/global-ai-governance-toolkit/connect.html#agents)** — schemas, commands, or the MCP server.
 
 The browser tools run locally in your browser. The MCP server is available as source for local installation or operator-hosted self-hosting; **Global AI Governance operates no hosted MCP endpoint**. Outputs are non-authorizing (`authority_effect: NONE`).
 
@@ -21,12 +23,12 @@ Other browser experiences: [Containment Ledger](https://global-ai-governance.git
 ### INTEGRATE
 
 - [AI Governance MCP](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp) exposes three read-only tools: `check_inventory`, `build_decision_pack`, and `validate_passport`. Every result carries `authority_effect: NONE` and leaves the decision with a human.
-  - [Install and run locally](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp#install-and-run-local) (stdio, no network or token) · [Client configuration](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp#client-configuration-copy-paste) · [Auth](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp#auth) · [Self-hosting](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp#self-hosting-needed-for-every-remote-platform-global-ai-governance-operates-no-endpoint) · [Known limits](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp#known-limits)
-  - Remote use: on any non-loopback bind the server refuses to start unless `GAG_MCP_ALLOWED_HOSTS` is set to the client-facing hostname and `GAG_MCP_BEARER_TOKEN` is a random secret of at least 32 characters. Serve it only over HTTPS; requests send `Authorization: Bearer TOKEN`. OAuth is not implemented.
-  - **Provider connections (Anthropic Claude, OpenAI, xAI Grok): NOT VERIFIED.** Protocol compatibility is tested with the official MCP Python SDK client and the MCP Inspector. ChatGPT on the web is not supported, because it cannot send a static bearer token.
-  - The `gag-mcp` command, `gag_mcp` Python package, and `GAG_MCP_*` variables are unchanged since the repository rename.
+- [Install and run locally](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp#install-and-run-local) (stdio, no network or token) · [Sample call](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp#sample-call) · [Client configuration](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp#client-configuration-copy-paste) · [Known limits](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp#known-limits)
+- The `gag-mcp` command, `gag_mcp` Python package, and `GAG_MCP_*` variables are unchanged since the repository rename.
 - [Machine interface](https://global-ai-governance.github.io/global-ai-governance-toolkit/machine-interface.json) · [Agent discovery](https://global-ai-governance.github.io/global-ai-governance-toolkit/llms.txt) · [Toolkit v2.3.0 contracts](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.3.0/automation) · [Agent authority and passport schemas (v0.1.0-alpha.2)](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance/tree/v0.1.0-alpha.2/schemas)
 - [Repository handoff contracts](docs/REPOSITORY_CONTRACTS.md) · [Global AI Assurance Envelope](docs/GLOBAL_AI_ASSURANCE_ENVELOPE.md) · [Portfolio schema](schemas/portfolio.schema.json)
+
+Remote use: on any non-loopback bind the server refuses to start unless `GAG_MCP_ALLOWED_HOSTS` is set to the client-facing hostname and `GAG_MCP_BEARER_TOKEN` is a random secret of at least 32 characters. Serve it only over HTTPS; requests send `Authorization: Bearer TOKEN`. OAuth is not implemented. **Provider connections (Anthropic Claude, OpenAI, xAI Grok): NOT VERIFIED.** Protocol compatibility is tested with the official MCP Python SDK client and the MCP Inspector. ChatGPT on the web is not supported, because it cannot send a static bearer token. [Auth](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp#auth) · [Self-hosting](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp#self-hosting-needed-for-every-remote-platform-global-ai-governance-operates-no-endpoint).
 
 Published tags remain controlling for released interfaces; newer merged code is not automatically a released contract. Integrations must preserve the source system's authority and evidence boundaries.
 
