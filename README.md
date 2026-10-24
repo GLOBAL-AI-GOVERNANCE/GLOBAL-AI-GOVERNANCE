@@ -29,7 +29,7 @@ Every path is self-serve and non-authorizing: the tools report; people decide.
 | CLI | `pip install https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/download/v2.7.2/global_ai_governance-2.7.2-py3-none-any.whl` | v2.7.2 | stable | TESTED (release wheel, clean environment) |
 | MCP server | `uvx --from git+https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp@v0.3.2 gaig-mcp` | v0.3.2 | released · no hosted endpoint | TESTED (MCP Python SDK client, clean environment) |
 | GitHub Action | `uses: GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit@cc5f5997a9d44958099b292a2081c86b52ee515c` | v2.7.2 (full commit SHA of the release tag) | released | TESTED (hosted CI self-test) |
-| Passport validator | `pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git` | main (after v0.1.0-alpha.2) | available · independent verifier review open | TESTED (hosted CI, clean environment) |
+| Passport validator | `pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git@v0.1.0-alpha.3` | v0.1.0-alpha.3 | available · independent verifier review open | TESTED (hosted CI, clean environment) |
 | Docker (MCP server) | `docker build -f deploy/Dockerfile -t gaig-mcp .` (in an `ai-governance-mcp` clone) | v0.3.2 | build locally from Dockerfile · no image published | untested |
 
 TESTED means run by this project's own CI or test runs; it is not independent verification. Every surface is non-authorizing (`authority_effect: NONE`). Machine-readable copy: `install_surfaces` in [portfolio.json](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/portfolio.json).
@@ -64,7 +64,7 @@ Nine product and reference repositories plus two public infrastructure repositor
 
 - **[Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit)** · [Open app](https://ai-governance.solutions/) — v2.7.2 · stable. Reproducible Decision Pack, bounded sovereignty assessment, assurance/accountability profiles, and organizational AI maturity evidence assessment.
 - **[AI Governance Model Context Protocol Server (AI Governance MCP)](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp)** — v0.3.2 · released · no hosted endpoint. Read-only Model Context Protocol (MCP) tools wrapping the toolkit and passport validator; authority_effect NONE.
-- **[Agentic AI Governance](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance)** — v0.1.0-alpha.2 · available · independent verifier review open. Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts.
+- **[Agentic AI Governance](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance)** — v0.1.0-alpha.3 · available · independent verifier review open. Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts.
 - **[Verified Vulnerability Governance](https://github.com/GLOBAL-AI-GOVERNANCE/verified-vulnerability-governance)** — v0.2.0 · released. Evidence-linked vulnerability ownership, remediation, retesting, and closure.
 - **[AI Cyber Resilience Framework](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework)** — v0.1.1 · released · independent review open. Boundary assessment, evidence cards, and architecture-hardening backlog.
 - **[Containment Ledger](https://github.com/GLOBAL-AI-GOVERNANCE/containment-ledger)** · [Open app](https://global-ai-governance.github.io/containment-ledger/) — v1.0.0 · released · local browser instrument for domain, path, and evidence marking and human disposition. Independent structural review instrument; shares vocabulary with the AI Cyber Resilience Framework; no code, data, or release dependency; authority_effect NONE.
@@ -82,7 +82,6 @@ Published release identities remain controlling. Merged development candidates *
 
 - AI Cyber Resilience Framework: **v0.2.0 Continuous Assurance Thread** (published release remains v0.1.1).
 - Peace OS: Crisis Room: **Post-RC2 Portfolio Operating Disposition Reference** (published release remains v0.3.0-rc2).
-- Agentic AI Governance: OPA Enforcement Bridge and synthetic Agent Incident Readiness lifecycle reference implementations (published release remains v0.1.0-alpha.2).
 
 ## Shared Governance Lifecycle
 

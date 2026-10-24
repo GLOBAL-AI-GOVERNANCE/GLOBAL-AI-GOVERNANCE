@@ -121,13 +121,8 @@ def validate_manifest(manifest: dict) -> list[dict]:
     if candidates.get("peace-os") != expected_peace_candidate:
         fail("Peace OS development candidate record is incorrect")
 
-    expected_agentic_candidate = {
-        "candidate": "OPA Enforcement Bridge and synthetic Agent Incident Readiness lifecycle reference implementations",
-        "status": "MERGED_UNRELEASED",
-        "published_release": "v0.1.0-alpha.2",
-    }
-    if candidates.get("agentic-ai-governance") != expected_agentic_candidate:
-        fail("Agentic current-main development candidate record is incorrect")
+    if "agentic-ai-governance" in candidates:
+        fail("Agentic v0.1.0-alpha.3 includes its reference implementations; it is not a development candidate")
 
     if "verified-vulnerability-governance" in candidates:
         fail("VVG crypto-migration closure reference is released, not a development candidate")
@@ -238,7 +233,7 @@ def main() -> None:
 
     if "Stateful Revocation continuity is implemented and verified on current `main` and remains unreleased." in text:
         fail("stale Agentic merged-unreleased baseline remains after Alpha.2")
-    if "v0.1.0-alpha.2 · available · independent verifier review open" not in text:
+    if "v0.1.0-alpha.3 · available · independent verifier review open" not in text:
         fail("Agentic Alpha.2 public maturity is missing")
 
     for forbidden in FORBIDDEN_TEXT:
