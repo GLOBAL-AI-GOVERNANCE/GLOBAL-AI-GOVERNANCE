@@ -8,7 +8,7 @@ List the AI systems and agents you run. See which ones lack an owner, monitoring
 
 **[Connect tools](https://global-ai-governance.github.io/global-ai-governance-toolkit/connect.html#agents)**: schemas, commands, or the MCP server your agents can call.
 
-No AI system moves faster than ownership, evidence, authority, and control. The tools report; people decide. Every output is non-authorizing (`authority_effect: NONE`). The browser tools run locally. The MCP server installs locally (v0.3.0 release with wheel, sdist, and `SHA256SUMS`) or can be self-hosted by an operator; **Global AI Governance operates no hosted MCP endpoint**.
+No AI system moves faster than ownership, evidence, authority, and control. The tools report; people decide. Every output is non-authorizing (`authority_effect: NONE`). The browser tools run locally. The MCP server installs locally (v0.3.1 release with wheel, sdist, CycloneDX SBOM, `SHA256SUMS`, and build-provenance attestation) or can be self-hosted by an operator; **Global AI Governance operates no hosted MCP endpoint**.
 
 **Pick your path**
 
@@ -27,10 +27,10 @@ Every path is self-serve and non-authorizing: the tools report; people decide.
 |---|---|---|---|---|
 | Browser | [Open the Toolkit](https://global-ai-governance.github.io/global-ai-governance-toolkit/) | current main (pinned release v2.7.1) | working public reference toolkit | TESTED (hosted CI) |
 | CLI | `pip install https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/download/v2.7.1/global_ai_governance_toolkit-2.7.1-py3-none-any.whl` | v2.7.1 | working public reference toolkit | TESTED (release wheel, clean environment) |
-| MCP server | `uvx --from git+https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp@v0.3.0 gaig-mcp` | v0.3.0 | preview · no hosted endpoint | TESTED (MCP Python SDK client, clean environment) |
+| MCP server | `uvx --from git+https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp@v0.3.1 gaig-mcp` | v0.3.1 | preview · no hosted endpoint | TESTED (MCP Python SDK client, clean environment) |
 | GitHub Action | `uses: GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit@4deb5b70b07d8f91cf157ef07d7ddd7dfe68731c` | v2.7.1 (full commit SHA of the release tag) | released | TESTED (hosted CI self-test) |
 | Passport validator | `pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git` | main, unreleased (after v0.1.0-alpha.2) | experimental public alpha | TESTED (hosted CI, clean environment) |
-| Docker (MCP server) | `docker build -f deploy/Dockerfile -t gaig-mcp .` (in an `ai-governance-mcp` clone) | v0.3.0 | build locally from Dockerfile · no image published | untested |
+| Docker (MCP server) | `docker build -f deploy/Dockerfile -t gaig-mcp .` (in an `ai-governance-mcp` clone) | v0.3.1 | build locally from Dockerfile · no image published | untested |
 
 TESTED means run by this project's own CI or test runs; it is not independent verification. Every surface is non-authorizing (`authority_effect: NONE`). Machine-readable copy: `install_surfaces` in [portfolio.json](portfolio.json).
 
@@ -63,7 +63,7 @@ Use of these materials does not imply endorsement or certification. Do not inclu
 Nine product and reference repositories plus two public infrastructure repositories. Labels below are the current public maturity and outcome from the [machine-readable portfolio](portfolio.json), which also carries lifecycle roles and source-of-truth boundaries.
 
 - **[Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit)** · [Open app](https://global-ai-governance.github.io/global-ai-governance-toolkit/) — v2.7.1 · working public reference toolkit. Reproducible Decision Pack, bounded sovereignty assessment, assurance/accountability profiles, and organizational AI maturity evidence assessment.
-- **[AI Governance Model Context Protocol Server (AI Governance MCP)](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp)** — v0.3.0 preview · no hosted endpoint. Read-only Model Context Protocol (MCP) tools wrapping the toolkit and passport validator; authority_effect NONE.
+- **[AI Governance Model Context Protocol Server (AI Governance MCP)](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp)** — v0.3.1 preview · no hosted endpoint. Read-only Model Context Protocol (MCP) tools wrapping the toolkit and passport validator; authority_effect NONE.
 - **[Agentic AI Governance](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance)** — v0.1.0-alpha.2 · experimental public alpha. Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts.
 - **[Verified Vulnerability Governance](https://github.com/GLOBAL-AI-GOVERNANCE/verified-vulnerability-governance)** — v0.1.3 · verified-closure pre-release. Evidence-linked vulnerability ownership, remediation, retesting, and closure.
 - **[AI Cyber Resilience Framework](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework)** — v0.1.1 · public defensive reference. Boundary assessment, evidence cards, and architecture-hardening backlog.
