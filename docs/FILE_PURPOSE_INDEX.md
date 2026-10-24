@@ -12,6 +12,8 @@ Every file in this portfolio control-plane repository exists for a specific oper
 - `docs/GLOBAL_AI_ASSURANCE_ENVELOPE.md` and related assurance docs — Define the shared assurance envelope and boundaries. Prevent over-claiming.
 - `docs/PROGRAM_CLOSEOUT.md` and `docs/FINAL_INTERNAL_UPDATE_SCOPE.md` — Explicit maturity and evidence boundaries. Published release identities remain controlling.
 
+- `docs/VOICE.md` — Voice and terminology guide for all public copy: plain language first, consistent names, no hype, and Claims Integrity labels.
+
 ## Validation and reproduction
 - `tools/` — Deterministic validators for profile, evidence graph, integration, closeout, and cross-estate reproduction. Used in CI and independent checks.
 - `tests/` — Regression coverage for assurance delta and validators.
