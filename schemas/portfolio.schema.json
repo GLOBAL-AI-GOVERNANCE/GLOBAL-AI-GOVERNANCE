@@ -138,31 +138,10 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "agentic-ai-governance",
         "ai-cyber-resilience-framework",
         "peace-os"
       ],
       "properties": {
-        "agentic-ai-governance": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "candidate",
-            "status",
-            "published_release"
-          ],
-          "properties": {
-            "candidate": {
-              "const": "OPA Enforcement Bridge and synthetic Agent Incident Readiness lifecycle reference implementations"
-            },
-            "status": {
-              "const": "MERGED_UNRELEASED"
-            },
-            "published_release": {
-              "const": "v0.1.0-alpha.2"
-            }
-          }
-        },
         "ai-cyber-resilience-framework": {
           "type": "object",
           "additionalProperties": false,

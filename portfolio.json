@@ -47,8 +47,8 @@
       "lifecycle_roles": [
         "AUTHORIZE"
       ],
-      "version": "v0.1.0-alpha.2",
-      "maturity": "v0.1.0-alpha.2 \u00b7 available \u00b7 independent verifier review open",
+      "version": "v0.1.0-alpha.3",
+      "maturity": "v0.1.0-alpha.3 \u00b7 available \u00b7 independent verifier review open",
       "finished_outcome": "Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts",
       "authority_boundary": "Passport and validation artifacts express bounded machine-readable authority semantics; production authorization remains human-governed and environment-specific.",
       "upstream": [
@@ -59,7 +59,7 @@
       ],
       "classification": "CORE",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
-      "published_release": "v0.1.0-alpha.2"
+      "published_release": "v0.1.0-alpha.3"
     },
     {
       "repository": "governed-systems-administration",
@@ -233,11 +233,6 @@
   ],
   "integration_contract_version": "1.0.0",
   "development_candidates": {
-    "agentic-ai-governance": {
-      "candidate": "OPA Enforcement Bridge and synthetic Agent Incident Readiness lifecycle reference implementations",
-      "status": "MERGED_UNRELEASED",
-      "published_release": "v0.1.0-alpha.2"
-    },
     "ai-cyber-resilience-framework": {
       "candidate": "v0.2.0 Continuous Assurance Thread",
       "status": "MERGED_UNRELEASED",
@@ -285,8 +280,8 @@
     {
       "surface": "Passport validator",
       "repository": "agentic-ai-governance",
-      "install": "pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git",
-      "version": "main (after v0.1.0-alpha.2)",
+      "install": "pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git@v0.1.0-alpha.3",
+      "version": "v0.1.0-alpha.3",
       "maturity": "available \u00b7 independent verifier review open",
       "test_status": "TESTED (hosted CI, clean environment)"
     },
