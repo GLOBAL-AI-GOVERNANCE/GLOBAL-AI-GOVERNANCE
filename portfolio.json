@@ -27,7 +27,7 @@
         "REASSESS"
       ],
       "version": "v2.7.2",
-      "maturity": "v2.7.2 \u00b7 working public reference toolkit",
+      "maturity": "v2.7.2 \u00b7 stable",
       "finished_outcome": "Reproducible Decision Pack, bounded sovereignty assessment, assurance/accountability profiles, and organizational AI maturity evidence assessment",
       "authority_boundary": "Organizational maturity is accountable-human determined. Automation verifies submitted evidence. It does not certify, independently declare maturity, approve deployment, or transfer authority.",
       "upstream": [
@@ -48,7 +48,7 @@
         "AUTHORIZE"
       ],
       "version": "v0.1.0-alpha.2",
-      "maturity": "v0.1.0-alpha.2 \u00b7 experimental public alpha",
+      "maturity": "v0.1.0-alpha.2 \u00b7 available \u00b7 independent verifier review open",
       "finished_outcome": "Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts",
       "authority_boundary": "Passport and validation artifacts express bounded machine-readable authority semantics; production authorization remains human-governed and environment-specific.",
       "upstream": [
@@ -68,7 +68,7 @@
         "DESIGN ENFORCEMENT"
       ],
       "version": null,
-      "maturity": "Pre-alpha \u00b7 preimplementation \u00b7 independent semantic review required \u00b7 no execution capability",
+      "maturity": "Specification \u00b7 independent semantic review open \u00b7 no execution capability",
       "finished_outcome": "Proposed human-governed administration request, review, validation, and evidence contracts",
       "authority_boundary": "The repository is preimplementation and provides no execution capability.",
       "upstream": [
@@ -87,8 +87,8 @@
         "VERIFY",
         "CLOSE"
       ],
-      "version": "v0.1.4",
-      "maturity": "v0.1.4 \u00b7 verified-closure pre-release",
+      "version": "v0.2.0",
+      "maturity": "v0.2.0 \u00b7 released",
       "finished_outcome": "Evidence-linked vulnerability ownership, remediation, retesting, and closure",
       "authority_boundary": "Closure is evidence-driven and human-authorized; repository checks do not establish enterprise deployment or independent operational retesting services.",
       "upstream": [
@@ -99,7 +99,7 @@
       ],
       "classification": "CORE",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
-      "published_release": "v0.1.4"
+      "published_release": "v0.2.0"
     },
     {
       "repository": "ai-cyber-resilience-framework",
@@ -109,7 +109,7 @@
         "RECOVER"
       ],
       "version": "v0.1.1",
-      "maturity": "v0.1.1 \u00b7 public defensive reference",
+      "maturity": "v0.1.1 \u00b7 released \u00b7 independent review open",
       "finished_outcome": "Boundary assessment, evidence cards, and architecture-hardening backlog",
       "authority_boundary": "The framework is a public defensive reference, not executable operational software, certification, or proof that a deployed control works.",
       "upstream": [
@@ -130,8 +130,8 @@
         "LEARN"
       ],
       "version": "v0.3.0-rc2",
-      "maturity": "v0.3.0-rc2 \u00b7 published public browser review candidate \u00b7 stable, human-validation, Godot, and Windows gates open",
-      "finished_outcome": "Fictional crisis-verification simulation and after-action review",
+      "maturity": "v0.3.0-rc2 \u00b7 available in your browser \u00b7 independent human validation open",
+      "finished_outcome": "Crisis-verification simulator with synthetic scenarios and an after-action review",
       "authority_boundary": "The experience is a fictional learning and review candidate, not an operational intelligence, emergency, attribution, certification, or autonomous-release system.",
       "upstream": [
         "ai-cyber-resilience-framework"
@@ -148,7 +148,7 @@
         "FOUNDATION"
       ],
       "version": "v1.1.1",
-      "maturity": "v1.1.1 \u00b7 foundational governance model and template set",
+      "maturity": "v1.1.1 \u00b7 stable",
       "finished_outcome": "Inventory, ownership, risk, control, monitoring, and reporting foundations",
       "authority_boundary": "Foundational models and templates provide reference structure; they do not independently establish approval, compliance, certification, or production authorization.",
       "upstream": [],
@@ -166,12 +166,12 @@
       "lifecycle_roles": [
         "CONTAIN"
       ],
-      "version": null,
-      "maturity": "Local-only browser instrument for domain/path/evidence marking and human disposition",
+      "version": "v1.0.0",
+      "maturity": "v1.0.0 \u00b7 released \u00b7 local browser instrument for domain, path, and evidence marking and human disposition",
       "finished_outcome": "Independent structural review instrument; shares vocabulary with the AI Cyber Resilience Framework; no code, data, or release dependency; authority_effect NONE",
       "authority_boundary": "Separate review instrument. Does not change published framework release or confer authority.",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
-      "published_release": null,
+      "published_release": "v1.0.0",
       "upstream": [],
       "downstream": []
     },
@@ -183,7 +183,7 @@
         "INTEGRATE"
       ],
       "version": "v0.3.2",
-      "maturity": "v0.3.2 preview \u00b7 no hosted endpoint",
+      "maturity": "v0.3.2 \u00b7 released \u00b7 no hosted endpoint",
       "finished_outcome": "Read-only Model Context Protocol (MCP) tools wrapping the toolkit and passport validator; authority_effect NONE",
       "authority_boundary": "Tool results are decision support only. Command gaig-mcp and package gaig_mcp. Does not approve, certify, authorize, or accept risk.",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
@@ -255,7 +255,7 @@
       "repository": "global-ai-governance-toolkit",
       "install": "https://ai-governance.solutions/",
       "version": "current main (pinned release v2.7.2)",
-      "maturity": "working public reference toolkit",
+      "maturity": "stable",
       "test_status": "TESTED (hosted CI)"
     },
     {
@@ -263,7 +263,7 @@
       "repository": "global-ai-governance-toolkit",
       "install": "pip install https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/download/v2.7.2/global_ai_governance-2.7.2-py3-none-any.whl",
       "version": "v2.7.2",
-      "maturity": "working public reference toolkit",
+      "maturity": "stable",
       "test_status": "TESTED (release wheel, clean environment)"
     },
     {
@@ -271,7 +271,7 @@
       "repository": "ai-governance-mcp",
       "install": "uvx --from git+https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp@v0.3.2 gaig-mcp",
       "version": "v0.3.2",
-      "maturity": "preview \u00b7 no hosted endpoint",
+      "maturity": "released \u00b7 no hosted endpoint",
       "test_status": "TESTED (MCP Python SDK client, clean environment)"
     },
     {
@@ -286,8 +286,8 @@
       "surface": "Passport validator",
       "repository": "agentic-ai-governance",
       "install": "pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git",
-      "version": "main, unreleased (after v0.1.0-alpha.2)",
-      "maturity": "experimental public alpha",
+      "version": "main (after v0.1.0-alpha.2)",
+      "maturity": "available \u00b7 independent verifier review open",
       "test_status": "TESTED (hosted CI, clean environment)"
     },
     {
