@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/schemas/portfolio.schema.json",
+  "$id": "https://raw.githubusercontent.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/main/schemas/portfolio.schema.json",
   "title": "GLOBAL AI GOVERNANCE Portfolio Manifest",
   "type": "object",
   "additionalProperties": false,
@@ -139,7 +139,6 @@
       "additionalProperties": false,
       "required": [
         "agentic-ai-governance",
-        "verified-vulnerability-governance",
         "ai-cyber-resilience-framework",
         "peace-os"
       ],
@@ -161,26 +160,6 @@
             },
             "published_release": {
               "const": "v0.1.0-alpha.2"
-            }
-          }
-        },
-        "verified-vulnerability-governance": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "candidate",
-            "status",
-            "published_release"
-          ],
-          "properties": {
-            "candidate": {
-              "const": "Synthetic crypto-migration closure reference"
-            },
-            "status": {
-              "const": "MERGED_UNRELEASED"
-            },
-            "published_release": {
-              "const": "v0.1.3"
             }
           }
         },

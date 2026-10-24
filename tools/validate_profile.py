@@ -56,9 +56,9 @@ FORBIDDEN_TEXT = (
 )
 
 REQUIRED_JOURNEY_LINKS = (
-    "global-ai-governance-toolkit/releases/tag/v2.7.1",
-    "global-ai-governance-toolkit/tree/v2.7.1#quick-start",
-    "global-ai-governance-toolkit/tree/v2.7.1/automation",
+    "global-ai-governance-toolkit/releases/tag/v2.7.2",
+    "global-ai-governance-toolkit/tree/v2.7.2#quick-start",
+    "global-ai-governance-toolkit/tree/v2.7.2/automation",
     "agentic-ai-governance/tree/v0.1.0-alpha.2/schemas",
 )
 
@@ -129,13 +129,8 @@ def validate_manifest(manifest: dict) -> list[dict]:
     if candidates.get("agentic-ai-governance") != expected_agentic_candidate:
         fail("Agentic current-main development candidate record is incorrect")
 
-    expected_vvg_candidate = {
-        "candidate": "Synthetic crypto-migration closure reference",
-        "status": "MERGED_UNRELEASED",
-        "published_release": "v0.1.3",
-    }
-    if candidates.get("verified-vulnerability-governance") != expected_vvg_candidate:
-        fail("VVG current-main development candidate record is incorrect")
+    if "verified-vulnerability-governance" in candidates:
+        fail("VVG crypto-migration closure reference is released in v0.1.4, not a development candidate")
 
     lifecycle = manifest.get("shared_lifecycle")
     if not isinstance(lifecycle, list) or not lifecycle:
@@ -278,7 +273,7 @@ def main() -> None:
         fail("lifecycle stages are out of order")
 
     if not re.search(
-        r"\bv2\.7\.1\b.*working public reference toolkit",
+        r"\bv2\.7\.2\b.*working public reference toolkit",
         text,
         re.IGNORECASE | re.DOTALL,
     ):
