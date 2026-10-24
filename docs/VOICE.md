@@ -39,7 +39,7 @@ Founders and teams building with AI agents, along with the operators, engineers,
 | Action Levels | action levels, autonomy levels | Agentic AI Governance spec 08. |
 | Agent Trust Passport (then "passport") | agent ID card, trust token | |
 | accountable person, accountable human | approver, the AI | The person who decides. |
-| `gaig`, `gaig-mcp` | `gag`, `gag-mcp` | Current commands. Mention the deprecated aliases only where a reader needs them for compatibility. |
+| `gaig`, `gaig-mcp` | any older abbreviation | The only command names. |
 | `authority_effect: NONE` | "approved", "certified", "compliant" | Outputs never authorize anything. |
 | local-first, runs in your browser | serverless, cloud | Browser tools send no data anywhere. |
 | synthetic example | demo customer, real case | Every example is synthetic. |
