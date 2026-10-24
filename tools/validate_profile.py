@@ -56,9 +56,9 @@ FORBIDDEN_TEXT = (
 )
 
 REQUIRED_JOURNEY_LINKS = (
-    "global-ai-governance-toolkit/releases/tag/v2.5.3",
-    "global-ai-governance-toolkit/tree/v2.5.3#quick-start",
-    "global-ai-governance-toolkit/tree/v2.5.3/automation",
+    "global-ai-governance-toolkit/releases/tag/v2.6.0",
+    "global-ai-governance-toolkit/tree/v2.6.0#quick-start",
+    "global-ai-governance-toolkit/tree/v2.6.0/automation",
     "agentic-ai-governance/tree/v0.1.0-alpha.2/schemas",
 )
 
@@ -278,7 +278,7 @@ def main() -> None:
         fail("lifecycle stages are out of order")
 
     if not re.search(
-        r"\bv2\.5\.3\b.*working public reference toolkit",
+        r"\bv2\.6\.0\b.*working public reference toolkit",
         text,
         re.IGNORECASE | re.DOTALL,
     ):
