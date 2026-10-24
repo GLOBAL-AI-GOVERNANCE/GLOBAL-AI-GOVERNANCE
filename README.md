@@ -10,6 +10,17 @@ Assess an inventory, examine findings, and prepare a reproducible result for hum
 
 The browser tools run locally in your browser. The MCP server is available for local installation (v0.2.0 release with wheel, sdist, and `SHA256SUMS`) or operator-hosted self-hosting; **Global AI Governance operates no hosted MCP endpoint**. Outputs are non-authorizing (`authority_effect: NONE`).
 
+**In 10 seconds:** list the AI systems and agents you run, see which ones lack an owner, monitoring, a shutdown path, or evidence, and get a Decision Pack an accountable person uses to decide. Free and open source. The browser check needs no install, upload, or login.
+
+**Pick your path**
+
+- **Founder or team running AI agents:** run the [browser Toolkit](https://global-ai-governance.github.io/global-ai-governance-toolkit/) on the sample, then on your own inventory from the [blank template](https://global-ai-governance.github.io/global-ai-governance-toolkit/ai-system-inventory-template.csv). Use the [Action Levels](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance/blob/main/spec/08-action-authority.md) to decide what each agent may do on its own.
+- **Chief of Staff or operations lead:** start with the [Action Levels](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance/blob/main/spec/08-action-authority.md) and the [agent passport](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance#five-minute-validation): which agent it covers, who issued it, its conditions, and when it expires.
+- **Engineer adding checks to an agent:** run the MCP server with one command (see **Install at a glance** below) and call `check_inventory` with `use_sample=true`.
+- **Compliance or risk reviewer:** run **Run example with gaps** in the [browser Toolkit](https://global-ai-governance.github.io/global-ai-governance-toolkit/) and download the Decision Pack to see the findings and the decision record a named person completes.
+
+Every path is self-serve and non-authorizing: the tools report; people decide.
+
 ## Start Here
 
 **Install at a glance**
@@ -19,7 +30,7 @@ The browser tools run locally in your browser. The MCP server is available for l
 | Browser | [Open the Toolkit](https://global-ai-governance.github.io/global-ai-governance-toolkit/) | current main (pinned release v2.6.0) | working public reference toolkit | TESTED (hosted CI) |
 | CLI | `pip install https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/download/v2.6.0/global_ai_governance_toolkit-2.6.0-py3-none-any.whl` | v2.6.0 | working public reference toolkit | TESTED (release wheel, clean environment) |
 | MCP server | `uvx --from git+https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp@v0.2.0 gaig-mcp` | v0.2.0 | preview · no hosted endpoint | TESTED (MCP Python SDK client, clean environment) |
-| GitHub Action | `uses: GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit@<commit-sha>` | main, unreleased (pin a full commit SHA) | merged, unreleased | TESTED (hosted CI self-test) |
+| GitHub Action | `uses: GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit@f454bf921b774f17982e70f28ce01a224d3c6410` | v2.6.0 (full commit SHA of the release tag) | released | TESTED (hosted CI self-test) |
 | Passport validator | `pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git` | main, unreleased (after v0.1.0-alpha.2) | experimental public alpha | TESTED (hosted CI, clean environment) |
 | Docker (MCP server) | `docker build -f deploy/Dockerfile -t gaig-mcp .` (in an `ai-governance-mcp` clone) | v0.2.0 | build locally from Dockerfile · no image published | untested |
 
