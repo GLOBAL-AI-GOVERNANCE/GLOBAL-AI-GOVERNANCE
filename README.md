@@ -13,7 +13,7 @@ No AI system moves faster than ownership, evidence, authority, and control. The 
 **Pick your path**
 
 - **Founder or team running AI agents:** run the [browser Toolkit](https://ai-governance.solutions/) on the sample, then on your own inventory from the [blank template](https://ai-governance.solutions/ai-system-inventory-template.csv). Use the [Action Levels](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance/blob/main/spec/08-action-authority.md) to decide what each agent may do on its own.
-- **Chief of Staff or operations lead:** start with the [Action Levels](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance/blob/main/spec/08-action-authority.md) and the [agent passport](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance#five-minute-validation): which agent it covers, who issued it, its conditions, and when it expires.
+- **Team running a lead agent (orchestrator) that coordinates a fleet:** describe the lead agent's sub-agents and delegations in its [agent passport](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance#five-minute-validation) action graph. Any declared delegation sets a minimum of Level 3 under the [Action Levels](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance/blob/main/spec/08-action-authority.md), so the lead agent is assessed for everything it can reach through other agents. The passport records who issued it, its conditions, and when it expires.
 - **Engineer adding checks to an agent:** run the MCP server with one command (see **Install at a glance** below) and call `check_inventory` with `use_sample=true`.
 - **Compliance or risk reviewer:** run **Run example with gaps** in the [browser Toolkit](https://ai-governance.solutions/) and download the Decision Pack to see the findings and the decision record a named person completes.
 
@@ -99,6 +99,6 @@ Repositories **do not all implement every lifecycle stage** and **do not share o
 
 The tools produce reference evidence and decision support. Automated checks **do not establish operational safety**, independent real-world assurance, **legal compliance**, **certification**, or **production authorization**. A passing evaluation is not permission to deploy, accept risk, or take consequential action.
 
-For operators and reviewers: [Integrated remediation reference](docs/GOVERNED_VULNERABILITY_REMEDIATION_REFERENCE.md) · [NIST AI RMF mapping](docs/NIST_AI_RMF_1_0_MAPPING.md) · [Source policy](docs/SOURCE_POLICY.md) · [Change policy](docs/CHANGE_POLICY.md) · [Security policy](https://github.com/GLOBAL-AI-GOVERNANCE/.github/blob/main/SECURITY.md).
+For operators and reviewers: [Integrated remediation reference](docs/GOVERNED_VULNERABILITY_REMEDIATION_REFERENCE.md) · [NIST AI RMF mapping](docs/NIST_AI_RMF_1_0_MAPPING.md) · [Frontier safety, EU AI Act, and ISO/IEC 42001 crosswalk](docs/FRONTIER_AND_REGULATORY_CROSSWALK.md) · [Source policy](docs/SOURCE_POLICY.md) · [Change policy](docs/CHANGE_POLICY.md) · [Security policy](https://github.com/GLOBAL-AI-GOVERNANCE/.github/blob/main/SECURITY.md).
 
 This profile repository is licensed under the Apache License 2.0; each linked repository states its own license and release terms.
