@@ -184,6 +184,20 @@ def validate_manifest(manifest: dict) -> list[dict]:
             if relation not in known:
                 fail(f"unknown repository relation: {relation}")
 
+    surfaces = manifest.get("install_surfaces")
+    if not isinstance(surfaces, list) or not surfaces:
+        fail("install_surfaces must be a non-empty list")
+    for index, surface in enumerate(surfaces, start=1):
+        keys = ("surface", "repository", "install", "version", "maturity", "test_status")
+        if not isinstance(surface, dict) or set(surface) != set(keys):
+            fail(f"install surface {index} has an unexpected key set")
+        if any(not isinstance(surface[k], str) or not surface[k].strip() for k in keys):
+            fail(f"install surface {index} has an empty field")
+        if surface["repository"] not in known:
+            fail(f"install surface {index} names an unknown repository")
+        if not (surface["test_status"].startswith("TESTED") or surface["test_status"] == "untested"):
+            fail(f"install surface {index} must be labelled TESTED or untested")
+
     gsa = next((item for item in repos if item["repository"] == "governed-systems-administration"), None)
     if gsa is None or gsa["lifecycle_roles"] != ["DESIGN ENFORCEMENT"]:
         fail("GSA lifecycle role must remain DESIGN ENFORCEMENT until execution capability exists")
@@ -214,6 +228,14 @@ def main() -> None:
             fail(f"README maturity does not match manifest: {repository}")
         if item["finished_outcome"] not in text:
             fail(f"README finished outcome does not match manifest: {repository}")
+
+    for surface in manifest["install_surfaces"]:
+        row = f"| {surface['surface']} |"
+        if row not in text or surface["install"] not in text:
+            fail(f"README install table does not mirror manifest: {surface['surface']}")
+        for key in ("version", "maturity", "test_status"):
+            if f"| {surface[key]} |" not in text:
+                fail(f"README install table {key} does not match manifest: {surface['surface']}")
 
     for boundary in REQUIRED_BOUNDARIES:
         if boundary.lower() not in lowered:

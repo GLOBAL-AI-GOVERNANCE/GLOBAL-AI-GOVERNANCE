@@ -1,6 +1,6 @@
 # File Purpose Index
 
-Every file in this portfolio control-plane repository exists for a specific operational or evidence-boundary purpose. None contains personal notes, journals, diary entries, or private data.
+Every file in this portfolio control-plane repository exists for a specific operational or evidence-boundary purpose.
 
 ## Core entry points
 - `README.md` — Human-facing Start Here. Directs operators and agents to the Toolkit browser, MCP, and portfolio map. States authority_effect NONE and evidence boundaries.
