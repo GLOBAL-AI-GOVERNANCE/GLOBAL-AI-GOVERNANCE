@@ -26,8 +26,8 @@
         "MEASURE",
         "REASSESS"
       ],
-      "version": "v2.5.3",
-      "maturity": "v2.5.3 \u00b7 working public reference toolkit",
+      "version": "v2.6.0",
+      "maturity": "v2.6.0 \u00b7 working public reference toolkit",
       "finished_outcome": "Reproducible Decision Pack, bounded sovereignty assessment, assurance/accountability profiles, and organizational AI maturity evidence assessment",
       "authority_boundary": "Organizational maturity is accountable-human determined. Automation verifies submitted evidence. It does not certify, independently declare maturity, approve deployment, or transfer authority.",
       "upstream": [
@@ -39,7 +39,7 @@
       ],
       "classification": "CORE",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
-      "published_release": "v2.5.3"
+      "published_release": "v2.6.0"
     },
     {
       "repository": "agentic-ai-governance",
@@ -259,15 +259,15 @@
       "surface": "Browser",
       "repository": "global-ai-governance-toolkit",
       "install": "https://global-ai-governance.github.io/global-ai-governance-toolkit/",
-      "version": "current main (pinned release v2.5.3)",
+      "version": "current main (pinned release v2.6.0)",
       "maturity": "working public reference toolkit",
       "test_status": "TESTED (hosted CI)"
     },
     {
       "surface": "CLI",
       "repository": "global-ai-governance-toolkit",
-      "install": "pip install https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/download/v2.5.3/global_ai_governance_toolkit-2.5.3-py3-none-any.whl",
-      "version": "v2.5.3",
+      "install": "pip install https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/download/v2.6.0/global_ai_governance_toolkit-2.6.0-py3-none-any.whl",
+      "version": "v2.6.0",
       "maturity": "working public reference toolkit",
       "test_status": "TESTED (release wheel, clean environment)"
     },
@@ -282,9 +282,9 @@
     {
       "surface": "GitHub Action",
       "repository": "global-ai-governance-toolkit",
-      "install": "uses: GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit@<commit-sha>",
-      "version": "main, unreleased (pin a full commit SHA)",
-      "maturity": "merged, unreleased",
+      "install": "uses: GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit@f454bf921b774f17982e70f28ce01a224d3c6410",
+      "version": "v2.6.0 (full commit SHA of the release tag)",
+      "maturity": "released",
       "test_status": "TESTED (hosted CI self-test)"
     },
     {
