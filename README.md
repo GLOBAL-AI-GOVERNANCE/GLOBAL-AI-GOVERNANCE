@@ -2,7 +2,7 @@
 
 **Govern your AI agents so you can give them more autonomy, safely.**
 
-List the AI systems and agents you run. See which ones lack an owner, monitoring, a shutdown path, or evidence. Get a Decision Pack prepared for the person accountable, so trust is earned before autonomy is extended. Free and open source. The browser check needs no install, upload, or login.
+List the AI systems and agents you run. See which ones lack an owner, monitoring, a shutdown path, or evidence. Get a Decision Pack ready for human review and decision by the person accountable, so trust is earned before autonomy is extended. Free and open source. The browser check needs no install, upload, or login.
 
 **[Try the Toolkit](https://ai-governance.solutions/)**: run a sample in your browser, nothing to install.
 
