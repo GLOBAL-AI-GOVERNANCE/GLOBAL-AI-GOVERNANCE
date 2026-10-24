@@ -182,12 +182,12 @@
       "lifecycle_roles": [
         "INTEGRATE"
       ],
-      "version": "v0.3.0",
-      "maturity": "v0.3.0 preview \u00b7 no hosted endpoint",
+      "version": "v0.3.1",
+      "maturity": "v0.3.1 preview \u00b7 no hosted endpoint",
       "finished_outcome": "Read-only Model Context Protocol (MCP) tools wrapping the toolkit and passport validator; authority_effect NONE",
       "authority_boundary": "Tool results are decision support only. Command gaig-mcp and package gaig_mcp. Does not approve, certify, authorize, or accept risk.",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
-      "published_release": "v0.3.0",
+      "published_release": "v0.3.1",
       "upstream": [
         "global-ai-governance-toolkit",
         "agentic-ai-governance"
@@ -274,8 +274,8 @@
     {
       "surface": "MCP server",
       "repository": "ai-governance-mcp",
-      "install": "uvx --from git+https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp@v0.3.0 gaig-mcp",
-      "version": "v0.3.0",
+      "install": "uvx --from git+https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp@v0.3.1 gaig-mcp",
+      "version": "v0.3.1",
       "maturity": "preview \u00b7 no hosted endpoint",
       "test_status": "TESTED (MCP Python SDK client, clean environment)"
     },
@@ -299,7 +299,7 @@
       "surface": "Docker (MCP server)",
       "repository": "ai-governance-mcp",
       "install": "docker build -f deploy/Dockerfile -t gaig-mcp .",
-      "version": "v0.3.0",
+      "version": "v0.3.1",
       "maturity": "build locally from Dockerfile \u00b7 no image published",
       "test_status": "untested"
     }
