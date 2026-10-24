@@ -56,9 +56,9 @@ FORBIDDEN_TEXT = (
 )
 
 REQUIRED_JOURNEY_LINKS = (
-    "global-ai-governance-toolkit/releases/tag/v2.7.2",
-    "global-ai-governance-toolkit/tree/v2.7.2#quick-start",
-    "global-ai-governance-toolkit/tree/v2.7.2/automation",
+    "global-ai-governance-toolkit/releases/tag/v2.8.0",
+    "global-ai-governance-toolkit/tree/v2.8.0#quick-start",
+    "global-ai-governance-toolkit/tree/v2.8.0/automation",
     "agentic-ai-governance/tree/v0.1.0-alpha.2/schemas",
 )
 
@@ -122,7 +122,7 @@ def validate_manifest(manifest: dict) -> list[dict]:
         fail("Peace OS development candidate record is incorrect")
 
     if "agentic-ai-governance" in candidates:
-        fail("Agentic v0.1.0-alpha.3 includes its reference implementations; it is not a development candidate")
+        fail("Agentic v0.1.0-alpha.4 includes its reference implementations; it is not a development candidate")
 
     if "verified-vulnerability-governance" in candidates:
         fail("VVG crypto-migration closure reference is released, not a development candidate")
@@ -233,7 +233,7 @@ def main() -> None:
 
     if "Stateful Revocation continuity is implemented and verified on current `main` and remains unreleased." in text:
         fail("stale Agentic merged-unreleased baseline remains after Alpha.2")
-    if "v0.1.0-alpha.3 · available · independent verifier review open" not in text:
+    if "v0.1.0-alpha.4 · available · independent verifier review open" not in text:
         fail("Agentic Alpha.2 public maturity is missing")
 
     for forbidden in FORBIDDEN_TEXT:
@@ -268,7 +268,7 @@ def main() -> None:
         fail("lifecycle stages are out of order")
 
     if not re.search(
-        r"\bv2\.7\.2\b · stable",
+        r"\bv2\.8\.0\b · stable",
         text,
         re.IGNORECASE | re.DOTALL,
     ):
