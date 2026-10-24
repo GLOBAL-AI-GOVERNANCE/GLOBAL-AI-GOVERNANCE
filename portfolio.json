@@ -258,7 +258,7 @@
     {
       "surface": "Browser",
       "repository": "global-ai-governance-toolkit",
-      "install": "https://global-ai-governance.github.io/global-ai-governance-toolkit/",
+      "install": "https://ai-governance.solutions/",
       "version": "current main (pinned release v2.7.1)",
       "maturity": "working public reference toolkit",
       "test_status": "TESTED (hosted CI)"
