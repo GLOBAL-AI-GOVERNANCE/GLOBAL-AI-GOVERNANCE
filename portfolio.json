@@ -182,12 +182,12 @@
       "lifecycle_roles": [
         "INTEGRATE"
       ],
-      "version": null,
-      "maturity": "v0.1.0 preview \u00b7 source only \u00b7 no hosted endpoint",
+      "version": "v0.1.0",
+      "maturity": "v0.1.0 preview \u00b7 no hosted endpoint",
       "finished_outcome": "Read-only Model Context Protocol (MCP) tools wrapping the toolkit and passport validator; authority_effect NONE",
       "authority_boundary": "Tool results are decision support only. Command gag-mcp and package gag_mcp. Does not approve, certify, authorize, or accept risk.",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
-      "published_release": null,
+      "published_release": "v0.1.0",
       "upstream": [
         "global-ai-governance-toolkit",
         "agentic-ai-governance"
@@ -253,5 +253,55 @@
       "status": "MERGED_UNRELEASED",
       "published_release": "v0.3.0-rc2"
     }
-  }
+  },
+  "install_surfaces": [
+    {
+      "surface": "Browser",
+      "repository": "global-ai-governance-toolkit",
+      "install": "https://global-ai-governance.github.io/global-ai-governance-toolkit/",
+      "version": "current main (pinned release v2.5.3)",
+      "maturity": "working public reference toolkit",
+      "test_status": "TESTED (hosted CI)"
+    },
+    {
+      "surface": "CLI",
+      "repository": "global-ai-governance-toolkit",
+      "install": "pip install https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/download/v2.5.3/global_ai_governance_toolkit-2.5.3-py3-none-any.whl",
+      "version": "v2.5.3",
+      "maturity": "working public reference toolkit",
+      "test_status": "TESTED (release wheel, clean environment)"
+    },
+    {
+      "surface": "MCP server",
+      "repository": "ai-governance-mcp",
+      "install": "uvx --from git+https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp@v0.1.0 gag-mcp",
+      "version": "v0.1.0",
+      "maturity": "preview \u00b7 no hosted endpoint",
+      "test_status": "TESTED (MCP Python SDK client, clean environment)"
+    },
+    {
+      "surface": "GitHub Action",
+      "repository": "global-ai-governance-toolkit",
+      "install": "uses: GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit@<commit-sha>",
+      "version": "main, unreleased (pin a full commit SHA)",
+      "maturity": "merged, unreleased",
+      "test_status": "TESTED (hosted CI self-test)"
+    },
+    {
+      "surface": "Passport validator",
+      "repository": "agentic-ai-governance",
+      "install": "pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git",
+      "version": "main, unreleased (after v0.1.0-alpha.2)",
+      "maturity": "experimental public alpha",
+      "test_status": "TESTED (hosted CI, clean environment)"
+    },
+    {
+      "surface": "Docker (MCP server)",
+      "repository": "ai-governance-mcp",
+      "install": "docker build -f deploy/Dockerfile -t gag-mcp .",
+      "version": "v0.1.0",
+      "maturity": "build locally from Dockerfile \u00b7 no image published",
+      "test_status": "untested"
+    }
+  ]
 }
