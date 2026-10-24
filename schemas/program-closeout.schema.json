@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/schemas/program-closeout.schema.json",
+  "$id": "https://raw.githubusercontent.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/main/schemas/program-closeout.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "properties": {
