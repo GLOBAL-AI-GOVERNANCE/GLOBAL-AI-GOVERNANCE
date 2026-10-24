@@ -1,12 +1,12 @@
 # Global AI Governance
 
-**Govern your AI agents so you can give them more autonomy, safely.**
+**Govern agent fleets before they act.**
 
-List the AI systems and agents you run. See which ones lack an owner, monitoring, a shutdown path, or evidence. Get a Decision Pack ready for human review and decision by the person accountable, so trust is earned before autonomy is extended. Free and open source. The browser check needs no install, upload, or login.
+Open-source governance for AI agencies, agent fleets, and AI-run companies, wherever they operate. List the AI systems and agents you run. See which ones lack an owner, monitoring, a shutdown path, or evidence. Get a Decision Pack ready for human review and decision by the person accountable, so trust is earned before autonomy is extended. Framework-neutral and jurisdiction-neutral, with [crosswalks](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/docs/FRONTIER_AND_REGULATORY_CROSSWALK.md) to NIST AI RMF 1.0, ISO/IEC 42001, the EU AI Act, and frontier safety frameworks. The browser check needs no install, upload, or login.
 
 **[Try the Toolkit](https://ai-governance.solutions/)**: run a sample in your browser, nothing to install.
 
-**[Connect tools](https://ai-governance.solutions/connect.html#agents)**: schemas, commands, or the MCP server your agents can call.
+**[Connect your agent](https://ai-governance.solutions/connect.html#agents)**: schemas, commands, or the MCP server any MCP-capable agent can call.
 
 No AI system moves faster than ownership, evidence, authority, and control. The tools report; people decide. Every output is non-authorizing (`authority_effect: NONE`). The browser tools run locally. The MCP server installs locally (v0.3.2 release with wheel, sdist, CycloneDX SBOM, `SHA256SUMS`, and build-provenance attestation) or can be self-hosted by an operator; **Global AI Governance operates no hosted MCP endpoint**.
 
@@ -32,7 +32,7 @@ Every path is self-serve and non-authorizing: the tools report; people decide.
 | Passport validator | `pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git` | main, unreleased (after v0.1.0-alpha.2) | experimental public alpha | TESTED (hosted CI, clean environment) |
 | Docker (MCP server) | `docker build -f deploy/Dockerfile -t gaig-mcp .` (in an `ai-governance-mcp` clone) | v0.3.2 | build locally from Dockerfile · no image published | untested |
 
-TESTED means run by this project's own CI or test runs; it is not independent verification. Every surface is non-authorizing (`authority_effect: NONE`). Machine-readable copy: `install_surfaces` in [portfolio.json](portfolio.json).
+TESTED means run by this project's own CI or test runs; it is not independent verification. Every surface is non-authorizing (`authority_effect: NONE`). Machine-readable copy: `install_surfaces` in [portfolio.json](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/portfolio.json).
 
 ### USE
 
@@ -40,7 +40,7 @@ TESTED means run by this project's own CI or test runs; it is not independent ve
 2. Review the findings and download the AI Governance Decision Pack. Neither example is a real security assessment. The clean sample may pass its bounded checks; a passing result is not a deployment decision and does not authorize deployment.
 3. The hosted Toolkit reflects current `main`. For a pinned implementation, use the [v2.7.2 release](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/tag/v2.7.2) and its [quick start](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.7.2#quick-start). v2.5.0 remains the organizational maturity capability release. v2.5.1 is a public-reference integrity patch.
 
-Other browser experiences: [Containment Ledger](https://global-ai-governance.github.io/containment-ledger/) for security-boundary review; [Peace OS: Crisis Room](https://global-ai-governance.github.io/peace-os/) for a fictional crisis-verification exercise.
+Other browser experiences: [Containment Ledger](https://global-ai-governance.github.io/containment-ledger/) for security-boundary review; [Peace OS: Crisis Room](https://global-ai-governance.github.io/peace-os/) for a fictional crisis simulation that rehearses evidence review, civilian protection, and human-controlled decisions.
 
 ### INTEGRATE
 
@@ -48,7 +48,7 @@ Other browser experiences: [Containment Ledger](https://global-ai-governance.git
 - [Install and run locally](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp#install-and-run-local) (stdio, no network or token) · [Sample call](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp#sample-call) · [Client configuration](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp#client-configuration-copy-paste) · [Known limits](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp#known-limits)
 - The primary command is `gaig-mcp`, with the `gaig_mcp` Python package and `GAIG_MCP_*` variables.
 - [Machine interface](https://ai-governance.solutions/machine-interface.json) · [Agent discovery](https://ai-governance.solutions/llms.txt) · [Toolkit v2.7.2 contracts](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.7.2/automation) · [Agent authority and passport schemas (v0.1.0-alpha.2)](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance/tree/v0.1.0-alpha.2/schemas)
-- [Repository handoff contracts](docs/REPOSITORY_CONTRACTS.md) · [Global AI Assurance Envelope](docs/GLOBAL_AI_ASSURANCE_ENVELOPE.md) · [Portfolio schema](schemas/portfolio.schema.json)
+- [Repository handoff contracts](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/docs/REPOSITORY_CONTRACTS.md) · [Global AI Assurance Envelope](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/docs/GLOBAL_AI_ASSURANCE_ENVELOPE.md) · [Portfolio schema](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/schemas/portfolio.schema.json)
 
 Remote use: on any non-loopback bind the server refuses to start unless `GAIG_MCP_ALLOWED_HOSTS` is set to the client-facing hostname and `GAIG_MCP_BEARER_TOKEN` is a random secret of at least 32 characters. Serve it only over HTTPS; requests send `Authorization: Bearer TOKEN`. OAuth is not implemented. **Provider connections (Anthropic Claude, OpenAI, xAI Grok): NOT VERIFIED.** Protocol compatibility is tested with the official MCP Python SDK client and the MCP Inspector. ChatGPT on the web is not supported, because it cannot send a static bearer token. [Auth](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp#auth) · [Self-hosting](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp#self-hosting-needed-for-every-remote-platform-global-ai-governance-operates-no-endpoint).
 
@@ -60,7 +60,7 @@ Use of these materials does not imply endorsement or certification. Do not inclu
 
 ## Portfolio
 
-Nine product and reference repositories plus two public infrastructure repositories. Labels below are the current public maturity and outcome from the [machine-readable portfolio](portfolio.json), which also carries lifecycle roles and source-of-truth boundaries.
+Nine product and reference repositories plus two public infrastructure repositories. Labels below are the current public maturity and outcome from the [machine-readable portfolio](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/portfolio.json), which also carries lifecycle roles and source-of-truth boundaries.
 
 - **[Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit)** · [Open app](https://ai-governance.solutions/) — v2.7.2 · working public reference toolkit. Reproducible Decision Pack, bounded sovereignty assessment, assurance/accountability profiles, and organizational AI maturity evidence assessment.
 - **[AI Governance Model Context Protocol Server (AI Governance MCP)](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp)** — v0.3.2 preview · no hosted endpoint. Read-only Model Context Protocol (MCP) tools wrapping the toolkit and passport validator; authority_effect NONE.
@@ -74,11 +74,11 @@ Nine product and reference repositories plus two public infrastructure repositor
 - **[Repository Governance Defaults](https://github.com/GLOBAL-AI-GOVERNANCE/.github)** — Account-level default repository governance files. Consistent security-boundary, claims-integrity, release-governance, and change-control defaults.
 - **[Global AI Governance Profile](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE)** — Public Start Here profile for the open-source portfolio. Portfolio truth registry, federated evidence graph, and cross-estate reproduction.
 
-[Repository maturity definitions](docs/MATURITY_MODEL.md) explain what these labels do and do not establish. AI Governance Foundations is the original foundation; Containment Ledger is independent of the AI Cyber Resilience Framework.
+[Repository maturity definitions](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/docs/MATURITY_MODEL.md) explain what these labels do and do not establish. AI Governance Foundations is the original foundation; Containment Ledger is independent of the AI Cyber Resilience Framework.
 
 ## Development Baseline
 
-Published release identities remain controlling. Merged development candidates **do not silently become release claims**. The [portfolio manifest](portfolio.json) records these merged, unreleased candidates; none is a new published release:
+Published release identities remain controlling. Merged development candidates **do not silently become release claims**. The [portfolio manifest](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/portfolio.json) records these merged, unreleased candidates; none is a new published release:
 
 - AI Cyber Resilience Framework: **v0.2.0 Continuous Assurance Thread** (published release remains v0.1.1).
 - Peace OS: Crisis Room: **Post-RC2 Portfolio Operating Disposition Reference** (published release remains v0.3.0-rc2).
@@ -98,6 +98,6 @@ Repositories **do not all implement every lifecycle stage** and **do not share o
 
 The tools produce reference evidence and decision support. Automated checks **do not establish operational safety**, independent real-world assurance, **legal compliance**, **certification**, or **production authorization**. A passing evaluation is not permission to deploy, accept risk, or take consequential action.
 
-For operators and reviewers: [Integrated remediation reference](docs/GOVERNED_VULNERABILITY_REMEDIATION_REFERENCE.md) · [NIST AI RMF mapping](docs/NIST_AI_RMF_1_0_MAPPING.md) · [Frontier safety, EU AI Act, and ISO/IEC 42001 crosswalk](docs/FRONTIER_AND_REGULATORY_CROSSWALK.md) · [Source policy](docs/SOURCE_POLICY.md) · [Change policy](docs/CHANGE_POLICY.md) · [Security policy](https://github.com/GLOBAL-AI-GOVERNANCE/.github/blob/main/SECURITY.md).
+For operators and reviewers: [Integrated remediation reference](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/docs/GOVERNED_VULNERABILITY_REMEDIATION_REFERENCE.md) · [NIST AI RMF mapping](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/docs/NIST_AI_RMF_1_0_MAPPING.md) · [Frontier safety, EU AI Act, and ISO/IEC 42001 crosswalk](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/docs/FRONTIER_AND_REGULATORY_CROSSWALK.md) · [Source policy](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/docs/SOURCE_POLICY.md) · [Change policy](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/docs/CHANGE_POLICY.md) · [Security policy](https://github.com/GLOBAL-AI-GOVERNANCE/.github/blob/main/SECURITY.md).
 
 This profile repository is licensed under the Apache License 2.0; each linked repository states its own license and release terms.
