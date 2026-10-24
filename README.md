@@ -1,16 +1,14 @@
 # Global AI Governance
 
-Governance tools and evidence-driven decision support.
+**Govern your AI agents so you can give them more autonomy, safely.**
 
-Assess an inventory, examine findings, and prepare a reproducible result for human review and decision. Consequential authority stays with accountable people.
+List the AI systems and agents you run. See which ones lack an owner, monitoring, a shutdown path, or evidence. Get a Decision Pack ready for human review and decision by an accountable person. Free and open source. The browser check needs no install, upload, or login.
 
-**[Try the Toolkit](https://global-ai-governance.github.io/global-ai-governance-toolkit/)** — run a sample in the browser. No install.
+**[Try the Toolkit](https://global-ai-governance.github.io/global-ai-governance-toolkit/)**: run a sample in your browser, nothing to install.
 
-**[Connect tools](https://global-ai-governance.github.io/global-ai-governance-toolkit/connect.html#agents)** — schemas, commands, or the MCP server.
+**[Connect tools](https://global-ai-governance.github.io/global-ai-governance-toolkit/connect.html#agents)**: schemas, commands, or the MCP server your agents can call.
 
-The browser tools run locally in your browser. The MCP server is available for local installation (v0.2.0 release with wheel, sdist, and `SHA256SUMS`) or operator-hosted self-hosting; **Global AI Governance operates no hosted MCP endpoint**. Outputs are non-authorizing (`authority_effect: NONE`).
-
-**In 10 seconds:** list the AI systems and agents you run, see which ones lack an owner, monitoring, a shutdown path, or evidence, and get a Decision Pack an accountable person uses to decide. Free and open source. The browser check needs no install, upload, or login.
+No AI system moves faster than ownership, evidence, authority, and control. The tools report; people decide. Every output is non-authorizing (`authority_effect: NONE`). The browser tools run locally. The MCP server installs locally (v0.2.0 release with wheel, sdist, and `SHA256SUMS`) or can be self-hosted by an operator; **Global AI Governance operates no hosted MCP endpoint**.
 
 **Pick your path**
 
