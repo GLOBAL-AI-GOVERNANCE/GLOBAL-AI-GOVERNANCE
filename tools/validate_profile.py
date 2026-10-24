@@ -130,7 +130,7 @@ def validate_manifest(manifest: dict) -> list[dict]:
         fail("Agentic current-main development candidate record is incorrect")
 
     if "verified-vulnerability-governance" in candidates:
-        fail("VVG crypto-migration closure reference is released in v0.1.4, not a development candidate")
+        fail("VVG crypto-migration closure reference is released, not a development candidate")
 
     lifecycle = manifest.get("shared_lifecycle")
     if not isinstance(lifecycle, list) or not lifecycle:
@@ -238,7 +238,7 @@ def main() -> None:
 
     if "Stateful Revocation continuity is implemented and verified on current `main` and remains unreleased." in text:
         fail("stale Agentic merged-unreleased baseline remains after Alpha.2")
-    if "v0.1.0-alpha.2 · experimental public alpha" not in text:
+    if "v0.1.0-alpha.2 · available · independent verifier review open" not in text:
         fail("Agentic Alpha.2 public maturity is missing")
 
     for forbidden in FORBIDDEN_TEXT:
@@ -273,17 +273,17 @@ def main() -> None:
         fail("lifecycle stages are out of order")
 
     if not re.search(
-        r"\bv2\.7\.2\b.*working public reference toolkit",
+        r"\bv2\.7\.2\b · stable",
         text,
         re.IGNORECASE | re.DOTALL,
     ):
         fail("toolkit release and maturity are not connected")
 
-    if "Pre-alpha" not in text or "independent semantic review" not in text:
-        fail("GSA pre-alpha review boundary is missing")
+    if "no execution capability" not in text or "independent semantic review" not in text:
+        fail("GSA specification review boundary is missing")
 
     if not re.search(
-        r"peace-os.*v0\.3\.0-rc2.*published public browser review candidate",
+        r"peace-os.*v0\.3\.0-rc2 · available in your browser · independent human validation open",
         text,
         re.IGNORECASE | re.DOTALL,
     ):
