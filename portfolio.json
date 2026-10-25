@@ -26,8 +26,8 @@
         "MEASURE",
         "REASSESS"
       ],
-      "version": "v2.7.2",
-      "maturity": "v2.7.2 \u00b7 stable",
+      "version": "v2.8.0",
+      "maturity": "v2.8.0 \u00b7 stable",
       "finished_outcome": "Reproducible Decision Pack, bounded sovereignty assessment, assurance/accountability profiles, and organizational AI maturity evidence assessment",
       "authority_boundary": "Organizational maturity is accountable-human determined. Automation verifies submitted evidence. It does not certify, independently declare maturity, approve deployment, or transfer authority.",
       "upstream": [
@@ -39,7 +39,7 @@
       ],
       "classification": "CORE",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
-      "published_release": "v2.7.2"
+      "published_release": "v2.8.0"
     },
     {
       "repository": "agentic-ai-governance",
@@ -47,8 +47,8 @@
       "lifecycle_roles": [
         "AUTHORIZE"
       ],
-      "version": "v0.1.0-alpha.3",
-      "maturity": "v0.1.0-alpha.3 \u00b7 available \u00b7 independent verifier review open",
+      "version": "v0.1.0-alpha.4",
+      "maturity": "v0.1.0-alpha.4 \u00b7 available \u00b7 independent verifier review open",
       "finished_outcome": "Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts",
       "authority_boundary": "Passport and validation artifacts express bounded machine-readable authority semantics; production authorization remains human-governed and environment-specific.",
       "upstream": [
@@ -59,7 +59,7 @@
       ],
       "classification": "CORE",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
-      "published_release": "v0.1.0-alpha.3"
+      "published_release": "v0.1.0-alpha.4"
     },
     {
       "repository": "governed-systems-administration",
@@ -87,8 +87,8 @@
         "VERIFY",
         "CLOSE"
       ],
-      "version": "v0.2.0",
-      "maturity": "v0.2.0 \u00b7 released",
+      "version": "v0.3.0",
+      "maturity": "v0.3.0 \u00b7 released",
       "finished_outcome": "Evidence-linked vulnerability ownership, remediation, retesting, and closure",
       "authority_boundary": "Closure is evidence-driven and human-authorized; repository checks do not establish enterprise deployment or independent operational retesting services.",
       "upstream": [
@@ -99,7 +99,7 @@
       ],
       "classification": "CORE",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
-      "published_release": "v0.2.0"
+      "published_release": "v0.3.0"
     },
     {
       "repository": "ai-cyber-resilience-framework",
@@ -182,12 +182,12 @@
       "lifecycle_roles": [
         "INTEGRATE"
       ],
-      "version": "v0.3.2",
-      "maturity": "v0.3.2 \u00b7 released \u00b7 no hosted endpoint",
+      "version": "v0.4.0",
+      "maturity": "v0.4.0 \u00b7 released \u00b7 no hosted endpoint",
       "finished_outcome": "Read-only Model Context Protocol (MCP) tools wrapping the toolkit and passport validator; authority_effect NONE",
       "authority_boundary": "Tool results are decision support only. Command gaig-mcp and package gaig_mcp. Does not approve, certify, authorize, or accept risk.",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
-      "published_release": "v0.3.2",
+      "published_release": "v0.4.0",
       "upstream": [
         "global-ai-governance-toolkit",
         "agentic-ai-governance"
@@ -249,39 +249,39 @@
       "surface": "Browser",
       "repository": "global-ai-governance-toolkit",
       "install": "https://ai-governance.solutions/",
-      "version": "current main (pinned release v2.7.2)",
+      "version": "current main (pinned release v2.8.0)",
       "maturity": "stable",
       "test_status": "TESTED (hosted CI)"
     },
     {
       "surface": "CLI",
       "repository": "global-ai-governance-toolkit",
-      "install": "pip install https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/download/v2.7.2/global_ai_governance-2.7.2-py3-none-any.whl",
-      "version": "v2.7.2",
+      "install": "pip install https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/download/v2.8.0/global_ai_governance-2.8.0-py3-none-any.whl",
+      "version": "v2.8.0",
       "maturity": "stable",
       "test_status": "TESTED (release wheel, clean environment)"
     },
     {
       "surface": "MCP server",
       "repository": "ai-governance-mcp",
-      "install": "uvx --from git+https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp@v0.3.2 gaig-mcp",
-      "version": "v0.3.2",
+      "install": "uvx --from git+https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp@v0.4.0 gaig-mcp",
+      "version": "v0.4.0",
       "maturity": "released \u00b7 no hosted endpoint",
       "test_status": "TESTED (MCP Python SDK client, clean environment)"
     },
     {
       "surface": "GitHub Action",
       "repository": "global-ai-governance-toolkit",
-      "install": "uses: GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit@cc5f5997a9d44958099b292a2081c86b52ee515c",
-      "version": "v2.7.2 (full commit SHA of the release tag)",
+      "install": "uses: GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit@958c9753cfb34cded253ee56bf103561e2ee22d0",
+      "version": "v2.8.0 (full commit SHA of the release tag)",
       "maturity": "released",
       "test_status": "TESTED (hosted CI self-test)"
     },
     {
       "surface": "Passport validator",
       "repository": "agentic-ai-governance",
-      "install": "pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git@v0.1.0-alpha.3",
-      "version": "v0.1.0-alpha.3",
+      "install": "pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git@v0.1.0-alpha.4",
+      "version": "v0.1.0-alpha.4",
       "maturity": "available \u00b7 independent verifier review open",
       "test_status": "TESTED (hosted CI, clean environment)"
     },
@@ -289,7 +289,7 @@
       "surface": "Docker (MCP server)",
       "repository": "ai-governance-mcp",
       "install": "docker build -f deploy/Dockerfile -t gaig-mcp .",
-      "version": "v0.3.2",
+      "version": "v0.4.0",
       "maturity": "build locally from Dockerfile \u00b7 no image published",
       "test_status": "untested"
     }
