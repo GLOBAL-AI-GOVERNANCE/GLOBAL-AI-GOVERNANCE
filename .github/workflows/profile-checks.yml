@@ -34,6 +34,11 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: python3 -B tools/verify_estate_truth.py
 
+      - name: Check suite path navigation
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 -B tools/check_suite_path.py
+
       - name: Validate Assurance Delta
         run: python3 -B -m unittest tests/test_assurance_delta.py -v
 
