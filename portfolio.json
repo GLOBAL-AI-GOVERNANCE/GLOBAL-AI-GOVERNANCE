@@ -47,8 +47,8 @@
       "lifecycle_roles": [
         "AUTHORIZE"
       ],
-      "version": "v0.1.0-alpha.4",
-      "maturity": "v0.1.0-alpha.4 \u00b7 available \u00b7 independent verifier review open",
+      "version": "v0.1.0-alpha.5",
+      "maturity": "v0.1.0-alpha.5 \u00b7 available \u00b7 independent verifier review open",
       "finished_outcome": "Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts",
       "authority_boundary": "Passport and validation artifacts express bounded machine-readable authority semantics; production authorization remains human-governed and environment-specific.",
       "upstream": [
@@ -59,7 +59,7 @@
       ],
       "classification": "CORE",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
-      "published_release": "v0.1.0-alpha.4"
+      "published_release": "v0.1.0-alpha.5"
     },
     {
       "repository": "governed-systems-administration",
@@ -87,8 +87,8 @@
         "VERIFY",
         "CLOSE"
       ],
-      "version": "v0.3.0",
-      "maturity": "v0.3.0 \u00b7 released",
+      "version": "v0.4.0",
+      "maturity": "v0.4.0 \u00b7 released",
       "finished_outcome": "Evidence-linked vulnerability ownership, remediation, retesting, and closure",
       "authority_boundary": "Closure is evidence-driven and human-authorized; repository checks do not establish enterprise deployment or independent operational retesting services.",
       "upstream": [
@@ -99,7 +99,7 @@
       ],
       "classification": "CORE",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
-      "published_release": "v0.3.0"
+      "published_release": "v0.4.0"
     },
     {
       "repository": "ai-cyber-resilience-framework",
@@ -182,12 +182,12 @@
       "lifecycle_roles": [
         "INTEGRATE"
       ],
-      "version": "v0.4.0",
-      "maturity": "v0.4.0 \u00b7 released \u00b7 no hosted endpoint",
+      "version": "v0.5.0",
+      "maturity": "v0.5.0 \u00b7 released \u00b7 no hosted endpoint",
       "finished_outcome": "Read-only Model Context Protocol (MCP) tools wrapping the toolkit and passport validator; authority_effect NONE",
       "authority_boundary": "Tool results are decision support only. Command gaig-mcp and package gaig_mcp. Does not approve, certify, authorize, or accept risk.",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
-      "published_release": "v0.4.0",
+      "published_release": "v0.5.0",
       "upstream": [
         "global-ai-governance-toolkit",
         "agentic-ai-governance"
@@ -264,8 +264,8 @@
     {
       "surface": "MCP server",
       "repository": "ai-governance-mcp",
-      "install": "uvx --from git+https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp@v0.4.0 gaig-mcp",
-      "version": "v0.4.0",
+      "install": "uvx --from git+https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp@v0.5.0 gaig-mcp",
+      "version": "v0.5.0",
       "maturity": "released \u00b7 no hosted endpoint",
       "test_status": "TESTED (MCP Python SDK client, clean environment)"
     },
@@ -280,8 +280,8 @@
     {
       "surface": "Passport validator",
       "repository": "agentic-ai-governance",
-      "install": "pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git@v0.1.0-alpha.4",
-      "version": "v0.1.0-alpha.4",
+      "install": "pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git@v0.1.0-alpha.5",
+      "version": "v0.1.0-alpha.5",
       "maturity": "available \u00b7 independent verifier review open",
       "test_status": "TESTED (hosted CI, clean environment)"
     },
@@ -289,7 +289,7 @@
       "surface": "Docker (MCP server)",
       "repository": "ai-governance-mcp",
       "install": "docker build -f deploy/Dockerfile -t gaig-mcp .",
-      "version": "v0.4.0",
+      "version": "v0.5.0",
       "maturity": "build locally from Dockerfile \u00b7 no image published",
       "test_status": "untested"
     }
