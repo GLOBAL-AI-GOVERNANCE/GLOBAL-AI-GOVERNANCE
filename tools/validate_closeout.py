@@ -46,26 +46,12 @@ def main() -> None:
     if closeout.get("published_release_state") != expected_release:
         fail("published release state is incorrect")
 
-    expected_dev = {
-        "ai-cyber-resilience-framework": "v0.2.0 Continuous Assurance Thread",
-        "peace-os": "Post-RC2 Portfolio Operating Disposition Reference",
-    }
-    if closeout.get("merged_unreleased_development") != expected_dev:
-        fail("merged unreleased development state is incorrect")
+    if closeout.get("merged_unreleased_development") not in ({}, None):
+        fail("merged unreleased development state must be empty after ACRF v0.2.0 and Peace OS v0.3.0 releases")
 
     candidates = portfolio.get("development_candidates", {})
-    if candidates.get("ai-cyber-resilience-framework") != {
-        "candidate": "v0.2.0 Continuous Assurance Thread",
-        "status": "MERGED_UNRELEASED",
-        "published_release": "v0.1.1",
-    }:
-        fail("ACRF portfolio candidate is inconsistent with closeout")
-    if candidates.get("peace-os") != {
-        "candidate": "Post-RC2 Portfolio Operating Disposition Reference",
-        "status": "MERGED_UNRELEASED",
-        "published_release": repos["peace-os"]["published_release"],
-    }:
-        fail("Peace OS portfolio candidate is inconsistent with closeout")
+    if candidates not in ({}, None):
+        fail("portfolio development_candidates must be empty while no merged-unreleased candidates are tracked")
 
     if schema.get("properties", {}).get("status", {}).get("const") != "COMPLETE":
         fail("closeout schema does not bind COMPLETE")
@@ -79,9 +65,9 @@ def main() -> None:
     readme = README.read_text(encoding="utf-8")
     for phrase in (
         "Published release identities remain controlling",
-        "v0.2.0 Continuous Assurance Thread",
-        "Post-RC2 Portfolio Operating Disposition Reference",
-        "do not silently become release claims",
+        "v0.2.0",
+        "v0.3.0",
+        "no merged-unreleased development candidates",
     ):
         if phrase not in readme:
             fail(f"README closeout truth is missing: {phrase}")

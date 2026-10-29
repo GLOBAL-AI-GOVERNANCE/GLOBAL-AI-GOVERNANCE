@@ -21,19 +21,10 @@
     },
     "merged_unreleased_development": {
       "additionalProperties": false,
-      "properties": {
-        "ai-cyber-resilience-framework": {
-          "const": "v0.2.0 Continuous Assurance Thread"
-        },
-        "peace-os": {
-          "const": "Post-RC2 Portfolio Operating Disposition Reference"
-        }
-      },
-      "required": [
-        "ai-cyber-resilience-framework",
-        "peace-os"
-      ],
-      "type": "object"
+      "properties": {},
+      "required": [],
+      "type": "object",
+      "description": "Merged-unreleased development candidates. Empty when none are tracked."
     },
     "program": {
       "const": "GLOBAL AI GOVERNANCE portfolio hardening and assurance integration"

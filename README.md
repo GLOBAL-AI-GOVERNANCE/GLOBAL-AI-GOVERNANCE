@@ -87,7 +87,7 @@ Nine product and reference repositories plus two public infrastructure repositor
 
 ## Development Baseline
 
-Published release identities remain controlling. The [portfolio manifest](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/portfolio.json) records repository versions and claim limits. No merged-unreleased development candidates are currently tracked.
+Published release identities remain controlling. There are no merged-unreleased development candidates. The [portfolio manifest](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/portfolio.json) records repository versions and claim limits. No merged-unreleased development candidates are currently tracked.
 
 - AI Cyber Resilience Framework: **v0.2.0** released (`authority_effect: NONE`).
 - Peace OS: Crisis Room: **v0.3.0** released for browser use; Godot, Windows, certification, and operational claims remain HOLD.
