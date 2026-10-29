@@ -56,9 +56,9 @@ FORBIDDEN_TEXT = (
 )
 
 REQUIRED_JOURNEY_LINKS = (
-    "global-ai-governance-toolkit/releases/tag/v2.8.0",
-    "global-ai-governance-toolkit/tree/v2.8.0#quick-start",
-    "global-ai-governance-toolkit/tree/v2.8.0/automation",
+    "global-ai-governance-toolkit/releases/tag/v2.8.1",
+    "global-ai-governance-toolkit/tree/v2.8.1#quick-start",
+    "global-ai-governance-toolkit/tree/v2.8.1/automation",
     "agentic-ai-governance/tree/v0.1.0-alpha.2/schemas",
 )
 
@@ -116,7 +116,7 @@ def validate_manifest(manifest: dict) -> list[dict]:
     expected_peace_candidate = {
         "candidate": "Post-RC2 Portfolio Operating Disposition Reference",
         "status": "MERGED_UNRELEASED",
-        "published_release": "v0.3.0-rc2",
+        "published_release": "v0.3.0-rc3",
     }
     if candidates.get("peace-os") != expected_peace_candidate:
         fail("Peace OS development candidate record is incorrect")
@@ -268,7 +268,7 @@ def main() -> None:
         fail("lifecycle stages are out of order")
 
     if not re.search(
-        r"\bv2\.8\.0\b · stable",
+        r"\bv2\.8\.1\b · stable",
         text,
         re.IGNORECASE | re.DOTALL,
     ):
@@ -278,7 +278,7 @@ def main() -> None:
         fail("GSA specification review boundary is missing")
 
     if not re.search(
-        r"peace-os.*v0\.3\.0-rc2 · available in your browser · independent human validation open",
+        r"peace-os.*v0\.3\.0-rc3 · available in your browser · independent human validation open",
         text,
         re.IGNORECASE | re.DOTALL,
     ):

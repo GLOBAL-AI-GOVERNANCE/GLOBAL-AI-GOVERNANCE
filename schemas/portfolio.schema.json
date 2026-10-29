@@ -178,7 +178,7 @@
               "const": "MERGED_UNRELEASED"
             },
             "published_release": {
-              "const": "v0.3.0-rc2"
+              "const": "v0.3.0-rc3"
             }
           }
         }

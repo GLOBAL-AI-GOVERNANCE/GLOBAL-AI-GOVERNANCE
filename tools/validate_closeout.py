@@ -40,7 +40,7 @@ def main() -> None:
 
     expected_release = {
         "ai-cyber-resilience-framework": "v0.1.1",
-        "peace-os": "v0.3.0-rc2",
+        "peace-os": "v0.3.0-rc3",
     }
     if closeout.get("published_release_state") != expected_release:
         fail("published release state is incorrect")
@@ -62,7 +62,7 @@ def main() -> None:
     if candidates.get("peace-os") != {
         "candidate": "Post-RC2 Portfolio Operating Disposition Reference",
         "status": "MERGED_UNRELEASED",
-        "published_release": "v0.3.0-rc2",
+        "published_release": "v0.3.0-rc3",
     }:
         fail("Peace OS portfolio candidate is inconsistent with closeout")
 
