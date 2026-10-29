@@ -109,7 +109,7 @@
         "RECOVER"
       ],
       "version": "v0.2.0",
-      "maturity": "v0.2.0 · released · independent review open",
+      "maturity": "v0.2.0 · released",
       "finished_outcome": "Boundary assessment, evidence cards, and architecture-hardening backlog",
       "authority_boundary": "The framework is a public defensive reference, not executable operational software, certification, or proof that a deployed control works.",
       "upstream": [

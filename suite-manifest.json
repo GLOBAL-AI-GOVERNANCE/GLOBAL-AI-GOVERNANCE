@@ -22,13 +22,13 @@
       "bundled_agentic": {
         "commit_sha": "58bdfb291df0de7c9437b4476e370a609c4b1d5f"
       },
-      "status": "released · no hosted endpoint",
+      "status": "released \u00b7 no hosted endpoint",
       "published_release": "v0.5.1"
     },
     "agentic-ai-governance": {
       "tag": "v0.1.0-alpha.5",
       "version_naked": "0.1.0-alpha.5",
-      "status": "available · independent verifier review open",
+      "status": "available \u00b7 independent verifier review open",
       "published_release": "v0.1.0-alpha.5"
     },
     "verified-vulnerability-governance": {
@@ -40,19 +40,19 @@
     "ai-cyber-resilience-framework": {
       "tag": "v0.2.0",
       "version_naked": "0.2.0",
-      "status": "released · independent review open",
+      "status": "released",
       "published_release": "v0.2.0"
     },
     "containment-ledger": {
       "tag": "v1.0.0",
       "version_naked": "1.0.0",
-      "status": "released · local browser instrument for domain, path, and evidence marking and human disposition",
+      "status": "released \u00b7 local browser instrument for domain, path, and evidence marking and human disposition",
       "published_release": "v1.0.0"
     },
     "peace-os": {
       "tag": "v0.3.0",
       "version_naked": "0.3.0",
-      "status": "available in your browser · independent human validation open",
+      "status": "available in your browser \u00b7 independent human validation open",
       "published_release": "v0.3.0"
     },
     "ai-governance-os": {
@@ -63,15 +63,15 @@
     }
   },
   "journey_badges": {
-    "peace-os": "v0.3.0 · available",
-    "global-ai-governance-toolkit": "v2.8.2 · stable",
-    "ai-governance-mcp": "v0.5.1 · released",
-    "agentic-ai-governance": "v0.1.0-alpha.5 · available",
-    "verified-vulnerability-governance": "v0.4.0 · released",
-    "containment-ledger": "v1.0.0 · released",
-    "ai-cyber-resilience-framework": "v0.2.0 · released",
-    "ai-governance-os": "v1.1.1 · stable",
-    "governed-systems-administration": "specification · review open"
+    "peace-os": "v0.3.0 \u00b7 available",
+    "global-ai-governance-toolkit": "v2.8.2 \u00b7 stable",
+    "ai-governance-mcp": "v0.5.1 \u00b7 released",
+    "agentic-ai-governance": "v0.1.0-alpha.5 \u00b7 available",
+    "verified-vulnerability-governance": "v0.4.0 \u00b7 released",
+    "containment-ledger": "v1.0.0 \u00b7 released",
+    "ai-cyber-resilience-framework": "v0.2.0 \u00b7 released",
+    "ai-governance-os": "v1.1.1 \u00b7 stable",
+    "governed-systems-administration": "specification \u00b7 review open"
   },
   "install_surfaces": [
     {
@@ -95,7 +95,7 @@
       "repository": "ai-governance-mcp",
       "install": "uvx --from git+https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp@v0.5.1 gaig-mcp",
       "version": "v0.5.1",
-      "maturity": "released · no hosted endpoint",
+      "maturity": "released \u00b7 no hosted endpoint",
       "test_status": "TESTED (MCP Python SDK client, clean environment)"
     },
     {
@@ -111,7 +111,7 @@
       "repository": "agentic-ai-governance",
       "install": "pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git@v0.1.0-alpha.5",
       "version": "v0.1.0-alpha.5",
-      "maturity": "available · independent verifier review open",
+      "maturity": "available \u00b7 independent verifier review open",
       "test_status": "TESTED (hosted CI, clean environment)"
     },
     {
@@ -119,7 +119,7 @@
       "repository": "ai-governance-mcp",
       "install": "docker build -f deploy/Dockerfile -t gaig-mcp .",
       "version": "v0.5.1",
-      "maturity": "build locally from Dockerfile · no image published",
+      "maturity": "build locally from Dockerfile \u00b7 no image published",
       "test_status": "untested"
     }
   ]
