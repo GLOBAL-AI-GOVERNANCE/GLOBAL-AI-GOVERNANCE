@@ -46,42 +46,31 @@ def main() -> None:
     if closeout.get("published_release_state") != expected_release:
         fail("published release state is incorrect")
 
-    expected_dev = {
-        "ai-cyber-resilience-framework": "v0.2.0 Continuous Assurance Thread",
-        "peace-os": "Post-RC2 Portfolio Operating Disposition Reference",
-    }
-    if closeout.get("merged_unreleased_development") != expected_dev:
-        fail("merged unreleased development state is incorrect")
+    if closeout.get("merged_unreleased_development") not in ({}, None):
+        fail("merged unreleased development state must be empty after ACRF v0.2.0 and Peace OS v0.3.0 releases")
 
     candidates = portfolio.get("development_candidates", {})
-    if candidates.get("ai-cyber-resilience-framework") != {
-        "candidate": "v0.2.0 Continuous Assurance Thread",
-        "status": "MERGED_UNRELEASED",
-        "published_release": "v0.1.1",
-    }:
-        fail("ACRF portfolio candidate is inconsistent with closeout")
-    if candidates.get("peace-os") != {
-        "candidate": "Post-RC2 Portfolio Operating Disposition Reference",
-        "status": "MERGED_UNRELEASED",
-        "published_release": repos["peace-os"]["published_release"],
-    }:
-        fail("Peace OS portfolio candidate is inconsistent with closeout")
+    if candidates not in ({}, None):
+        fail("portfolio development_candidates must be empty while no merged-unreleased candidates are tracked")
 
     if schema.get("properties", {}).get("status", {}).get("const") != "COMPLETE":
         fail("closeout schema does not bind COMPLETE")
     if schema.get("properties", {}).get("protected_default_branches", {}).get("const") != 9:
         fail("closeout schema does not bind protected branch count")
-    for section in ("published_release_state", "merged_unreleased_development"):
-        keys = set(schema.get("properties", {}).get(section, {}).get("properties", {}))
-        if "peace-os" not in keys or "peace-os-crisis-room" in keys:
-            fail(f"closeout schema {section} must use the peace-os repository identity")
+    pub_keys = set(schema.get("properties", {}).get("published_release_state", {}).get("properties", {}))
+    if "peace-os" not in pub_keys or "peace-os-crisis-room" in pub_keys:
+        fail("closeout schema published_release_state must use the peace-os repository identity")
+    # merged_unreleased_development may be empty; when properties exist they must use peace-os identity
+    merged_props = schema.get("properties", {}).get("merged_unreleased_development", {}).get("properties", {})
+    if merged_props and ("peace-os" not in merged_props or "peace-os-crisis-room" in merged_props):
+        fail("closeout schema merged_unreleased_development must use the peace-os repository identity")
 
     readme = README.read_text(encoding="utf-8")
     for phrase in (
         "Published release identities remain controlling",
-        "v0.2.0 Continuous Assurance Thread",
-        "Post-RC2 Portfolio Operating Disposition Reference",
-        "do not silently become release claims",
+        "v0.2.0",
+        "v0.3.0",
+        "no merged-unreleased development candidates",
     ):
         if phrase not in readme:
             fail(f"README closeout truth is missing: {phrase}")

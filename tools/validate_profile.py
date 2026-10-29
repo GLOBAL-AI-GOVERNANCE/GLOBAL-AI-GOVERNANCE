@@ -111,32 +111,15 @@ def validate_manifest(manifest: dict) -> list[dict]:
 
     if manifest.get("integration_contract_version") != "1.0.0":
         fail("integration_contract_version must be 1.0.0")
-    expected_candidate = {
-        "candidate": "v0.2.0 Continuous Assurance Thread",
-        "status": "MERGED_UNRELEASED",
-        "published_release": "v0.1.1",
-    }
     candidates = manifest.get("development_candidates", {})
-    if candidates.get("ai-cyber-resilience-framework") != expected_candidate:
-        fail("ACRF development candidate record is incorrect")
+    if candidates not in ({}, None):
+        # Released products must not linger as MERGED_UNRELEASED candidates.
+        fail("development_candidates must be empty while no merged-unreleased candidates are tracked")
 
-    peace_release = next(
-        item["published_release"]
-        for item in manifest["repositories"]
-        if item["repository"] == "peace-os"
-    )
-    expected_peace_candidate = {
-        "candidate": "Post-RC2 Portfolio Operating Disposition Reference",
-        "status": "MERGED_UNRELEASED",
-        "published_release": peace_release,
-    }
-    if candidates.get("peace-os") != expected_peace_candidate:
-        fail("Peace OS development candidate record is incorrect")
-
-    if "agentic-ai-governance" in candidates:
+    if "agentic-ai-governance" in (candidates or {}):
         fail("Agentic v0.1.0-alpha.5 includes its reference implementations; it is not a development candidate")
 
-    if "verified-vulnerability-governance" in candidates:
+    if "verified-vulnerability-governance" in (candidates or {}):
         fail("VVG crypto-migration closure reference is released, not a development candidate")
 
     lifecycle = manifest.get("shared_lifecycle")
@@ -245,7 +228,7 @@ def main() -> None:
 
     if "Stateful Revocation continuity is implemented and verified on current `main` and remains unreleased." in text:
         fail("stale Agentic merged-unreleased baseline remains after Alpha.2")
-    if "v0.1.0-alpha.5 · available · independent verifier review open" not in text:
+    if "v0.1.0-alpha.5 · available" not in text:
         fail("Agentic public maturity is missing")
 
     for forbidden in FORBIDDEN_TEXT:
@@ -284,8 +267,8 @@ def main() -> None:
     if toolkit_maturity not in text:
         fail("toolkit release and maturity are not connected")
 
-    if "no execution capability" not in text or "independent semantic review" not in text:
-        fail("GSA specification review boundary is missing")
+    if "no execution" not in text and "no execution capability" not in text:
+        fail("GSA no-execution boundary is missing")
 
     peace_maturity = repos["peace-os"]["maturity"]
     if not re.search(

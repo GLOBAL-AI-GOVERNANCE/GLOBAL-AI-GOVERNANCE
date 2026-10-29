@@ -91,14 +91,8 @@ def main() -> None:
         fail("portfolio integration_contract_version must be 1.0.0")
 
     candidates = portfolio.get("development_candidates", {})
-    acrf = candidates.get("ai-cyber-resilience-framework", {})
-    expected_acrf = {
-        "candidate": "v0.2.0 Continuous Assurance Thread",
-        "status": "MERGED_UNRELEASED",
-        "published_release": "v0.1.1",
-    }
-    if acrf != expected_acrf:
-        fail("ACRF merged-unreleased candidate record is missing or incorrect")
+    if candidates not in ({}, None):
+        fail("development_candidates must be empty while no merged-unreleased candidates are tracked")
 
     if handoff_doc.get("schema_version") != "1.0.0":
         fail("handoff schema_version must be 1.0.0")
