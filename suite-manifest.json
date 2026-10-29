@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-29T21:57:29Z",
+  "generated_at": "2026-10-29T22:20:48Z",
   "owner": "GLOBAL-AI-GOVERNANCE",
   "source": "github-releases",
   "pins": {
@@ -38,10 +38,10 @@
       "published_release": "v0.4.0"
     },
     "ai-cyber-resilience-framework": {
-      "tag": "v0.1.1",
-      "version_naked": "0.1.1",
+      "tag": "v0.2.0",
+      "version_naked": "0.2.0",
       "status": "released · independent review open",
-      "published_release": "v0.1.1"
+      "published_release": "v0.2.0"
     },
     "containment-ledger": {
       "tag": "v1.0.0",
@@ -50,10 +50,10 @@
       "published_release": "v1.0.0"
     },
     "peace-os": {
-      "tag": "v0.3.0-rc3",
-      "version_naked": "0.3.0-rc3",
+      "tag": "v0.3.0",
+      "version_naked": "0.3.0",
       "status": "available in your browser · independent human validation open",
-      "published_release": "v0.3.0-rc3"
+      "published_release": "v0.3.0"
     },
     "ai-governance-os": {
       "tag": "v1.1.1",
@@ -63,13 +63,13 @@
     }
   },
   "journey_badges": {
-    "peace-os": "v0.3.0-rc3 · available",
+    "peace-os": "v0.3.0 · available",
     "global-ai-governance-toolkit": "v2.8.2 · stable",
     "ai-governance-mcp": "v0.5.1 · released",
     "agentic-ai-governance": "v0.1.0-alpha.5 · available",
     "verified-vulnerability-governance": "v0.4.0 · released",
     "containment-ledger": "v1.0.0 · released",
-    "ai-cyber-resilience-framework": "v0.1.1 · released",
+    "ai-cyber-resilience-framework": "v0.2.0 · released",
     "ai-governance-os": "v1.1.1 · stable",
     "governed-systems-administration": "specification · review open"
   },
