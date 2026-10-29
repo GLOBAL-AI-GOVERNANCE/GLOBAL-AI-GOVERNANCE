@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-10-29T21:39:58Z",
+  "owner": "GLOBAL-AI-GOVERNANCE",
+  "source": "github-releases",
+  "pins": {
+    "global-ai-governance-toolkit": {
+      "tag": "v2.8.1",
+      "version_naked": "2.8.1",
+      "commit_sha": "0ab38c6a94a705e4423bfc9bb19ef2137f59f5c5",
+      "wheel": "global_ai_governance-2.8.1-py3-none-any.whl",
+      "status": "stable",
+      "published_release": "v2.8.1"
+    },
+    "ai-governance-mcp": {
+      "tag": "v0.5.1",
+      "version_naked": "0.5.1",
+      "status": "released · no hosted endpoint",
+      "published_release": "v0.5.1"
+    },
+    "agentic-ai-governance": {
+      "tag": "v0.1.0-alpha.5",
+      "version_naked": "0.1.0-alpha.5",
+      "status": "available · independent verifier review open",
+      "published_release": "v0.1.0-alpha.5"
+    },
+    "verified-vulnerability-governance": {
+      "tag": "v0.4.0",
+      "version_naked": "0.4.0",
+      "status": "released",
+      "published_release": "v0.4.0"
+    },
+    "ai-cyber-resilience-framework": {
+      "tag": "v0.1.1",
+      "version_naked": "0.1.1",
+      "status": "released · independent review open",
+      "published_release": "v0.1.1"
+    },
+    "containment-ledger": {
+      "tag": "v1.0.0",
+      "version_naked": "1.0.0",
+      "status": "released · local browser instrument for domain, path, and evidence marking and human disposition",
+      "published_release": "v1.0.0"
+    },
+    "peace-os": {
+      "tag": "v0.3.0-rc3",
+      "version_naked": "0.3.0-rc3",
+      "status": "available in your browser · independent human validation open",
+      "published_release": "v0.3.0-rc3"
+    },
+    "ai-governance-os": {
+      "tag": "v1.1.1",
+      "version_naked": "1.1.1",
+      "status": "stable",
+      "published_release": "v1.1.1"
+    }
+  },
+  "journey_badges": {
+    "peace-os": "v0.3.0-rc3 · available",
+    "global-ai-governance-toolkit": "v2.8.1 · stable",
+    "ai-governance-mcp": "v0.5.1 · released",
+    "agentic-ai-governance": "v0.1.0-alpha.5 · available",
+    "verified-vulnerability-governance": "v0.4.0 · released",
+    "containment-ledger": "v1.0.0 · released",
+    "ai-cyber-resilience-framework": "v0.1.1 · released",
+    "ai-governance-os": "v1.1.1 · stable",
+    "governed-systems-administration": "specification · review open"
+  },
+  "install_surfaces": [
+    {
+      "surface": "Browser",
+      "repository": "global-ai-governance-toolkit",
+      "install": "https://ai-governance.solutions/",
+      "version": "current main (pinned release v2.8.1)",
+      "maturity": "stable",
+      "test_status": "TESTED (hosted CI)"
+    },
+    {
+      "surface": "CLI",
+      "repository": "global-ai-governance-toolkit",
+      "install": "pip install https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/download/v2.8.1/global_ai_governance-2.8.1-py3-none-any.whl",
+      "version": "v2.8.1",
+      "maturity": "stable",
+      "test_status": "TESTED (release wheel, clean environment)"
+    },
+    {
+      "surface": "MCP server",
+      "repository": "ai-governance-mcp",
+      "install": "uvx --from git+https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp@v0.5.1 gaig-mcp",
+      "version": "v0.5.1",
+      "maturity": "released · no hosted endpoint",
+      "test_status": "TESTED (MCP Python SDK client, clean environment)"
+    },
+    {
+      "surface": "GitHub Action",
+      "repository": "global-ai-governance-toolkit",
+      "install": "uses: GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit@0ab38c6a94a705e4423bfc9bb19ef2137f59f5c5",
+      "version": "v2.8.1 (full commit SHA of the release tag)",
+      "maturity": "released",
+      "test_status": "TESTED (hosted CI self-test)"
+    },
+    {
+      "surface": "Passport validator",
+      "repository": "agentic-ai-governance",
+      "install": "pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git@v0.1.0-alpha.5",
+      "version": "v0.1.0-alpha.5",
+      "maturity": "available · independent verifier review open",
+      "test_status": "TESTED (hosted CI, clean environment)"
+    },
+    {
+      "surface": "Docker (MCP server)",
+      "repository": "ai-governance-mcp",
+      "install": "docker build -f deploy/Dockerfile -t gaig-mcp .",
+      "version": "v0.5.1",
+      "maturity": "build locally from Dockerfile · no image published",
+      "test_status": "untested"
+    }
+  ]
+}

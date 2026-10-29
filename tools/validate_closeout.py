@@ -38,9 +38,10 @@ def main() -> None:
     if closeout.get("protected_default_branches") != 9:
         fail("protected default branch count must be 9")
 
+    repos = {item["repository"]: item for item in portfolio["repositories"]}
     expected_release = {
-        "ai-cyber-resilience-framework": "v0.1.1",
-        "peace-os": "v0.3.0-rc3",
+        "ai-cyber-resilience-framework": repos["ai-cyber-resilience-framework"]["published_release"],
+        "peace-os": repos["peace-os"]["published_release"],
     }
     if closeout.get("published_release_state") != expected_release:
         fail("published release state is incorrect")
@@ -62,7 +63,7 @@ def main() -> None:
     if candidates.get("peace-os") != {
         "candidate": "Post-RC2 Portfolio Operating Disposition Reference",
         "status": "MERGED_UNRELEASED",
-        "published_release": "v0.3.0-rc3",
+        "published_release": repos["peace-os"]["published_release"],
     }:
         fail("Peace OS portfolio candidate is inconsistent with closeout")
 

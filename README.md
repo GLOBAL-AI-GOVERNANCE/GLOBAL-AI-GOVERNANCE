@@ -27,6 +27,7 @@ Every path is self-serve and non-authorizing: the tools report; people decide.
 
 **Install at a glance**
 
+<!-- gaig:install-surfaces -->
 | Surface | Install or run | Version | Maturity | Test status |
 |---|---|---|---|---|
 | Browser | [Open the Toolkit](https://ai-governance.solutions/) | current main (pinned release v2.8.1) | stable | TESTED (hosted CI) |
@@ -35,6 +36,7 @@ Every path is self-serve and non-authorizing: the tools report; people decide.
 | GitHub Action | `uses: GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit@0ab38c6a94a705e4423bfc9bb19ef2137f59f5c5` | v2.8.1 (full commit SHA of the release tag) | released | TESTED (hosted CI self-test) |
 | Passport validator | `pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git@v0.1.0-alpha.5` | v0.1.0-alpha.5 | available · independent verifier review open | TESTED (hosted CI, clean environment) |
 | Docker (MCP server) | `docker build -f deploy/Dockerfile -t gaig-mcp .` (in an `ai-governance-mcp` clone) | v0.5.1 | build locally from Dockerfile · no image published | untested |
+<!-- /gaig:install-surfaces -->
 
 TESTED means run by this project's own CI or test runs; it is not independent verification. Every surface is non-authorizing (`authority_effect: NONE`). Machine-readable copy: `install_surfaces` in [portfolio.json](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/portfolio.json).
 
@@ -67,6 +69,7 @@ Use of these materials does not imply endorsement or certification. Do not inclu
 
 Nine product and reference repositories plus two public infrastructure repositories. Labels below are the current public maturity and outcome from the [machine-readable portfolio](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/portfolio.json), which also carries lifecycle roles and source-of-truth boundaries.
 
+<!-- gaig:portfolio-versions -->
 - **[Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit)** · [Open app](https://ai-governance.solutions/) — v2.8.1 · stable. Reproducible Decision Pack, bounded sovereignty assessment, assurance/accountability profiles, and organizational AI maturity evidence assessment.
 - **[AI Governance Model Context Protocol Server (AI Governance MCP)](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp)** — v0.5.1 · released · no hosted endpoint. Read-only Model Context Protocol (MCP) tools wrapping the toolkit and passport validator; authority_effect NONE.
 - **[Agentic AI Governance](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance)** — v0.1.0-alpha.5 · available · independent verifier review open. Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts.
@@ -78,6 +81,7 @@ Nine product and reference repositories plus two public infrastructure repositor
 - **[AI Governance Foundations](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-os)** — v1.1.1 · stable. Inventory, ownership, risk, control, monitoring, and reporting foundations.
 - **[Repository Governance Defaults](https://github.com/GLOBAL-AI-GOVERNANCE/.github)** — Account-level default repository governance files. Consistent security-boundary, claims-integrity, release-governance, and change-control defaults.
 - **[Global AI Governance Profile](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE)** — Public Start Here profile for the open-source portfolio. Portfolio truth registry, federated evidence graph, and cross-estate reproduction.
+<!-- /gaig:portfolio-versions -->
 
 [Repository maturity definitions](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/docs/MATURITY_MODEL.md) explain what these labels do and do not establish. AI Governance Foundations is the original foundation; Containment Ledger is independent of the AI Cyber Resilience Framework.
 
