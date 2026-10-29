@@ -89,8 +89,8 @@ Nine product and reference repositories plus two public infrastructure repositor
 
 Published release identities remain controlling. Merged development candidates **do not silently become release claims**. The [portfolio manifest](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/portfolio.json) records these merged, unreleased candidates; none is a new published release:
 
-- AI Cyber Resilience Framework: **v0.2.0 Continuous Assurance Thread** (published release remains v0.1.1).
-- Peace OS: Crisis Room: **Post-RC2 Portfolio Operating Disposition Reference** (published release remains v0.3.0-rc3).
+- AI Cyber Resilience Framework: **v0.2.0 Continuous Assurance Thread**.
+- Peace OS: Crisis Room: **v0.3.0** (stable browser release; Godot/Windows/certification/operational claims remain HOLD).
 
 ## Shared Governance Lifecycle
 
