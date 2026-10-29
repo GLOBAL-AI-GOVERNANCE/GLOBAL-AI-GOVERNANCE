@@ -108,8 +108,8 @@
         "CONTAIN",
         "RECOVER"
       ],
-      "version": "v0.1.1",
-      "maturity": "v0.1.1 · released · independent review open",
+      "version": "v0.2.0",
+      "maturity": "v0.2.0 · released · independent review open",
       "finished_outcome": "Boundary assessment, evidence cards, and architecture-hardening backlog",
       "authority_boundary": "The framework is a public defensive reference, not executable operational software, certification, or proof that a deployed control works.",
       "upstream": [
@@ -120,7 +120,7 @@
       ],
       "classification": "CORE",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
-      "published_release": "v0.1.1"
+      "published_release": "v0.2.0"
     },
     {
       "repository": "peace-os",
@@ -129,8 +129,8 @@
         "DECIDE",
         "LEARN"
       ],
-      "version": "v0.3.0-rc3",
-      "maturity": "v0.3.0-rc3 · available in your browser · independent human validation open",
+      "version": "v0.3.0",
+      "maturity": "v0.3.0 · available in your browser · independent human validation open",
       "finished_outcome": "Crisis-verification simulator with synthetic scenarios and an after-action review",
       "authority_boundary": "The experience is a fictional learning and review candidate, not an operational intelligence, emergency, attribution, certification, or autonomous-release system.",
       "upstream": [
@@ -139,7 +139,7 @@
       "downstream": [],
       "classification": "CORE",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
-      "published_release": "v0.3.0-rc3"
+      "published_release": "v0.3.0"
     },
     {
       "repository": "ai-governance-os",
@@ -236,12 +236,12 @@
     "ai-cyber-resilience-framework": {
       "candidate": "v0.2.0 Continuous Assurance Thread",
       "status": "MERGED_UNRELEASED",
-      "published_release": "v0.1.1"
+      "published_release": "v0.2.0"
     },
     "peace-os": {
       "candidate": "Post-RC2 Portfolio Operating Disposition Reference",
       "status": "MERGED_UNRELEASED",
-      "published_release": "v0.3.0-rc3"
+      "published_release": "v0.3.0"
     }
   },
   "install_surfaces": [
