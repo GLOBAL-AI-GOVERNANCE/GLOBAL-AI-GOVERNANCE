@@ -57,10 +57,13 @@ def main() -> None:
         fail("closeout schema does not bind COMPLETE")
     if schema.get("properties", {}).get("protected_default_branches", {}).get("const") != 9:
         fail("closeout schema does not bind protected branch count")
-    for section in ("published_release_state", "merged_unreleased_development"):
-        keys = set(schema.get("properties", {}).get(section, {}).get("properties", {}))
-        if "peace-os" not in keys or "peace-os-crisis-room" in keys:
-            fail(f"closeout schema {section} must use the peace-os repository identity")
+    pub_keys = set(schema.get("properties", {}).get("published_release_state", {}).get("properties", {}))
+    if "peace-os" not in pub_keys or "peace-os-crisis-room" in pub_keys:
+        fail("closeout schema published_release_state must use the peace-os repository identity")
+    # merged_unreleased_development may be empty; when properties exist they must use peace-os identity
+    merged_props = schema.get("properties", {}).get("merged_unreleased_development", {}).get("properties", {})
+    if merged_props and ("peace-os" not in merged_props or "peace-os-crisis-room" in merged_props):
+        fail("closeout schema merged_unreleased_development must use the peace-os repository identity")
 
     readme = README.read_text(encoding="utf-8")
     for phrase in (
