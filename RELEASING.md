@@ -30,3 +30,14 @@ Product release tags are the single source of truth for suite version pins. Do n
 ## First automated run
 
 The initial `suite-manifest.json` was generated from the live GitHub releases that already pinned Toolkit `v2.8.1`, MCP `v0.5.1`, and Peace OS `v0.3.0-rc3`. Later releases propagate through the same path.
+
+## GitHub Actions permissions
+
+Both this repo and each consuming repo need:
+
+1. **Settings → Actions → General → Workflow permissions**: Read and write + **Allow GitHub Actions to create and approve pull requests**.
+2. The first sync PR opened by `github-actions[bot]` may show workflows as `action_required` until a maintainer approves them once.
+
+## MCP bundle pins
+
+AI Governance MCP ships a fixed Toolkit commit in `UPSTREAM_LOCK.json`. Suite sync records that bundle under `pins.ai-governance-mcp.bundled_toolkit` so site docs do not claim MCP bundles the tip Toolkit tag.
