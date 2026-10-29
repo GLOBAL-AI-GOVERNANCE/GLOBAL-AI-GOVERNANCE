@@ -28,7 +28,7 @@
     "agentic-ai-governance": {
       "tag": "v0.1.0-alpha.5",
       "version_naked": "0.1.0-alpha.5",
-      "status": "available \u00b7 independent verifier review open",
+      "status": "available",
       "published_release": "v0.1.0-alpha.5"
     },
     "verified-vulnerability-governance": {
@@ -52,7 +52,7 @@
     "peace-os": {
       "tag": "v0.3.0",
       "version_naked": "0.3.0",
-      "status": "available in your browser \u00b7 independent human validation open",
+      "status": "released for browser use",
       "published_release": "v0.3.0"
     },
     "ai-governance-os": {
@@ -71,7 +71,7 @@
     "containment-ledger": "v1.0.0 \u00b7 released",
     "ai-cyber-resilience-framework": "v0.2.0 \u00b7 released",
     "ai-governance-os": "v1.1.1 \u00b7 stable",
-    "governed-systems-administration": "specification \u00b7 review open"
+    "governed-systems-administration": "specification \u00b7 no execution"
   },
   "install_surfaces": [
     {
@@ -111,7 +111,7 @@
       "repository": "agentic-ai-governance",
       "install": "pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git@v0.1.0-alpha.5",
       "version": "v0.1.0-alpha.5",
-      "maturity": "available \u00b7 independent verifier review open",
+      "maturity": "available",
       "test_status": "TESTED (hosted CI, clean environment)"
     },
     {

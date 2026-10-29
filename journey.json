@@ -8,55 +8,55 @@
       "repository": "peace-os",
       "short_name": "Peace OS",
       "role": "practise a decision",
-      "badge": "v0.3.0 · available"
+      "badge": "v0.3.0 \u00b7 released"
     },
     {
       "repository": "global-ai-governance-toolkit",
       "short_name": "Toolkit",
       "role": "check what you run",
-      "badge": "v2.8.2 · stable"
+      "badge": "v2.8.2 \u00b7 stable"
     },
     {
       "repository": "ai-governance-mcp",
       "short_name": "AI Governance MCP",
       "role": "connect your agents",
-      "badge": "v0.5.1 · released"
+      "badge": "v0.5.1 \u00b7 released"
     },
     {
       "repository": "agentic-ai-governance",
       "short_name": "Agentic AI Governance",
       "role": "bound agent fleets",
-      "badge": "v0.1.0-alpha.5 · available"
+      "badge": "v0.1.0-alpha.5 \u00b7 available"
     },
     {
       "repository": "verified-vulnerability-governance",
       "short_name": "Verified Vulnerability Governance",
       "role": "fix with evidence",
-      "badge": "v0.4.0 · released"
+      "badge": "v0.4.0 \u00b7 released"
     },
     {
       "repository": "containment-ledger",
       "short_name": "Containment Ledger",
       "role": "mark boundaries",
-      "badge": "v1.0.0 · released"
+      "badge": "v1.0.0 \u00b7 released"
     },
     {
       "repository": "ai-cyber-resilience-framework",
       "short_name": "AI Cyber Resilience Framework",
       "role": "stay resilient",
-      "badge": "v0.2.0 · released"
+      "badge": "v0.2.0 \u00b7 released"
     },
     {
       "repository": "ai-governance-os",
       "short_name": "AI Governance Foundations",
       "role": "govern the whole",
-      "badge": "v1.1.1 · stable"
+      "badge": "v1.1.1 \u00b7 stable"
     },
     {
       "repository": "governed-systems-administration",
       "short_name": "Governed Systems Administration",
       "role": "administer under review",
-      "badge": "specification · review open",
+      "badge": "specification \u00b7 no execution",
       "readme_managed": false
     }
   ]
