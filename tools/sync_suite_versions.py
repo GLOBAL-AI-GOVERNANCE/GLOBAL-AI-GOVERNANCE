@@ -49,6 +49,21 @@ END_PORTFOLIO = "<!-- /gaig:portfolio-versions -->"
 
 
 def gh_json(path: str):
+    """GitHub JSON via `gh api` (retries TLS flakes that hit bare urllib)."""
+    last_error: Exception | None = None
+    for _ in range(5):
+        try:
+            completed = subprocess.run(
+                ["gh", "api", path.lstrip("/")],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            return json.loads(completed.stdout)
+        except (subprocess.CalledProcessError, FileNotFoundError, json.JSONDecodeError) as error:
+            last_error = error
+            continue
+    # Fall back to urllib once.
     token = None
     try:
         token = subprocess.run(
@@ -67,8 +82,11 @@ def gh_json(path: str):
             **({"Authorization": f"Bearer {token}"} if token else {}),
         },
     )
-    with urllib.request.urlopen(request, timeout=60) as response:
-        return json.loads(response.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(request, timeout=60) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except Exception as error:
+        raise last_error or error
 
 
 def latest_release_tag(repository: str) -> str | None:
@@ -78,9 +96,9 @@ def latest_release_tag(repository: str) -> str | None:
         tag = data.get("tag_name")
         if isinstance(tag, str) and tag:
             return tag
-    except urllib.error.HTTPError as error:
-        if error.code != 404:
-            raise
+    except Exception:
+        # 404 when only prereleases exist, or transient API errors — fall through.
+        pass
     releases = gh_json(f"/repos/{OWNER}/{repository}/releases?per_page=20")
     for item in releases:
         if item.get("draft"):
@@ -98,6 +116,42 @@ def tag_commit_sha(repository: str, tag: str) -> str:
         return obj["sha"]
     tag_obj = gh_json(f"/repos/{OWNER}/{repository}/git/tags/{obj['sha']}")
     return tag_obj["object"]["sha"]
+
+
+def mcp_upstream_lock(tag: str) -> dict:
+    """Read MCP UPSTREAM_LOCK.json at a release tag (bundle pins, not tip)."""
+    path = f"repos/{OWNER}/{MCP}/contents/src/gaig_mcp/_upstream/UPSTREAM_LOCK.json?ref={tag}"
+    last_error: Exception | None = None
+    for _ in range(5):
+        try:
+            completed = subprocess.run(
+                ["gh", "api", path, "-H", "Accept: application/vnd.github.raw"],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            return json.loads(completed.stdout)
+        except (subprocess.CalledProcessError, FileNotFoundError, json.JSONDecodeError) as error:
+            last_error = error
+            continue
+    raise last_error or RuntimeError(f"MCP UPSTREAM_LOCK unavailable at {tag}")
+
+
+def toolkit_tag_for_commit(commit_sha: str) -> str | None:
+    releases = gh_json(f"/repos/{OWNER}/{TOOLKIT}/releases?per_page=30")
+    for item in releases:
+        if item.get("draft"):
+            continue
+        tag = item.get("tag_name")
+        if not isinstance(tag, str) or not tag:
+            continue
+        try:
+            if tag_commit_sha(TOOLKIT, tag) == commit_sha:
+                return tag
+        except Exception:
+            continue
+    return None
+
 
 
 def naked(tag: str) -> str:
@@ -136,6 +190,19 @@ def collect_pins(portfolio: dict) -> dict[str, dict]:
         if name == TOOLKIT:
             entry["commit_sha"] = tag_commit_sha(name, tag)
             entry["wheel"] = WHEEL_NAME.format(naked=naked(tag))
+        if name == MCP:
+            try:
+                lock = mcp_upstream_lock(tag)
+                toolkit_commit = lock["upstreams"]["toolkit"]["commit"]
+                agentic_commit = lock["upstreams"]["agentic"]["commit"]
+                bundled_tag = toolkit_tag_for_commit(toolkit_commit) or f"commit-{toolkit_commit[:7]}"
+                entry["bundled_toolkit"] = {
+                    "tag": bundled_tag,
+                    "commit_sha": toolkit_commit,
+                }
+                entry["bundled_agentic"] = {"commit_sha": agentic_commit}
+            except Exception as error:
+                print(f"WARN: MCP UPSTREAM_LOCK at {tag}: {error}", file=sys.stderr)
         pins[name] = entry
     # Carry human status words from the current portfolio for the manifest.
     by_name = {item["repository"]: item for item in portfolio["repositories"]}

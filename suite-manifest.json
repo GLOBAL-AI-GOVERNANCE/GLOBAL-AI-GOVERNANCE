@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-29T21:48:50Z",
+  "generated_at": "2026-10-29T21:57:29Z",
   "owner": "GLOBAL-AI-GOVERNANCE",
   "source": "github-releases",
   "pins": {
@@ -15,6 +15,13 @@
     "ai-governance-mcp": {
       "tag": "v0.5.1",
       "version_naked": "0.5.1",
+      "bundled_toolkit": {
+        "tag": "v2.8.1",
+        "commit_sha": "0ab38c6a94a705e4423bfc9bb19ef2137f59f5c5"
+      },
+      "bundled_agentic": {
+        "commit_sha": "58bdfb291df0de7c9437b4476e370a609c4b1d5f"
+      },
       "status": "released · no hosted endpoint",
       "published_release": "v0.5.1"
     },
