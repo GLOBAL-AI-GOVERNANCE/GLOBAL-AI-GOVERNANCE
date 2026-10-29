@@ -77,7 +77,7 @@ Nine product and reference repositories plus two public infrastructure repositor
 - **[AI Cyber Resilience Framework](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework)** — v0.2.0 · released. Boundary assessment, evidence cards, and architecture-hardening backlog.
 - **[Containment Ledger](https://github.com/GLOBAL-AI-GOVERNANCE/containment-ledger)** · [Open app](https://global-ai-governance.github.io/containment-ledger/) — v1.0.0 · released · local browser instrument for domain, path, and evidence marking and human disposition. Independent structural review instrument; shares vocabulary with the AI Cyber Resilience Framework; no code, data, or release dependency; authority_effect NONE.
 - **[Peace OS: Crisis Room](https://github.com/GLOBAL-AI-GOVERNANCE/peace-os)** · [Open app](https://global-ai-governance.github.io/peace-os/) — v0.3.0 · released for browser use. Crisis-verification simulator with synthetic scenarios and an after-action review.
-- **[Governed Systems Administration](https://github.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration)** — specification · no execution. Proposed human-governed administration request, review, validation, and evidence contracts.
+- **[Governed Systems Administration](https://github.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration)** — specification · no execution capability. Proposed human-governed administration request, review, validation, and evidence contracts.
 - **[AI Governance Foundations](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-os)** — v1.1.1 · stable. Inventory, ownership, risk, control, monitoring, and reporting foundations.
 - **[Repository Governance Defaults](https://github.com/GLOBAL-AI-GOVERNANCE/.github)** — Account-level default repository governance files. Consistent security-boundary, claims-integrity, release-governance, and change-control defaults.
 - **[Global AI Governance Profile](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE)** — Public Start Here profile for the open-source portfolio. Portfolio truth registry, federated evidence graph, and cross-estate reproduction.
@@ -87,10 +87,10 @@ Nine product and reference repositories plus two public infrastructure repositor
 
 ## Development Baseline
 
-Published release identities remain controlling. Merged development candidates **do not silently become release claims**. The [portfolio manifest](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/portfolio.json) records these merged, unreleased candidates; none is a new published release:
+Published release identities remain controlling. The [portfolio manifest](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/portfolio.json) records repository versions and claim limits. No merged-unreleased development candidates are currently tracked.
 
-- AI Cyber Resilience Framework: **v0.2.0 Continuous Assurance Thread**.
-- Peace OS: Crisis Room: **v0.3.0** (stable browser release; Godot/Windows/certification/operational claims remain HOLD).
+- AI Cyber Resilience Framework: **v0.2.0** released (`authority_effect: NONE`).
+- Peace OS: Crisis Room: **v0.3.0** released for browser use; Godot, Windows, certification, and operational claims remain HOLD.
 
 ## Shared Governance Lifecycle
 

@@ -232,18 +232,7 @@
     }
   ],
   "integration_contract_version": "1.0.0",
-  "development_candidates": {
-    "ai-cyber-resilience-framework": {
-      "candidate": "v0.2.0 Continuous Assurance Thread",
-      "status": "MERGED_UNRELEASED",
-      "published_release": "v0.2.0"
-    },
-    "peace-os": {
-      "candidate": "Post-RC2 Portfolio Operating Disposition Reference",
-      "status": "MERGED_UNRELEASED",
-      "published_release": "v0.3.0"
-    }
-  },
+  "development_candidates": {},
   "install_surfaces": [
     {
       "surface": "Browser",
