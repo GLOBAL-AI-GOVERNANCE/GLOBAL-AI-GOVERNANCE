@@ -13,7 +13,7 @@
   "protected_default_branches": 9,
   "published_release_state": {
     "ai-cyber-resilience-framework": "v0.1.1",
-    "peace-os": "v0.3.0-rc2"
+    "peace-os": "v0.3.0-rc3"
   },
   "schema_version": "1.0.0",
   "scope": "M0-M9",
