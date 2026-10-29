@@ -101,6 +101,33 @@ def actual_block(readme: str) -> str | None:
     return match.group(0) if match else None
 
 
+def manifest_errors(journey: dict, portfolio: dict) -> list[str]:
+    """Require suite-manifest.json pins to match portfolio/journey versions."""
+    path = ROOT / "suite-manifest.json"
+    if not path.is_file():
+        return ["suite-manifest.json is missing (run tools/sync_suite_versions.py)"]
+    manifest = json.loads(path.read_text(encoding="utf-8"))
+    errors = []
+    pins = manifest.get("pins") or {}
+    repos = {item["repository"]: item for item in portfolio["repositories"]}
+    for name, pin in pins.items():
+        record = repos.get(name)
+        if record is None:
+            errors.append(f"{name}: in suite-manifest.json but not portfolio.json")
+            continue
+        if record.get("published_release") != pin.get("tag") and record.get("version") != pin.get("tag"):
+            errors.append(
+                f"{name}: suite-manifest tag {pin.get('tag')!r} disagrees with portfolio "
+                f"{record.get('published_release')!r}"
+            )
+    badges = manifest.get("journey_badges") or {}
+    for item in journey["sequence"]:
+        name = item["repository"]
+        if name in badges and badges[name] != item["badge"]:
+            errors.append(f"{name}: suite-manifest journey badge disagrees with journey.json")
+    return errors
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--local", type=Path, help="directory holding local checkouts named after each repository")
@@ -111,7 +138,7 @@ def main() -> int:
     if args.show:
         print(expected_block(journey, owner, names.index(args.show)))
         return 0
-    errors = consistency_errors(journey, portfolio)
+    errors = consistency_errors(journey, portfolio) + manifest_errors(journey, portfolio)
     for index, item in enumerate(journey["sequence"]):
         name = item["repository"]
         readme = (

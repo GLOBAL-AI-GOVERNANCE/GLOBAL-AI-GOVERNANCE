@@ -55,12 +55,19 @@ FORBIDDEN_TEXT = (
     "certified ai governance",
 )
 
-REQUIRED_JOURNEY_LINKS = (
-    "global-ai-governance-toolkit/releases/tag/v2.8.1",
-    "global-ai-governance-toolkit/tree/v2.8.1#quick-start",
-    "global-ai-governance-toolkit/tree/v2.8.1/automation",
-    "agentic-ai-governance/tree/v0.1.0-alpha.2/schemas",
-)
+def required_journey_links(manifest: dict) -> tuple[str, ...]:
+    """Derive README release links from the portfolio toolkit pin.
+
+    Agentic schema tree links stay on the immutable Alpha.2 controlling tag.
+    """
+    repos = {item["repository"]: item for item in manifest["repositories"]}
+    toolkit = repos["global-ai-governance-toolkit"]["published_release"]
+    return (
+        f"global-ai-governance-toolkit/releases/tag/{toolkit}",
+        f"global-ai-governance-toolkit/tree/{toolkit}#quick-start",
+        f"global-ai-governance-toolkit/tree/{toolkit}/automation",
+        "agentic-ai-governance/tree/v0.1.0-alpha.2/schemas",
+    )
 
 REQUIRED_REPOSITORY_KEYS = {
     "repository",
@@ -113,10 +120,15 @@ def validate_manifest(manifest: dict) -> list[dict]:
     if candidates.get("ai-cyber-resilience-framework") != expected_candidate:
         fail("ACRF development candidate record is incorrect")
 
+    peace_release = next(
+        item["published_release"]
+        for item in manifest["repositories"]
+        if item["repository"] == "peace-os"
+    )
     expected_peace_candidate = {
         "candidate": "Post-RC2 Portfolio Operating Disposition Reference",
         "status": "MERGED_UNRELEASED",
-        "published_release": "v0.3.0-rc3",
+        "published_release": peace_release,
     }
     if candidates.get("peace-os") != expected_peace_candidate:
         fail("Peace OS development candidate record is incorrect")
@@ -244,7 +256,7 @@ def main() -> None:
     journey_headings = re.findall(r"^### ([A-Z]+)$", journey, re.MULTILINE)
     if journey_headings != ["USE", "INTEGRATE"]:
         fail("first-time journey must contain exactly USE, INTEGRATE in order")
-    for link in REQUIRED_JOURNEY_LINKS:
+    for link in required_journey_links(manifest):
         if link not in journey:
             fail(f"first-time journey route is missing: {link}")
     for boundary in (
@@ -267,22 +279,21 @@ def main() -> None:
     if positions != sorted(positions):
         fail("lifecycle stages are out of order")
 
-    if not re.search(
-        r"\bv2\.8\.1\b · stable",
-        text,
-        re.IGNORECASE | re.DOTALL,
-    ):
+    repos = {item["repository"]: item for item in manifest["repositories"]}
+    toolkit_maturity = repos["global-ai-governance-toolkit"]["maturity"]
+    if toolkit_maturity not in text:
         fail("toolkit release and maturity are not connected")
 
     if "no execution capability" not in text or "independent semantic review" not in text:
         fail("GSA specification review boundary is missing")
 
+    peace_maturity = repos["peace-os"]["maturity"]
     if not re.search(
-        r"peace-os.*v0\.3\.0-rc3 · available in your browser · independent human validation open",
+        re.escape("peace-os") + r".*" + re.escape(peace_maturity),
         text,
         re.IGNORECASE | re.DOTALL,
     ):
-        fail("Peace OS RC2 repository and bounded maturity are not connected")
+        fail("Peace OS repository and bounded maturity are not connected")
 
     for anchor, heading in INBOUND_SECTION_ANCHORS.items():
         marker = f'<a id="{anchor}"></a>\n\n{heading}\n'

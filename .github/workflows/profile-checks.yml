@@ -38,6 +38,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 -B tools/check_suite_path.py
+      - name: Check suite versions match GitHub releases
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 -B tools/sync_suite_versions.py --check
 
       - name: Validate Assurance Delta
         run: python3 -B -m unittest tests/test_assurance_delta.py -v
