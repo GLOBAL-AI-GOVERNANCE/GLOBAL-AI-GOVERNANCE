@@ -56,7 +56,7 @@
       "repository": "governed-systems-administration",
       "short_name": "Governed Systems Administration",
       "role": "administer under review",
-      "badge": "specification · no execution capability",
+      "badge": "specification · no execution",
       "readme_managed": false
     }
   ]
