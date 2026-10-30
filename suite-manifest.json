@@ -1,16 +1,16 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-30T00:13:33Z",
+  "generated_at": "2026-10-30T02:28:35Z",
   "owner": "GLOBAL-AI-GOVERNANCE",
   "source": "github-releases",
   "pins": {
     "global-ai-governance-toolkit": {
-      "tag": "v2.8.2",
-      "version_naked": "2.8.2",
-      "commit_sha": "516641b72886762c2ced0f5bc3b2d8205e3d548f",
-      "wheel": "global_ai_governance-2.8.2-py3-none-any.whl",
+      "tag": "v2.8.3",
+      "version_naked": "2.8.3",
+      "commit_sha": "50aec342f5d18954dcf6da2e5f08f096d8b734d9",
+      "wheel": "global_ai_governance-2.8.3-py3-none-any.whl",
       "status": "stable",
-      "published_release": "v2.8.2"
+      "published_release": "v2.8.3"
     },
     "ai-governance-mcp": {
       "tag": "v0.5.1",
@@ -64,7 +64,7 @@
   },
   "journey_badges": {
     "peace-os": "v0.3.0 · released",
-    "global-ai-governance-toolkit": "v2.8.2 · stable",
+    "global-ai-governance-toolkit": "v2.8.3 · stable",
     "ai-governance-mcp": "v0.5.1 · released",
     "agentic-ai-governance": "v0.1.0-alpha.6 · available",
     "verified-vulnerability-governance": "v0.4.0 · released",
@@ -78,15 +78,15 @@
       "surface": "Browser",
       "repository": "global-ai-governance-toolkit",
       "install": "https://ai-governance.solutions/",
-      "version": "current main (pinned release v2.8.2)",
+      "version": "current main (pinned release v2.8.3)",
       "maturity": "stable",
       "test_status": "TESTED (hosted CI)"
     },
     {
       "surface": "CLI",
       "repository": "global-ai-governance-toolkit",
-      "install": "pip install https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/download/v2.8.2/global_ai_governance-2.8.2-py3-none-any.whl",
-      "version": "v2.8.2",
+      "install": "pip install https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/download/v2.8.3/global_ai_governance-2.8.3-py3-none-any.whl",
+      "version": "v2.8.3",
       "maturity": "stable",
       "test_status": "TESTED (release wheel, clean environment)"
     },
@@ -101,8 +101,8 @@
     {
       "surface": "GitHub Action",
       "repository": "global-ai-governance-toolkit",
-      "install": "uses: GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit@516641b72886762c2ced0f5bc3b2d8205e3d548f",
-      "version": "v2.8.2 (full commit SHA of the release tag)",
+      "install": "uses: GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit@50aec342f5d18954dcf6da2e5f08f096d8b734d9",
+      "version": "v2.8.3 (full commit SHA of the release tag)",
       "maturity": "released",
       "test_status": "TESTED (hosted CI self-test)"
     },

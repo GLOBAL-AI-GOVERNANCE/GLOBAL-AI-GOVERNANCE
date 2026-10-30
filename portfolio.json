@@ -26,8 +26,8 @@
         "MEASURE",
         "REASSESS"
       ],
-      "version": "v2.8.2",
-      "maturity": "v2.8.2 · stable",
+      "version": "v2.8.3",
+      "maturity": "v2.8.3 · stable",
       "finished_outcome": "Reproducible Decision Pack, bounded sovereignty assessment, assurance/accountability profiles, and organizational AI maturity evidence assessment",
       "authority_boundary": "Organizational maturity is accountable-human determined. Automation verifies submitted evidence. It does not certify, independently declare maturity, approve deployment, or transfer authority.",
       "upstream": [
@@ -39,7 +39,7 @@
       ],
       "classification": "CORE",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
-      "published_release": "v2.8.2"
+      "published_release": "v2.8.3"
     },
     {
       "repository": "agentic-ai-governance",
@@ -238,15 +238,15 @@
       "surface": "Browser",
       "repository": "global-ai-governance-toolkit",
       "install": "https://ai-governance.solutions/",
-      "version": "current main (pinned release v2.8.2)",
+      "version": "current main (pinned release v2.8.3)",
       "maturity": "stable",
       "test_status": "TESTED (hosted CI)"
     },
     {
       "surface": "CLI",
       "repository": "global-ai-governance-toolkit",
-      "install": "pip install https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/download/v2.8.2/global_ai_governance-2.8.2-py3-none-any.whl",
-      "version": "v2.8.2",
+      "install": "pip install https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/download/v2.8.3/global_ai_governance-2.8.3-py3-none-any.whl",
+      "version": "v2.8.3",
       "maturity": "stable",
       "test_status": "TESTED (release wheel, clean environment)"
     },
@@ -261,8 +261,8 @@
     {
       "surface": "GitHub Action",
       "repository": "global-ai-governance-toolkit",
-      "install": "uses: GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit@516641b72886762c2ced0f5bc3b2d8205e3d548f",
-      "version": "v2.8.2 (full commit SHA of the release tag)",
+      "install": "uses: GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit@50aec342f5d18954dcf6da2e5f08f096d8b734d9",
+      "version": "v2.8.3 (full commit SHA of the release tag)",
       "maturity": "released",
       "test_status": "TESTED (hosted CI self-test)"
     },
