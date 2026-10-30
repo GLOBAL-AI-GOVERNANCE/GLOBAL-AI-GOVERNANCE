@@ -68,7 +68,7 @@
         "DESIGN ENFORCEMENT"
       ],
       "version": null,
-      "maturity": "specification · no execution",
+      "maturity": "specification · no execution capability",
       "finished_outcome": "Proposed human-governed administration request, review, validation, and evidence contracts",
       "authority_boundary": "The repository is preimplementation and provides no execution capability.",
       "upstream": [
