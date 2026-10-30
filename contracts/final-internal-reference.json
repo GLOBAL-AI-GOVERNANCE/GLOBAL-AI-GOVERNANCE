@@ -56,7 +56,7 @@
   "limitations": [
     "References do not transfer authority or truth between repositories.",
     "Time validity of the Agentic sample must be evaluated by Agentic semantics at use time.",
-    "GSA remains pre-alpha, preimplementation, and non-executing.",
+    "GSA remains a reference design: preimplementation and non-executing.",
     "The thread is synthetic and does not prove real remediation or operational assurance.",
     "Published release identities remain controlling."
   ]
