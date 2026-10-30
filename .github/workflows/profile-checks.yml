@@ -39,7 +39,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: python3 -B tools/check_suite_path.py
       - name: Check suite versions match GitHub releases
-        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.event_name == 'push'
+        # Always on PR/push/schedule/dispatch so version-pin PRs cannot skip the gate.
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' || github.event_name == 'pull_request'
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 -B tools/sync_suite_versions.py --check
