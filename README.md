@@ -34,7 +34,7 @@ Every path is self-serve and non-authorizing: the tools report; people decide.
 | CLI | `pip install https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/download/v2.8.2/global_ai_governance-2.8.2-py3-none-any.whl` | v2.8.2 | stable | TESTED (release wheel, clean environment) |
 | MCP server | `uvx --from git+https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp@v0.5.1 gaig-mcp` | v0.5.1 | released · no hosted endpoint | TESTED (MCP Python SDK client, clean environment) |
 | GitHub Action | `uses: GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit@516641b72886762c2ced0f5bc3b2d8205e3d548f` | v2.8.2 (full commit SHA of the release tag) | released | TESTED (hosted CI self-test) |
-| Passport validator | `pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git@v0.1.0-alpha.5` | v0.1.0-alpha.5 | available | TESTED (hosted CI, clean environment) |
+| Passport validator | `pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git@v0.1.0-alpha.6` | v0.1.0-alpha.6 | available | TESTED (hosted CI, clean environment) |
 | Docker (MCP server) | `docker build -f deploy/Dockerfile -t gaig-mcp .` (in an `ai-governance-mcp` clone) | v0.5.1 | build locally from Dockerfile · no image published | untested |
 <!-- /gaig:install-surfaces -->
 
@@ -72,12 +72,12 @@ Nine product and reference repositories plus two public infrastructure repositor
 <!-- gaig:portfolio-versions -->
 - **[Global AI Governance Toolkit](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit)** · [Open app](https://ai-governance.solutions/) — v2.8.2 · stable. Reproducible Decision Pack, bounded sovereignty assessment, assurance/accountability profiles, and organizational AI maturity evidence assessment.
 - **[AI Governance Model Context Protocol Server (AI Governance MCP)](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp)** — v0.5.1 · released · no hosted endpoint. Read-only Model Context Protocol (MCP) tools wrapping the toolkit and passport validator; authority_effect NONE.
-- **[Agentic AI Governance](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance)** — v0.1.0-alpha.5 · available. Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts.
+- **[Agentic AI Governance](https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance)** — v0.1.0-alpha.6 · available. Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts.
 - **[Verified Vulnerability Governance](https://github.com/GLOBAL-AI-GOVERNANCE/verified-vulnerability-governance)** — v0.4.0 · released. Evidence-linked vulnerability ownership, remediation, retesting, and closure.
 - **[AI Cyber Resilience Framework](https://github.com/GLOBAL-AI-GOVERNANCE/ai-cyber-resilience-framework)** — v0.2.0 · released. Boundary assessment, evidence cards, and architecture-hardening backlog.
 - **[Containment Ledger](https://github.com/GLOBAL-AI-GOVERNANCE/containment-ledger)** · [Open app](https://global-ai-governance.github.io/containment-ledger/) — v1.0.0 · released · local browser instrument for domain, path, and evidence marking and human disposition. Independent structural review instrument; shares vocabulary with the AI Cyber Resilience Framework; no code, data, or release dependency; authority_effect NONE.
 - **[Peace OS: Crisis Room](https://github.com/GLOBAL-AI-GOVERNANCE/peace-os)** · [Open app](https://global-ai-governance.github.io/peace-os/) — v0.3.0 · released for browser use. Crisis-verification simulator with synthetic scenarios and an after-action review.
-- **[Governed Systems Administration](https://github.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration)** — specification · no execution capability. Proposed human-governed administration request, review, validation, and evidence contracts.
+- **[Governed Systems Administration](https://github.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration)** — specification · no execution. Proposed human-governed administration request, review, validation, and evidence contracts.
 - **[AI Governance Foundations](https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-os)** — v1.1.1 · stable. Inventory, ownership, risk, control, monitoring, and reporting foundations.
 - **[Repository Governance Defaults](https://github.com/GLOBAL-AI-GOVERNANCE/.github)** — Account-level default repository governance files. Consistent security-boundary, claims-integrity, release-governance, and change-control defaults.
 - **[Global AI Governance Profile](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE)** — Public Start Here profile for the open-source portfolio. Portfolio truth registry, federated evidence graph, and cross-estate reproduction.
@@ -104,7 +104,7 @@ Repositories **do not all implement every lifecycle stage** and **do not share o
 
 ## Evidence Boundary
 
-The tools produce reference evidence and decision support. Automated checks **do not establish operational safety**, independent real-world assurance, **legal compliance**, **certification**, or **production authorization**. A passing evaluation is not permission to deploy, accept risk, or take consequential action.
+The tools produce reference evidence and decision support. Governed Systems Administration remains a specification with **no execution capability**. Automated checks **do not establish operational safety**, independent real-world assurance, **legal compliance**, **certification**, or **production authorization**. A passing evaluation is not permission to deploy, accept risk, or take consequential action.
 
 For operators and reviewers: [Integrated remediation reference](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/docs/GOVERNED_VULNERABILITY_REMEDIATION_REFERENCE.md) · [NIST AI RMF mapping](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/docs/NIST_AI_RMF_1_0_MAPPING.md) · [Frontier safety, EU AI Act, and ISO/IEC 42001 crosswalk](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/docs/FRONTIER_AND_REGULATORY_CROSSWALK.md) · [Source policy](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/docs/SOURCE_POLICY.md) · [Change policy](https://github.com/GLOBAL-AI-GOVERNANCE/GLOBAL-AI-GOVERNANCE/blob/main/docs/CHANGE_POLICY.md) · [Security policy](https://github.com/GLOBAL-AI-GOVERNANCE/.github/blob/main/SECURITY.md).
 

@@ -27,7 +27,7 @@
         "REASSESS"
       ],
       "version": "v2.8.2",
-      "maturity": "v2.8.2 \u00b7 stable",
+      "maturity": "v2.8.2 · stable",
       "finished_outcome": "Reproducible Decision Pack, bounded sovereignty assessment, assurance/accountability profiles, and organizational AI maturity evidence assessment",
       "authority_boundary": "Organizational maturity is accountable-human determined. Automation verifies submitted evidence. It does not certify, independently declare maturity, approve deployment, or transfer authority.",
       "upstream": [
@@ -47,8 +47,8 @@
       "lifecycle_roles": [
         "AUTHORIZE"
       ],
-      "version": "v0.1.0-alpha.5",
-      "maturity": "v0.1.0-alpha.5 \u00b7 available",
+      "version": "v0.1.0-alpha.6",
+      "maturity": "v0.1.0-alpha.6 · available",
       "finished_outcome": "Machine-readable authority, evidence, passport, validation, expiry, and revocation artifacts",
       "authority_boundary": "Passport and validation artifacts express bounded machine-readable authority semantics; production authorization remains human-governed and environment-specific.",
       "upstream": [
@@ -59,7 +59,7 @@
       ],
       "classification": "CORE",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
-      "published_release": "v0.1.0-alpha.5"
+      "published_release": "v0.1.0-alpha.6"
     },
     {
       "repository": "governed-systems-administration",
@@ -68,7 +68,7 @@
         "DESIGN ENFORCEMENT"
       ],
       "version": null,
-      "maturity": "specification \u00b7 no execution",
+      "maturity": "specification · no execution",
       "finished_outcome": "Proposed human-governed administration request, review, validation, and evidence contracts",
       "authority_boundary": "The repository is preimplementation and provides no execution capability.",
       "upstream": [
@@ -88,7 +88,7 @@
         "CLOSE"
       ],
       "version": "v0.4.0",
-      "maturity": "v0.4.0 \u00b7 released",
+      "maturity": "v0.4.0 · released",
       "finished_outcome": "Evidence-linked vulnerability ownership, remediation, retesting, and closure",
       "authority_boundary": "Closure is evidence-driven and human-authorized; repository checks do not establish enterprise deployment or independent operational retesting services.",
       "upstream": [
@@ -109,7 +109,7 @@
         "RECOVER"
       ],
       "version": "v0.2.0",
-      "maturity": "v0.2.0 \u00b7 released",
+      "maturity": "v0.2.0 · released",
       "finished_outcome": "Boundary assessment, evidence cards, and architecture-hardening backlog",
       "authority_boundary": "The framework is a public defensive reference, not executable operational software, certification, or proof that a deployed control works.",
       "upstream": [
@@ -130,7 +130,7 @@
         "LEARN"
       ],
       "version": "v0.3.0",
-      "maturity": "v0.3.0 \u00b7 released for browser use",
+      "maturity": "v0.3.0 · released for browser use",
       "finished_outcome": "Crisis-verification simulator with synthetic scenarios and an after-action review",
       "authority_boundary": "The experience is a fictional learning and review candidate, not an operational intelligence, emergency, attribution, certification, or autonomous-release system.",
       "upstream": [
@@ -148,7 +148,7 @@
         "FOUNDATION"
       ],
       "version": "v1.1.1",
-      "maturity": "v1.1.1 \u00b7 stable",
+      "maturity": "v1.1.1 · stable",
       "finished_outcome": "Inventory, ownership, risk, control, monitoring, and reporting foundations",
       "authority_boundary": "Foundational models and templates provide reference structure; they do not independently establish approval, compliance, certification, or production authorization.",
       "upstream": [],
@@ -167,7 +167,7 @@
         "CONTAIN"
       ],
       "version": "v1.0.0",
-      "maturity": "v1.0.0 \u00b7 released \u00b7 local browser instrument for domain, path, and evidence marking and human disposition",
+      "maturity": "v1.0.0 · released · local browser instrument for domain, path, and evidence marking and human disposition",
       "finished_outcome": "Independent structural review instrument; shares vocabulary with the AI Cyber Resilience Framework; no code, data, or release dependency; authority_effect NONE",
       "authority_boundary": "Separate review instrument. Does not change published framework release or confer authority.",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
@@ -183,7 +183,7 @@
         "INTEGRATE"
       ],
       "version": "v0.5.1",
-      "maturity": "v0.5.1 \u00b7 released \u00b7 no hosted endpoint",
+      "maturity": "v0.5.1 · released · no hosted endpoint",
       "finished_outcome": "Read-only Model Context Protocol (MCP) tools wrapping the toolkit and passport validator; authority_effect NONE",
       "authority_boundary": "Tool results are decision support only. Command gaig-mcp and package gaig_mcp. Does not approve, certify, authorize, or accept risk.",
       "owner_boundary": "GLOBAL-AI-GOVERNANCE",
@@ -255,7 +255,7 @@
       "repository": "ai-governance-mcp",
       "install": "uvx --from git+https://github.com/GLOBAL-AI-GOVERNANCE/ai-governance-mcp@v0.5.1 gaig-mcp",
       "version": "v0.5.1",
-      "maturity": "released \u00b7 no hosted endpoint",
+      "maturity": "released · no hosted endpoint",
       "test_status": "TESTED (MCP Python SDK client, clean environment)"
     },
     {
@@ -269,8 +269,8 @@
     {
       "surface": "Passport validator",
       "repository": "agentic-ai-governance",
-      "install": "pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git@v0.1.0-alpha.5",
-      "version": "v0.1.0-alpha.5",
+      "install": "pip install git+https://github.com/GLOBAL-AI-GOVERNANCE/agentic-ai-governance.git@v0.1.0-alpha.6",
+      "version": "v0.1.0-alpha.6",
       "maturity": "available",
       "test_status": "TESTED (hosted CI, clean environment)"
     },
@@ -279,7 +279,7 @@
       "repository": "ai-governance-mcp",
       "install": "docker build -f deploy/Dockerfile -t gaig-mcp .",
       "version": "v0.5.1",
-      "maturity": "build locally from Dockerfile \u00b7 no image published",
+      "maturity": "build locally from Dockerfile · no image published",
       "test_status": "untested"
     }
   ]

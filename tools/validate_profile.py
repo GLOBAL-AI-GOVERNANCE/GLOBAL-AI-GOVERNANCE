@@ -117,7 +117,7 @@ def validate_manifest(manifest: dict) -> list[dict]:
         fail("development_candidates must be empty while no merged-unreleased candidates are tracked")
 
     if "agentic-ai-governance" in (candidates or {}):
-        fail("Agentic v0.1.0-alpha.5 includes its reference implementations; it is not a development candidate")
+        fail("Agentic v0.1.0-alpha.6 includes its reference implementations; it is not a development candidate")
 
     if "verified-vulnerability-governance" in (candidates or {}):
         fail("VVG crypto-migration closure reference is released, not a development candidate")
@@ -228,7 +228,7 @@ def main() -> None:
 
     if "Stateful Revocation continuity is implemented and verified on current `main` and remains unreleased." in text:
         fail("stale Agentic merged-unreleased baseline remains after Alpha.2")
-    if "v0.1.0-alpha.5 · available" not in text:
+    if "v0.1.0-alpha.6 · available" not in text:
         fail("Agentic public maturity is missing")
 
     for forbidden in FORBIDDEN_TEXT:
