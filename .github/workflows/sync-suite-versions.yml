@@ -36,15 +36,66 @@ jobs:
       - name: Detect changes
         id: diff
         run: |
-          if git diff --quiet -- portfolio.json journey.json suite-manifest.json \
-              contracts/program-closeout.json README.md; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "No version drift against GitHub releases."
-          else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-            git status -sb
-            git diff --stat
-          fi
+          # Meaningful drift only. Ignore suite-manifest generated_at-only churn
+          # so hourly runs do not open timestamp-only pull requests.
+          set -euo pipefail
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          import subprocess
+          import sys
+          from pathlib import Path
+
+          files = [
+              "portfolio.json",
+              "journey.json",
+              "contracts/program-closeout.json",
+              "README.md",
+          ]
+          meaningful = False
+          for path in files:
+              result = subprocess.run(
+                  ["git", "diff", "--quiet", "--", path], check=False
+              )
+              if result.returncode != 0:
+                  meaningful = True
+                  break
+
+          manifest = Path("suite-manifest.json")
+          if subprocess.run(
+              ["git", "diff", "--quiet", "--", str(manifest)], check=False
+          ).returncode != 0:
+              try:
+                  old = json.loads(
+                      subprocess.check_output(
+                          ["git", "show", "HEAD:suite-manifest.json"], text=True
+                      )
+                  )
+              except Exception:
+                  old = {}
+              new = json.loads(manifest.read_text(encoding="utf-8"))
+              old.pop("generated_at", None)
+              new.pop("generated_at", None)
+              if old != new:
+                  meaningful = True
+              else:
+                  subprocess.run(
+                      ["git", "checkout", "--", str(manifest)], check=True
+                  )
+
+          if meaningful:
+              print("changed=true")
+              sys.stdout.flush()
+              # Keep diagnostics off GITHUB_OUTPUT (stdout is redirected there).
+              subprocess.run(
+                  ["git", "status", "-sb"], check=False, stdout=sys.stderr
+              )
+              subprocess.run(
+                  ["git", "diff", "--stat"], check=False, stdout=sys.stderr
+              )
+          else:
+              print("changed=false")
+              print("No version drift against GitHub releases.", file=sys.stderr)
+          PY
       - name: Open or refresh sync pull request
         if: steps.diff.outputs.changed == 'true'
         env:

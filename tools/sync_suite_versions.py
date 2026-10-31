@@ -408,6 +408,13 @@ def apply_readme(portfolio: dict, journey: dict, pins: dict[str, dict]) -> None:
             f"(pinned release {tag})",
             text,
         )
+        # Link label next to the toolkit release URL (URLs are updated above).
+        text = re.sub(
+            r"\[v[0-9A-Za-z.-]+ release\]"
+            r"(\(https://github\.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/tag/v[0-9A-Za-z.-]+\))",
+            rf"[{tag} release]\1",
+            text,
+        )
     if mcp:
         text = re.sub(
             r"The MCP server installs locally \(v[0-9A-Za-z.-]+ release",
@@ -418,6 +425,7 @@ def apply_readme(portfolio: dict, journey: dict, pins: dict[str, dict]) -> None:
 
 
 def write_manifest(portfolio: dict, journey: dict, pins: dict[str, dict]) -> None:
+    path = ROOT / "suite-manifest.json"
     manifest = {
         "schema_version": "1.0.0",
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -429,7 +437,15 @@ def write_manifest(portfolio: dict, journey: dict, pins: dict[str, dict]) -> Non
         },
         "install_surfaces": portfolio.get("install_surfaces", []),
     }
-    dump(ROOT / "suite-manifest.json", manifest)
+    # Do not rewrite the file when only generated_at would change. Hourly sync
+    # must not open PRs for timestamp-only churn.
+    if path.exists():
+        previous = json.loads(path.read_text(encoding="utf-8"))
+        previous_cmp = {key: value for key, value in previous.items() if key != "generated_at"}
+        next_cmp = {key: value for key, value in manifest.items() if key != "generated_at"}
+        if previous_cmp == next_cmp:
+            return
+    dump(path, manifest)
 
 
 def sync(*, check_only: bool) -> int:
