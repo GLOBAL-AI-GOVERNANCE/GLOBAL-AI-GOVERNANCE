@@ -44,7 +44,7 @@ TESTED means run by this project's own CI or test runs; it is not independent ve
 
 1. Open the [Toolkit](https://ai-governance.solutions/) and select **Run sample** (a synthetic clean inventory) or **Run example with gaps** (a synthetic inventory that shows governance findings). No login or upload is required for the browser workflow.
 2. Review the findings and download the AI Governance Decision Pack. Neither example is a real security assessment. The clean sample may pass its bounded checks; a passing result is not a deployment decision and does not authorize deployment.
-3. The hosted Toolkit reflects current `main`. For a pinned implementation, use the [v2.8.1 release](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/tag/v2.8.3) and its [quick start](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.8.3#quick-start). v2.5.0 remains the organizational maturity capability release. v2.5.1 is a public-reference integrity patch.
+3. The hosted Toolkit reflects current `main`. For a pinned implementation, use the [v2.8.3 release](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/releases/tag/v2.8.3) and its [quick start](https://github.com/GLOBAL-AI-GOVERNANCE/global-ai-governance-toolkit/tree/v2.8.3#quick-start). v2.5.0 remains the organizational maturity capability release. v2.5.1 is a public-reference integrity patch.
 
 Other browser experiences: [Containment Ledger](https://global-ai-governance.github.io/containment-ledger/) for security-boundary review; [Peace OS: Crisis Room](https://global-ai-governance.github.io/peace-os/), a crisis-room simulator with synthetic scenarios for rehearsing evidence review, civilian protection, and decisions that stay with people.
 
